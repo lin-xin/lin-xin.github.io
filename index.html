@@ -1,437 +1,1915 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+<!doctype html>
+
+
+
   
-  <title>林鑫博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="总结和分享平时工作中的学习和经验">
+<meta property="og:type" content="website">
 <meta property="og:title" content="林鑫博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="林鑫博客">
+<meta property="og:description" content="总结和分享平时工作中的学习和经验">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="林鑫博客">
-  
-    <link rel="alternate" href="/atom.xml" title="林鑫博客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
+<meta name="twitter:description" content="总结和分享平时工作中的学习和经验">
 
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title>林鑫博客</title>
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">林鑫博客</a>
-      </h1>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">林鑫博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/05/hello-world/" class="article-date">
-  <time datetime="2017-06-05T12:25:14.050Z" itemprop="datePublished">2017-06-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/05/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+        <p class="site-subtitle"></p>
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/05/hello-world/" data-id="cj3k4z9dp000020fulmowbsfb" class="article-share-link">Share</a>
-      
-      
-    </footer>
   </div>
-  
-</article>
 
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
 
   
-    <article id="post-精通-gulp-常用插件的功能和用法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/09/精通-gulp-常用插件的功能和用法/" class="article-date">
-  <time datetime="2017-03-09T02:50:00.000Z" itemprop="datePublished">2017-03-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <ul id="menu" class="menu">
+      
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/09/精通-gulp-常用插件的功能和用法/">精通 gulp 常用插件的功能和用法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
       
-        <h2 id="匹配符-、-、！、"><a href="#匹配符-、-、！、" class="headerlink" title="匹配符 *、**、！、{}"></a>匹配符 *、**、！、{}</h2><pre><code>gulp.src(&apos;./js/*.js&apos;)               // * 匹配js文件夹下所有.js格式的文件
-gulp.src(&apos;./js/**/*.js&apos;)            // ** 匹配js文件夹的0个或多个子文件夹
-gulp.src([&apos;./js/*.js&apos;,&apos;!./js/index.js&apos;])    // ! 匹配除了index.js之外的所有js文件
-gulp.src(&apos;./js/**/{omui,common}.js&apos;)        // {} 匹配{}里的文件名
-</code></pre><h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><h3 id="del-替代gulp-clean"><a href="#del-替代gulp-clean" class="headerlink" title="del (替代gulp-clean)"></a>del (替代gulp-clean)</h3><pre><code>var del = require(&apos;del&apos;);
-
-del(&apos;./dist&apos;);                      // 删除整个dist文件夹
-</code></pre><h3 id="gulp-rename"><a href="#gulp-rename" class="headerlink" title="gulp-rename"></a>gulp-rename</h3><p>描述：重命名文件。</p>
-<pre><code>var rename = require(&quot;gulp-rename&quot;);
-
-gulp.src(&apos;./hello.txt&apos;)
-  .pipe(rename(&apos;gb/goodbye.md&apos;))    // 直接修改文件名和路径
-  .pipe(gulp.dest(&apos;./dist&apos;)); 
-
-gulp.src(&apos;./hello.txt&apos;)
-  .pipe(rename({
-    dirname: &quot;text&quot;,                // 路径名
-    basename: &quot;goodbye&quot;,            // 主文件名
-    prefix: &quot;pre-&quot;,                 // 前缀
-    suffix: &quot;-min&quot;,                 // 后缀
-    extname: &quot;.html&quot;                // 扩展名
-  }))
-  .pipe(gulp.dest(&apos;./dist&apos;));
-</code></pre><h3 id="gulp-concat"><a href="#gulp-concat" class="headerlink" title="gulp-concat"></a>gulp-concat</h3><p>描述：合并文件。</p>
-<pre><code>var concat = require(&apos;gulp-concat&apos;);
-
-gulp.src(&apos;./js/*.js&apos;)
-    .pipe(concat(&apos;all.js&apos;))         // 合并all.js文件
-    .pipe(gulp.dest(&apos;./dist&apos;));
-
-gulp.src([&apos;./js/demo1.js&apos;,&apos;./js/demo2.js&apos;,&apos;./js/demo2.js&apos;])
-    .pipe(concat(&apos;all.js&apos;))         // 按照[]里的顺序合并文件
-    .pipe(gulp.dest(&apos;./dist&apos;));
-</code></pre><h3 id="gulp-filter"><a href="#gulp-filter" class="headerlink" title="gulp-filter"></a>gulp-filter</h3><p>描述：在虚拟文件流中过滤文件。</p>
-<pre><code>var filter = require(&apos;gulp-filter&apos;);
-
-const f = filter([&apos;**&apos;, &apos;!*/index.js&apos;]);
-gulp.src(&apos;js/**/*.js&apos;)
-    .pipe(f)                        // 过滤掉index.js这个文件
-    .pipe(gulp.dest(&apos;dist&apos;));
-
-const f1 = filter([&apos;**&apos;, &apos;!*/index.js&apos;], {restore: true});
-gulp.src(&apos;js/**/*.js&apos;)
-    .pipe(f1)                       // 过滤掉index.js这个文件
-    .pipe(uglify())                 // 对其他文件进行压缩
-    .pipe(f1.restore)               // 返回到未过滤执行的所有文件
-    .pipe(gulp.dest(&apos;dist&apos;));       // 再对所有文件操作，包括index.js
-</code></pre><h2 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h2><h3 id="gulp-uglify"><a href="#gulp-uglify" class="headerlink" title="gulp-uglify"></a>gulp-uglify</h3><p>描述：压缩js文件大小。</p>
-<pre><code>var uglify = require(&quot;gulp-uglify&quot;);
-
-gulp.src(&apos;./hello.js&apos;)
-    .pipe(uglify())                 // 直接压缩hello.js
-    .pipe(gulp.dest(&apos;./dist&apos;))
-
- gulp.src(&apos;./hello.js&apos;)
-    .pipe(uglify({
-        mangle: true,               // 是否修改变量名，默认为 true
-        compress: true,             // 是否完全压缩，默认为 true
-        preserveComments: &apos;all&apos;     // 保留所有注释
-    }))
-    .pipe(gulp.dest(&apos;./dist&apos;))
-</code></pre><h3 id="gulp-csso"><a href="#gulp-csso" class="headerlink" title="gulp-csso"></a>gulp-csso</h3><p>描述：压缩优化css。</p>
-<pre><code>var csso = require(&apos;gulp-csso&apos;);
-
-gulp.src(&apos;./css/*.css&apos;)
-    .pipe(csso())
-    .pipe(gulp.dest(&apos;./dist/css&apos;))
-</code></pre><h3 id="gulp-html-minify"><a href="#gulp-html-minify" class="headerlink" title="gulp-html-minify"></a>gulp-html-minify</h3><p>描述：压缩HTML。</p>
-<pre><code>var htmlminify = require(&apos;gulp-html-minify&apos;);
-
-gulp.src(&apos;index.html&apos;)
-    .pipe(htmlminify())
-    .pipe(gulp.dest(&apos;./dist&apos;))
-</code></pre><h3 id="gulp-imagemin"><a href="#gulp-imagemin" class="headerlink" title="gulp-imagemin"></a>gulp-imagemin</h3><p>描述：压缩图片。</p>
-<pre><code>var imagemin = require(&apos;gulp-imagemin&apos;);
-
-gulp.src(&apos;./img/*.{jpg,png,gif,ico}&apos;)
-    .pipe(imagemin())
-    .pipe(gulp.dest(&apos;./dist/img&apos;))
-</code></pre><h3 id="gulp-zip"><a href="#gulp-zip" class="headerlink" title="gulp-zip"></a>gulp-zip</h3><p>描述：ZIP压缩文件。</p>
-<pre><code>var zip = require(&apos;gulp-zip&apos;);
-
-gulp.src(&apos;./src/*&apos;)
-    .pipe(zip(&apos;all.zip&apos;))                   // 压缩成all.zip文件
-    .pipe(gulp.dest(&apos;./dist&apos;))
-</code></pre><h2 id="JS-CSS自动注入"><a href="#JS-CSS自动注入" class="headerlink" title="JS/CSS自动注入"></a>JS/CSS自动注入</h2><h3 id="gulp-autoprefixer"><a href="#gulp-autoprefixer" class="headerlink" title="gulp-autoprefixer"></a>gulp-autoprefixer</h3><p>描述：自动为css添加浏览器前缀。</p>
-<pre><code>var autoprefixer = require(&apos;gulp-autoprefixer&apos;);
-
-gulp.src(&apos;./css/*.css&apos;)
-    .pipe(autoprefixer())           // 直接添加前缀
-    .pipe(gulp.dest(&apos;dist&apos;))
-
-gulp.src(&apos;./css/*.css&apos;)
-    .pipe(autoprefixer({
-        browsers: [&apos;last 2 versions&apos;],      // 浏览器版本
-        cascade：true                       // 美化属性，默认true
-        add: true                           // 是否添加前缀，默认true
-        remove: true                        // 删除过时前缀，默认true
-        flexbox: true                       // 为flexbox属性添加前缀，默认true
-    }))
-    .pipe(gulp.dest(&apos;./dist&apos;))
-</code></pre><p>查看更多配置：<a href="https://github.com/postcss/autoprefixer#options" target="_blank" rel="external">options</a></p>
-<p>更多浏览器版本：<a href="https://github.com/ai/browserslist#queries" target="_blank" rel="external">browsers</a> </p>
-<h3 id="gulp-useref"><a href="#gulp-useref" class="headerlink" title="gulp-useref"></a>gulp-useref</h3><p>描述：解析构建块在HTML文件来代替引用未经优化的脚本和样式表。</p>
-<pre><code>// index.html
-
-&lt;!-- build:css /css/all.css --&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;css/normalize.css&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
-&lt;!-- endbuild --&gt;
-
-// gulpfile.js
-
-var useref = require(&apos;gulp-useref&apos;);
-
-gulp.src(&apos;index.html&apos;)
-    .pipe(useref())
-    .pipe(gulp.dest(&apos;./dist&apos;))
-</code></pre><p>替换之后的index.html中就会变成：</p>
-<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/all.css&quot;&gt;  // 之前的两个&lt;link&gt;替换成一个了
-</code></pre><h3 id="gulp-rev"><a href="#gulp-rev" class="headerlink" title="gulp-rev"></a>gulp-rev</h3><p>描述：给静态资源文件名添加hash值:unicorn.css =&gt; unicorn-d41d8cd98f.css</p>
-<pre><code>var rev = require(&apos;gulp-rev&apos;);
-
-gulp.src(&apos;./css/*.css&apos;)
-    .pipe(rev())
-    .pipe(gulp.dest(&apos;./dist/css&apos;))
-</code></pre><h3 id="gulp-rev-replace"><a href="#gulp-rev-replace" class="headerlink" title="gulp-rev-replace"></a>gulp-rev-replace</h3><p>描述：重写被gulp-rev重命名的文件名。</p>
-<pre><code>var rev = require(&apos;gulp-rev&apos;);
-var revReplace = require(&apos;gulp-rev-replace&apos;);
-var useref = require(&apos;gulp-useref&apos;);
-
-gulp.src(&apos;index.html&apos;)
-    .pipe(useref())                         // 替换HTML中引用的css和js
-    .pipe(rev())                            // 给css,js,html加上hash版本号
-    .pipe(revReplace())                     // 把引用的css和js替换成有版本号的名字
-    .pipe(gulp.dest(&apos;./dist&apos;))
-</code></pre><h3 id="gulp-html-replace"><a href="#gulp-html-replace" class="headerlink" title="gulp-html-replace"></a>gulp-html-replace</h3><p>描述：替换html中的构建块。</p>
-<pre><code>// index.html
-
-&lt;!-- build:css --&gt;                          // css是buildName,可以自己定义
-&lt;link rel=&quot;stylesheet&quot; href=&quot;css/normalize.css&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
-&lt;!-- endbuild --&gt;
-
-// gulpfile.js
-
-var htmlreplace = require(&apos;gulp-html-replace&apos;);
-
-gulp.src(&apos;index.html&apos;)
-    .pipe(htmlreplace({
-        &apos;css&apos;:&apos;all.css&apos;                     // css是index.html中定义的buildName
-    }))
-    .pipe(gulp.dest(&apos;./dist&apos;))
-</code></pre><p>替换之后的index.html中就会变成：</p>
-<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;all.css&quot;&gt;      // 之前的两个&lt;link&gt;替换成一个了
-</code></pre><h2 id="流控制"><a href="#流控制" class="headerlink" title="流控制"></a>流控制</h2><h3 id="gulp-if"><a href="#gulp-if" class="headerlink" title="gulp-if"></a>gulp-if</h3><p>描述：有条件地运行一个任务。</p>
-<pre><code>var gulpif = require(&apos;gulp-if&apos;);
-var uglify = require(&apos;gulp-uglify&apos;);
-var concat = require(&apos;gulp-concat&apos;);
-var condition = true; 
-
-gulp.src(&apos;./js/*.js&apos;)
-    .pipe(gulpif(condition, uglify(), concat(&apos;all.js&apos;)))  // condition为true时执行uglify(), else 执行concat(&apos;all.js&apos;)
-    .pipe(gulp.dest(&apos;./dist/&apos;));
-</code></pre><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><h3 id="gulp-load-plugins"><a href="#gulp-load-plugins" class="headerlink" title="gulp-load-plugins"></a>gulp-load-plugins</h3><p>描述：从包的依赖和附件里加载gulp插件到一个对象里给你选择。</p>
-<pre><code>// package.json 
-
-&quot;devDependencies&quot;: {
-    &quot;gulp&quot;: &quot;^3.9.1&quot;,
-    &quot;gulp-concat&quot;: &quot;^2.6.1&quot;,
-    &quot;gulp-rename&quot;: &quot;^1.2.2&quot;,
-    &quot;gulp-uglify&quot;: &quot;^2.0.1&quot;
-}
-
-// gulpfile.js
-
-var $ = require(&apos;gulp-load-plugins&apos;)();     // $ 是一个对象,加载了依赖里的插件
-
-gulp.src(&apos;./**/*.js&apos;)
-    .pipe($.concat(&apos;all.js&apos;))               // 使用插件就可以用$.PluginsName()
-    .pipe($.uglify())
-    .pipe($.rename(&apos;all.min.js&apos;))
-    .pipe(gulp.dest(&apos;./dist&apos;))
-</code></pre><h3 id="gulp-sass"><a href="#gulp-sass" class="headerlink" title="gulp-sass"></a>gulp-sass</h3><p>描述：编译sass。</p>
-<pre><code>var sass = require(&apos;gulp-sass&apos;);
-
-gulp.src(&apos;./sass/**/*.scss&apos;)
-    .pipe(sass({
-        outputStyle: &apos;compressed&apos;           // 配置输出方式,默认为nested
-    }))
-    .pipe(gulp.dest(&apos;./dist/css&apos;));
-
-gulp.watch(&apos;./sass/**/*.scss&apos;, [&apos;sass&apos;]);   // 实时监听sass文件变动,执行sass任务
-</code></pre><h3 id="gulp-babel"><a href="#gulp-babel" class="headerlink" title="gulp-babel"></a>gulp-babel</h3><p>描述：将ES6代码编译成ES5。</p>
-<pre><code>var babel = require(&apos;gulp-babel&apos;);
-
-gulp.src(&apos;./js/index.js&apos;)
-    .pipe(babel({
-        presets: [&apos;es2015&apos;]
-    }))
-    .pipe(gulp.dest(&apos;./dist&apos;))
-</code></pre>
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
       
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/09/精通-gulp-常用插件的功能和用法/" data-id="cj3k4z9e1000120funu7cseae" class="article-share-link">Share</a>
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
       
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
+      
+    </ul>
   
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/gulp/" style="font-size: 10px;">gulp</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/06/05/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/09/精通-gulp-常用插件的功能和用法/">精通 gulp 常用插件的功能和用法</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 林鑫<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
   
 </nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/31/15/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="linshuai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars0.githubusercontent.com/u/13494930?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林鑫博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/31/15/" itemprop="url">sChart.js：一个小型简单的图表库</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-31T09:24:46+08:00">
+                2017-05-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>sChart.js 作为一个小型简单的图表库，没有过多的图表类型，只包含了柱状图、折线图、饼状图和环形图四种基本的图表。麻雀虽小，五脏俱全。sChart.js 基本可以满足这四种图表的需求。而它的小，体现在它的体积上，代码只有 8kb，如果经过服务器的Gzip压缩，那就更小了，因此不用担心造成项目代码冗余。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/31/15/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/23/14/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="linshuai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars0.githubusercontent.com/u/13494930?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林鑫博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/23/14/" itemprop="url">HTML5 进阶系列：canvas 动态图表</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-23T10:09:31+08:00">
+                2017-05-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML5/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML5</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>canvas 强大的功能让它成为了 HTML5 中非常重要的部分，至于它是什么，这里就不需要我多作介绍了。而可视化图表，则是 canvas 强大功能的表现之一。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/23/14/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
 
 
-<script src="/js/script.js"></script>
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/13/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="linshuai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars0.githubusercontent.com/u/13494930?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林鑫博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/10/13/" itemprop="url">微信小程序之购物车功能</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T09:20:09+08:00">
+                2017-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/wxapp/" itemprop="url" rel="index">
+                    <span itemprop="name">微信小程序</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>以往的购物车，基本都是通过大量的 DOM 操作来实现。微信小程序其实跟 vue.js 的用法非常像，接下来就看看小程序可以怎样实现购物车功能。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/10/13/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/28/12/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="linshuai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars0.githubusercontent.com/u/13494930?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林鑫博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/04/28/12/" itemprop="url">HTML5 进阶系列：拖放 API 实现拖放排序</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-28T10:35:35+08:00">
+                2017-04-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML5/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML5</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>HTML5 中提供了直接拖放的 API，极大的方便我们实现拖放效果，不需要去写一大堆的 js，只需要通过监听元素的拖放事件就能实现各种拖放功能。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/28/12/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/25/11/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="linshuai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars0.githubusercontent.com/u/13494930?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林鑫博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/04/25/11/" itemprop="url">HTML5 进阶系列：indexedDB 数据库</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-25T09:13:12+08:00">
+                2017-04-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML5/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML5</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>在 HTML5 的本地存储中，有一种叫 indexedDB 的数据库，该数据库是一种存储在客户端本地的 NoSQL 数据库，它可以存储大量的数据。我们知道 web Storage 可以方便灵活的在本地存取简单数据，但是对于大量结构化存储，indexedDB 的优势就更加明显。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/25/11/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/14/10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="linshuai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars0.githubusercontent.com/u/13494930?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林鑫博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/04/14/10/" itemprop="url">HTML5 进阶系列：web Storage</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-14T14:09:23+08:00">
+                2017-04-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML5/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML5</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>HTML5 的 web Storage 存储方式有两种：localStorage 和 sessionStorage。</p>
+<p>这两种方式都是通过键值对保存数据，存取方便，不影响网站性能。他们的用法相同，存储时间不同。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/14/10/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/01/9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="linshuai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars0.githubusercontent.com/u/13494930?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林鑫博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/04/01/9/" itemprop="url">提高 webpack 构建 Vue 项目的速度</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-01T13:55:07+08:00">
+                2017-04-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/tools/" itemprop="url" rel="index">
+                    <span itemprop="name">前端工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>在项目中，引入了比较多的第三方库，导致项目大，而每次修改，都不会去修改到这些库，构建却都要再打包这些库，浪费了不少时间。所以，把这些不常变动的第三方库都提取出来，下次 build 的时候不再构建这些库，这样既可大大缩短构建时间。那么要怎么去实现呢？</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/01/9/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/28/8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="linshuai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars0.githubusercontent.com/u/13494930?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林鑫博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/28/8/" itemprop="url">Vue.js 插件开发详解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-28T11:21:46+08:00">
+                2017-03-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue/" itemprop="url" rel="index">
+                    <span itemprop="name">vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>随着 Vue.js 越来越火，Vue.js 的相关插件也在不断的被贡献出来，数不胜数。比如官方推荐的 vue-router、vuex 等，都是非常优秀的插件。但是我们更多的人还只停留在使用的阶段，比较少自己开发。所以接下来会通过一个简单的 vue-toast 插件，来了解掌握插件的开发和使用。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/28/8/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/22/7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="linshuai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars0.githubusercontent.com/u/13494930?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林鑫博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/22/7/" itemprop="url">JavaScript 中 闭包 的详解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T09:49:02+08:00">
+                2017-03-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>在 JavaScript 中，闭包是一个让人很难弄懂的概念。ECMAScript 中给闭包的定义是：闭包，指的是词法表示包括不被计算的变量的函数，也就是说，函数可以使用函数之外定义的变量。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/22/7/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/21/6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="linshuai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars0.githubusercontent.com/u/13494930?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林鑫博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/21/6/" itemprop="url">JavaScript 中 apply 、call 的详解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-21T13:46:48+08:00">
+                2017-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>ECMAScript 规范给所有函数都定义了 call 与 apply 两个方法，它们的应用非常广泛，它们的作用也是一模一样，只是传参的形式有区别而已。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/21/6/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars0.githubusercontent.com/u/13494930?v=3&s=460"
+               alt="linshuai" />
+          <p class="site-author-name" itemprop="name">linshuai</p>
+           
+              <p class="site-description motion-element" itemprop="description">总结和分享平时工作中的学习和经验</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">linshuai</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
 
   </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
