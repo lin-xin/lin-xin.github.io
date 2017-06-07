@@ -97,7 +97,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信小程序之购物车功能">
 <meta property="og:url" content="http://yoursite.com/2017/05/10/13/index.html">
-<meta property="og:site_name" content="林鑫博客">
+<meta property="og:site_name" content="林鑫的博客">
 <meta property="og:description" content="以往的购物车，基本都是通过大量的 DOM 操作来实现。微信小程序其实跟 vue.js 的用法非常像，接下来就看看小程序可以怎样实现购物车功能。">
 <meta property="og:image" content="https://raw.githubusercontent.com/lin-xin/mini-apps-mall/master/image/1.gif">
 <meta property="og:updated_time" content="2017-06-07T06:29:30.386Z">
@@ -113,7 +113,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -138,7 +138,7 @@
 
 
 
-  <title>微信小程序之购物车功能 | 林鑫博客</title>
+  <title>微信小程序之购物车功能 | 林鑫的博客</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -175,7 +175,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">林鑫博客</span>
+        <span class="site-title">林鑫的博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -239,6 +239,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -277,7 +287,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="林鑫博客">
+      <meta itemprop="name" content="林鑫的博客">
     </span>
 
     
@@ -412,7 +422,12 @@
 
       
     </div>
-
+    
+    <div class="donate">
+      <img src="http://www.gdfengshuo.com/blog/static/weixin.jpg">
+      <p style="text-align:center;">请作者喝杯饮料！</p>
+    </div>
+    
     <footer class="post-footer">
       
         <div class="post-tags">
@@ -547,6 +562,17 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lin-xin" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
           
         </div>
 

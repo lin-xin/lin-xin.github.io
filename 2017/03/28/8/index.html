@@ -97,7 +97,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue.js 插件开发详解">
 <meta property="og:url" content="http://yoursite.com/2017/03/28/8/index.html">
-<meta property="og:site_name" content="林鑫博客">
+<meta property="og:site_name" content="林鑫的博客">
 <meta property="og:description" content="随着 Vue.js 越来越火，Vue.js 的相关插件也在不断的被贡献出来，数不胜数。比如官方推荐的 vue-router、vuex 等，都是非常优秀的插件。但是我们更多的人还只停留在使用的阶段，比较少自己开发。所以接下来会通过一个简单的 vue-toast 插件，来了解掌握插件的开发和使用。">
 <meta property="og:updated_time" content="2017-06-07T06:19:00.283Z">
 <meta name="twitter:card" content="summary">
@@ -111,7 +111,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -136,7 +136,7 @@
 
 
 
-  <title>Vue.js 插件开发详解 | 林鑫博客</title>
+  <title>Vue.js 插件开发详解 | 林鑫的博客</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -173,7 +173,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">林鑫博客</span>
+        <span class="site-title">林鑫的博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -237,6 +237,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -275,7 +285,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="林鑫博客">
+      <meta itemprop="name" content="林鑫的博客">
     </span>
 
     
@@ -396,7 +406,12 @@
 
       
     </div>
-
+    
+    <div class="donate">
+      <img src="http://www.gdfengshuo.com/blog/static/weixin.jpg">
+      <p style="text-align:center;">请作者喝杯饮料！</p>
+    </div>
+    
     <footer class="post-footer">
       
         <div class="post-tags">
@@ -531,6 +546,17 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lin-xin" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
           
         </div>
 

@@ -1677,7 +1677,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6b5d87;
+  background: #cb4aff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2760,11 +2760,9 @@ hr {
 }
 .footer-inner {
   margin: 0 auto;
-  text-align: left;
 }
 @media (max-width: 767px) {
   .footer-inner {
     width: auto;
-    text-align: center;
   }
 }

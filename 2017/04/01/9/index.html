@@ -97,7 +97,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="提高 webpack 构建 Vue 项目的速度">
 <meta property="og:url" content="http://yoursite.com/2017/04/01/9/index.html">
-<meta property="og:site_name" content="林鑫博客">
+<meta property="og:site_name" content="林鑫的博客">
 <meta property="og:description" content="在项目中，引入了比较多的第三方库，导致项目大，而每次修改，都不会去修改到这些库，构建却都要再打包这些库，浪费了不少时间。所以，把这些不常变动的第三方库都提取出来，下次 build 的时候不再构建这些库，这样既可大大缩短构建时间。那么要怎么去实现呢？">
 <meta property="og:updated_time" content="2017-06-07T06:18:42.561Z">
 <meta name="twitter:card" content="summary">
@@ -111,7 +111,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -136,7 +136,7 @@
 
 
 
-  <title>提高 webpack 构建 Vue 项目的速度 | 林鑫博客</title>
+  <title>提高 webpack 构建 Vue 项目的速度 | 林鑫的博客</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -173,7 +173,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">林鑫博客</span>
+        <span class="site-title">林鑫的博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -237,6 +237,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -275,7 +285,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="林鑫博客">
+      <meta itemprop="name" content="林鑫的博客">
     </span>
 
     
@@ -394,7 +404,12 @@
 
       
     </div>
-
+    
+    <div class="donate">
+      <img src="http://www.gdfengshuo.com/blog/static/weixin.jpg">
+      <p style="text-align:center;">请作者喝杯饮料！</p>
+    </div>
+    
     <footer class="post-footer">
       
         <div class="post-tags">
@@ -531,6 +546,17 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lin-xin" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
           
         </div>
 
