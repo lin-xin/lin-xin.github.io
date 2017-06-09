@@ -1677,7 +1677,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c9ddff;
+  background: #ffedab;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2778,7 +2778,7 @@ hr {
   margin-right: 10%;
   margin-bottom: 20px;
   border: 1px solid #ddd;
-  padding: 20px;
+  padding: 5px;
   box-sizing: border-box;
 }
 .open-all-list:nth-child(2n) {
@@ -2812,7 +2812,6 @@ hr {
   .open-all-list {
     width: 30%;
     margin-right: 5%;
-    padding: 10px;
   }
   .open-all-list:nth-child(2n) {
     margin-right: 5%;
