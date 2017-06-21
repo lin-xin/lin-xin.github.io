@@ -1677,7 +1677,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #86ebcf;
+  background: #440e75;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2793,6 +2793,16 @@ hr {
   height: 50px;
   text-align: center;
   margin-top: 10px;
+}
+.open-list-num {
+  height: 30px;
+  text-align: center;
+}
+.open-list-num img {
+  display: inline-block;
+}
+.open-list-num a {
+  border-bottom: 0;
 }
 .open-list-subhead {
   font-size: 14px;
