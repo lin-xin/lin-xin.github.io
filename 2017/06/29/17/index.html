@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript,图表," />
+  <meta name="keywords" content="canvas,exif,图片上传," />
 
 
 
@@ -88,19 +88,19 @@
 
 
 
-<meta name="description" content="sChart.js 作为一个小型简单的图表库，没有过多的图表类型，只包含了柱状图、折线图、饼状图和环形图四种基本的图表。麻雀虽小，五脏俱全。sChart.js 基本可以满足这四种图表的需求。而它的小，体现在它的体积上，代码只有 8kb，如果经过服务器的Gzip压缩，那就更小了，因此不用担心造成项目代码冗余。">
-<meta name="keywords" content="JavaScript,图表">
+<meta name="description" content="在手机上通过网页 input 标签拍照上传图片，有一些手机会出现图片旋转了90度d的问题，包括 iPhone 和个别三星手机。这些手机竖着拍的时候才会出现这种问题，横拍出来的照片就正常显示。因此，可以通过获取手机拍照角度来对照片进行旋转，从而解决这个问题。">
+<meta name="keywords" content="canvas,exif,图片上传">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sChart.js：一个小型简单的图表库">
-<meta property="og:url" content="https://lin-xin.github.io/2017/05/31/15/index.html">
+<meta property="og:title" content="移动端图片上传旋转、压缩的解决方案">
+<meta property="og:url" content="https://lin-xin.github.io/2017/06/29/17/index.html">
 <meta property="og:site_name" content="林鑫的博客">
-<meta property="og:description" content="sChart.js 作为一个小型简单的图表库，没有过多的图表类型，只包含了柱状图、折线图、饼状图和环形图四种基本的图表。麻雀虽小，五脏俱全。sChart.js 基本可以满足这四种图表的需求。而它的小，体现在它的体积上，代码只有 8kb，如果经过服务器的Gzip压缩，那就更小了，因此不用担心造成项目代码冗余。">
-<meta property="og:image" content="http://open.omwteam.com/sChart/static/img/demo.jpg">
-<meta property="og:updated_time" content="2017-06-17T03:02:04.502Z">
+<meta property="og:description" content="在手机上通过网页 input 标签拍照上传图片，有一些手机会出现图片旋转了90度d的问题，包括 iPhone 和个别三星手机。这些手机竖着拍的时候才会出现这种问题，横拍出来的照片就正常显示。因此，可以通过获取手机拍照角度来对照片进行旋转，从而解决这个问题。">
+<meta property="og:image" content="https://raw.githubusercontent.com/lin-xin/blog/master/file-demo/xy.png">
+<meta property="og:updated_time" content="2017-06-29T12:45:07.923Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sChart.js：一个小型简单的图表库">
-<meta name="twitter:description" content="sChart.js 作为一个小型简单的图表库，没有过多的图表类型，只包含了柱状图、折线图、饼状图和环形图四种基本的图表。麻雀虽小，五脏俱全。sChart.js 基本可以满足这四种图表的需求。而它的小，体现在它的体积上，代码只有 8kb，如果经过服务器的Gzip压缩，那就更小了，因此不用担心造成项目代码冗余。">
-<meta name="twitter:image" content="http://open.omwteam.com/sChart/static/img/demo.jpg">
+<meta name="twitter:title" content="移动端图片上传旋转、压缩的解决方案">
+<meta name="twitter:description" content="在手机上通过网页 input 标签拍照上传图片，有一些手机会出现图片旋转了90度d的问题，包括 iPhone 和个别三星手机。这些手机竖着拍的时候才会出现这种问题，横拍出来的照片就正常显示。因此，可以通过获取手机拍照角度来对照片进行旋转，从而解决这个问题。">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/lin-xin/blog/master/file-demo/xy.png">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://lin-xin.github.io/2017/05/31/15/"/>
+  <link rel="canonical" href="https://lin-xin.github.io/2017/06/29/17/"/>
 
 
 
 
 
-  <title>sChart.js：一个小型简单的图表库 | 林鑫的博客</title>
+  <title>移动端图片上传旋转、压缩的解决方案 | 林鑫的博客</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -294,7 +294,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://lin-xin.github.io/2017/05/31/15/">
+    <link itemprop="mainEntityOfPage" href="https://lin-xin.github.io/2017/06/29/17/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="linshuai">
@@ -311,7 +311,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">sChart.js：一个小型简单的图表库</h2>
+          <h2 class="post-title" itemprop="name headline">移动端图片上传旋转、压缩的解决方案</h2>
         
 
         <div class="post-meta">
@@ -323,8 +323,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-31T09:24:46+08:00">
-                2017-05-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-29T20:42:31+08:00">
+                2017-06-29
               </time>
             
 
@@ -363,7 +363,7 @@
 
           
           
-             <span id="/2017/05/31/15/" class="leancloud_visitors" data-flag-title="sChart.js：一个小型简单的图表库">
+             <span id="/2017/06/29/17/" class="leancloud_visitors" data-flag-title="移动端图片上传旋转、压缩的解决方案">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -391,35 +391,56 @@
       
 
       
-        <p>sChart.js 作为一个小型简单的图表库，没有过多的图表类型，只包含了柱状图、折线图、饼状图和环形图四种基本的图表。麻雀虽小，五脏俱全。sChart.js 基本可以满足这四种图表的需求。而它的小，体现在它的体积上，代码只有 8kb，如果经过服务器的Gzip压缩，那就更小了，因此不用担心造成项目代码冗余。</p>
+        <p>在手机上通过网页 input 标签拍照上传图片，有一些手机会出现图片旋转了90度d的问题，包括 iPhone 和个别三星手机。这些手机竖着拍的时候才会出现这种问题，横拍出来的照片就正常显示。因此，可以通过获取手机拍照角度来对照片进行旋转，从而解决这个问题。</p>
 <a id="more"></a>
-<p>该库使用 canvas 实现，兼容 IE9 以上浏览器。</p>
-<ul>
-<li>仓库地址：<a href="https://github.com/lin-xin/sChart.js" target="_blank" rel="external">sChart.js</a></li>
-<li>文档(中英文)：<a href="http://open.omwteam.com/sChart" target="_blank" rel="external">http://open.omwteam.com/sChart</a></li>
-<li>演示地址：<a href="http://open.omwteam.com/sChart/demo.html" target="_blank" rel="external">http://open.omwteam.com/sChart/demo.html</a></li>
-</ul>
-<p><img src="http://open.omwteam.com/sChart/static/img/demo.jpg" alt="demo"></p>
-<h2 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install schart.js</div><div class="line">import sChart from &apos;schart.js&apos;</div></pre></td></tr></table></figure>
-<p>也可以直接插入script到你的HTML页面:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://open.omwteam.com/sChart/static/js/sChart.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>使用简单：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> sChart(canvasId, type, data, options);</div></pre></td></tr></table></figure>
-<p>即可生成一个图表。</p>
-<p>canvasId：canvas标签的id，必填。</p>
-<p>type：图表类型，必填。</p>
-<p>options：图表配置参数，可选，具体参考<a href="http://open.omwteam.com/sChart/index.html" target="_blank" rel="external">文档</a>。</p>
-<p>data：要生成图表的数据，格式为：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">data:[</div><div class="line">    &#123;<span class="attr">name</span>: <span class="string">'xx'</span>, <span class="attr">value</span>: <span class="string">'yy'</span>&#125;</div><div class="line">]</div></pre></td></tr></table></figure>
-<p>name则为坐标值，value则为柱状数据值。</p>
-<p>其他类型的图表data格式都相同，可以同个数据生成不同图表。</p>
-<h2 id="vue相关"><a href="#vue相关" class="headerlink" title="vue相关"></a>vue相关</h2><p>vue-schart：是用vue.js封装了 sChart.js 的一个库。方便在vue的项目中使用。</p>
-<p>仓库地址：<a href="https://github.com/lin-xin/vue-schart" target="_blank" rel="external">https://github.com/lin-xin/vue-schart</a></p>
-<p>在项目中使用了 vue-schart 的有：<a href="https://github.com/lin-xin/vue-manage-system" target="_blank" rel="external">vue-manage-system</a></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>当然，现在有很多成熟的图表库，Chart.js、echarts等等，有着丰富的图表和炫酷的效果。这个库当然不足以与它们相媲美。</p>
-<p>但是很多时候我的项目追求的是小，我并不需要用到那么多的功能，我只想展示一下就OK。那它们也可以按需引用，是吧？</p>
-<p>所以我觉得，适合自己项目的，才是最好的！</p>
-
+<h2 id="Orientation"><a href="#Orientation" class="headerlink" title="Orientation"></a>Orientation</h2><p>这个参数并不是所有图片都有的，不过手机拍出来的图片是带有这个参数的。</p>
+<table>
+<thead>
+<tr>
+<th>旋转角度</th>
+<th>参数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0°</td>
+<td>1</td>
+</tr>
+<tr>
+<td>顺时针90°</td>
+<td>6</td>
+</tr>
+<tr>
+<td>逆时针90°</td>
+<td>8</td>
+</tr>
+<tr>
+<td>180°</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>参数为 1 的时候显示正常，那么在这些横拍显示正常，即 Orientation = 1 的手机上，竖拍的参数为 6。</p>
+<p>想要获取 Orientation 参数，可以通过 exif.js 库来操作。exif.js 功能很多，体积也很大，未压缩之前足足有 30k，这对手机页面加载来说是非常大影响的。而我只需要获取 Orientation 信息而已，所以我这里删减了 exif.js 库的一些代码，将代码缩小到几KB。</p>
+<p>exif.js 获取 Orientation ：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">EXIF.getData(file, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">    <span class="keyword">var</span> Orientation = EXIF.getTag(<span class="keyword">this</span>, <span class="string">'Orientation'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>file 则是 input 文件表单上传的文件。上传的文件经过 fileReader.readAsDataURL(file) 就可以实现预览图片了，这方面不清楚的可以查看：<a href="https://github.com/lin-xin/blog/issues/19" target="_blank" rel="external">HTML5 进阶系列：文件上传下载</a></p>
+<h2 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h2><p>旋转需要用到 canvas 的 rotate() 方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.rotate(angle);</div></pre></td></tr></table></figure>
+<p>rotate 方法的参数为旋转弧度。需要将角度转为弧度：degrees * Math.PI / 180</p>
+<p>旋转的中心点默认都在 canvas 的起点，即 ( 0, 0 )。旋转的原理如下图：</p>
+<p><img src="https://raw.githubusercontent.com/lin-xin/blog/master/file-demo/xy.png" alt="旋转原理图"></p>
+<p>旋转之后，如果从 ( 0, 0 ) 点进行 drawImage()，那么画出来的位置就是在左图中的旋转 90 度后的位置，不在可视区域呢。旋转之后，坐标轴也跟着旋转了，想要显示在可视区域呢，需要将 ( 0, 0 ) 点往 y 轴的反方向移 y 个单位，此时的起始点则为 ( 0, -y )。</p>
+<p>同理，可以获得旋转 -90 度后的起始点为 ( -x, 0 )，旋转 180 度后的起始点为 ( -x, -y )。</p>
+<h2 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h2><p>手机拍出来的照片太大，而且使用 base64 编码的照片会比原照片大，那么上传的时候进行压缩就非常有必要的。现在的手机像素这么高，拍出来的照片宽高都有几千像素，用 canvas 来渲染这照片的速度会相对比较慢。</p>
+<p>因此第一步需要先对上传照片的宽高做限制，判断宽度或高度是否超出哪个范围，则等比压缩其宽高。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ratio = width / height;</div><div class="line"><span class="keyword">if</span>(imgWidth &gt; imgHeight &amp;&amp; imgWidth &gt; xx)&#123;</div><div class="line">    imgWidth = xx;</div><div class="line">    imgHeight = <span class="built_in">Math</span>.ceil(xx / ratio);</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(imgWidth &lt; imgHeight &amp;&amp; imgHeight &gt; yy)&#123;</div><div class="line">    imgWidth = <span class="built_in">Math</span>.ceil(yy * ratio);</div><div class="line">    imgHeight = yy;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>第二步就通过 canvas.toDataURL() 方法来压缩照片质量。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">canvas.toDataURL(<span class="string">"image/jpeg"</span>, <span class="number">1</span>);</div></pre></td></tr></table></figure>
+<p>toDataURL() 方法返回一个包含图片展示的 data URI 。使用两个参数，第一个参数为图片格式，默认为 image/png。第二个参数为压缩质量，在指定图片格式为 image/jpeg 或 image/webp的情况下，可以从 0 到 1 的区间内选择图片的质量。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>综合以上，例子的代码包括精简的exif.js库地址：<a href="https://github.com/lin-xin/blog/tree/master/file-demo" target="_blank" rel="external">file-demo</a></p>
+<p>主要的核心代码如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">id</span>=<span class="string">"files"</span> &gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"blank.gif"</span> <span class="attr">id</span>=<span class="string">"preview"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"small-exif.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">var</span> ipt = <span class="built_in">document</span>.getElementById(<span class="string">'files'</span>),</div><div class="line">    img = <span class="built_in">document</span>.getElementById(<span class="string">'preview'</span>),</div><div class="line">    Orientation = <span class="literal">null</span>;</div><div class="line">ipt.onchange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> file = ipt.files[<span class="number">0</span>],</div><div class="line">        reader = <span class="keyword">new</span> FileReader(),</div><div class="line">        image = <span class="keyword">new</span> Image();</div><div class="line">        </div><div class="line">    <span class="keyword">if</span>(file)&#123;</div><div class="line">        EXIF.getData(file, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </div><div class="line">            Orientation = EXIF.getTag(<span class="keyword">this</span>, <span class="string">'Orientation'</span>);</div><div class="line">        &#125;);</div><div class="line">        reader.onload = <span class="function"><span class="keyword">function</span> (<span class="params">ev</span>) </span>&#123;</div><div class="line">            image.src = ev.target.result;</div><div class="line">            image.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="keyword">var</span> imgWidth = <span class="keyword">this</span>.width,</div><div class="line">                    imgHeight = <span class="keyword">this</span>.height;</div><div class="line">                <span class="comment">// 控制上传图片的宽高</span></div><div class="line">                <span class="keyword">if</span>(imgWidth &gt; imgHeight &amp;&amp; imgWidth &gt; <span class="number">750</span>)&#123;</div><div class="line">                    imgWidth = <span class="number">750</span>;</div><div class="line">                    imgHeight = <span class="built_in">Math</span>.ceil(<span class="number">750</span> * <span class="keyword">this</span>.height / <span class="keyword">this</span>.width);</div><div class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(imgWidth &lt; imgHeight &amp;&amp; imgHeight &gt; <span class="number">1334</span>)&#123;</div><div class="line">                    imgWidth = <span class="built_in">Math</span>.ceil(<span class="number">1334</span> * <span class="keyword">this</span>.width / <span class="keyword">this</span>.height);</div><div class="line">                    imgHeight = <span class="number">1334</span>;</div><div class="line">                &#125;</div><div class="line">                </div><div class="line">                <span class="keyword">var</span> canvas = <span class="built_in">document</span>.createElement(<span class="string">"canvas"</span>),</div><div class="line">                ctx = canvas.getContext(<span class="string">'2d'</span>);</div><div class="line">                canvas.width = imgWidth;</div><div class="line">                canvas.height = imgHeight;</div><div class="line">                <span class="keyword">if</span>(Orientation &amp;&amp; Orientation != <span class="number">1</span>)&#123;</div><div class="line">                    <span class="keyword">switch</span>(Orientation)&#123;</div><div class="line">                        <span class="keyword">case</span> <span class="number">6</span>:     <span class="comment">// 旋转90度</span></div><div class="line">                            canvas.width = imgHeight;    </div><div class="line">                            canvas.height = imgWidth;    </div><div class="line">                            ctx.rotate(<span class="built_in">Math</span>.PI / <span class="number">2</span>);</div><div class="line">                            <span class="comment">// (0,-imgHeight) 从旋转原理图那里获得的起始点</span></div><div class="line">                            ctx.drawImage(<span class="keyword">this</span>, <span class="number">0</span>, -imgHeight, imgWidth, imgHeight);</div><div class="line">                            <span class="keyword">break</span>;</div><div class="line">                        <span class="keyword">case</span> <span class="number">3</span>:     <span class="comment">// 旋转180度</span></div><div class="line">                            ctx.rotate(<span class="built_in">Math</span>.PI);    </div><div class="line">                            ctx.drawImage(<span class="keyword">this</span>, -imgWidth, -imgHeight, imgWidth, imgHeight);</div><div class="line">                            <span class="keyword">break</span>;</div><div class="line">                        <span class="keyword">case</span> <span class="number">8</span>:     <span class="comment">// 旋转-90度</span></div><div class="line">                            canvas.width = imgHeight;    </div><div class="line">                            canvas.height = imgWidth;    </div><div class="line">                            ctx.rotate(<span class="number">3</span> * <span class="built_in">Math</span>.PI / <span class="number">2</span>);    </div><div class="line">                            ctx.drawImage(<span class="keyword">this</span>, -imgWidth, <span class="number">0</span>, imgWidth, imgHeight);</div><div class="line">                            <span class="keyword">break</span>;</div><div class="line">                    &#125;</div><div class="line">                &#125;<span class="keyword">else</span>&#123;</div><div class="line">                    ctx.drawImage(<span class="keyword">this</span>, <span class="number">0</span>, <span class="number">0</span>, imgWidth, imgHeight);</div><div class="line">                &#125;</div><div class="line">                img.src = canvas.toDataURL(<span class="string">"image/jpeg"</span>, <span class="number">0.8</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        reader.readAsDataURL(file);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
       
     </div>
 
@@ -453,9 +474,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+            <a href="/tags/canvas/" rel="tag"># canvas</a>
           
-            <a href="/tags/charts/" rel="tag"># 图表</a>
+            <a href="/tags/exif/" rel="tag"># exif</a>
+          
+            <a href="/tags/图片上传/" rel="tag"># 图片上传</a>
           
         </div>
       
@@ -472,8 +495,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/23/14/" rel="next" title="HTML5 进阶系列：canvas 动态图表">
-                <i class="fa fa-chevron-left"></i> HTML5 进阶系列：canvas 动态图表
+              <a href="/2017/06/17/16/" rel="next" title="vue-schart ： vue.js 的图表组件">
+                <i class="fa fa-chevron-left"></i> vue-schart ： vue.js 的图表组件
               </a>
             
           </div>
@@ -482,8 +505,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/17/16/" rel="prev" title="vue-schart ： vue.js 的图表组件">
-                vue-schart ： vue.js 的图表组件 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/06/29/18/" rel="prev" title="HTML5 进阶系列：文件上传下载">
+                HTML5 进阶系列：文件上传下载 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -669,7 +692,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用指南"><span class="nav-number">1.</span> <span class="nav-text">使用指南</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue相关"><span class="nav-number">2.</span> <span class="nav-text">vue相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Orientation"><span class="nav-number">1.</span> <span class="nav-text">Orientation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#旋转"><span class="nav-number">2.</span> <span class="nav-text">旋转</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩"><span class="nav-number">3.</span> <span class="nav-text">压缩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
