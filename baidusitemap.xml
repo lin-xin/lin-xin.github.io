@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://lin-xin.github.io/2017/03/28/8/</loc>
+    <lastmod>2017-07-05T11:34:40.148Z</lastmod>
+    <data>
+        <display>
+        <title>Vue.js 插件开发详解</title>
+        <pubTime>2017-03-28T03:21:46.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="vue" url="https://lin-xin.github.io/categories/vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://lin-xin.github.io/2017/06/29/18/</loc>
     <lastmod>2017-07-02T03:39:03.829Z</lastmod>
     <data>
@@ -197,26 +217,6 @@
            
              
               <breadCrumb title="HTML5" url="https://lin-xin.github.io/categories/HTML5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lin-xin.github.io/2017/03/28/8/</loc>
-    <lastmod>2017-07-02T03:33:20.283Z</lastmod>
-    <data>
-        <display>
-        <title>Vue.js 插件开发详解</title>
-        <pubTime>2017-03-28T03:21:46.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-         
-           
-             
-              <breadCrumb title="vue" url="https://lin-xin.github.io/categories/vue/"/>
           
         </display>
     </data>
