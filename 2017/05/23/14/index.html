@@ -92,7 +92,7 @@
 <meta name="keywords" content="HTML5,JavaScript,图表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTML5 进阶系列：canvas 动态图表">
-<meta property="og:url" content="https://lin-xin.github.io/2017/05/23/14/index.html">
+<meta property="og:url" content="http://blog.gdfengshuo.com/2017/05/23/14/index.html">
 <meta property="og:site_name" content="林鑫的博客">
 <meta property="og:description" content="canvas 强大的功能让它成为了 HTML5 中非常重要的部分，至于它是什么，这里就不需要我多作介绍了。而可视化图表，则是 canvas 强大功能的表现之一。">
 <meta property="og:image" content="https://raw.githubusercontent.com/lin-xin/blog/master/canvas-demo/1.png">
@@ -128,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="https://lin-xin.github.io/2017/05/23/14/"/>
+  <link rel="canonical" href="http://blog.gdfengshuo.com/2017/05/23/14/"/>
 
 
 
@@ -294,7 +294,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://lin-xin.github.io/2017/05/23/14/">
+    <link itemprop="mainEntityOfPage" href="http://blog.gdfengshuo.com/2017/05/23/14/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="linshuai">
@@ -444,8 +444,8 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">canvas.addEventListener(<span class="string">'mousemove'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line"> 	<span class="keyword">var</span> ev = ev||<span class="built_in">window</span>.event;</div><div class="line"> 	<span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;data.length;i++)&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;data.length;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(ev.offsetX &gt; data[i].left &amp;&amp;</div><div class="line">        ev.offsetX &lt; data[i].right &amp;&amp;</div><div class="line">        ev.offsetY &gt; data[i].top &amp;&amp;</div><div class="line">        ev.offsetY &lt; data[i].bottom)&#123;</div><div class="line">    	    <span class="built_in">console</span>.log(<span class="string">'我在第'</span>+i+<span class="string">'个柱状里。'</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>为了更方便的使用，封装成构造函数。通过</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var chart = new sBarChart(&apos;canvas&apos;,data,&#123;</div><div class="line">    title: &apos;xxx公司年度盈利&apos;,   // 标题</div><div class="line">    titleColor: &apos;#000000&apos;,      // 标题颜色</div><div class="line">    titlePosition: &apos;top&apos;,       // 标题位置</div><div class="line">    bgColor: &apos;#ffffff&apos;,         // 背景色</div><div class="line">    fillColor: &apos;#1E9FFF&apos;,       // 柱状填充色</div><div class="line">    axisColor: &apos;#666666&apos;,       // 坐标轴颜色</div><div class="line">    contentColor: &apos;#a5f0f6&apos;     // 内容横线颜色</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>参数可配置，很简单就生成一个个性化的柱状图。代码地址：<a href="https://lin-xin.github.io/link/index.html?target=https://github.com/lin-xin/blog/tree/master/canvas-demo">canvas-demo</a></p>
-<p>最后加上折线图、饼图、环形图，完整封装成sChart.js插件，插件地址：<a href="https://lin-xin.github.io/link/index.html?target=https://github.com/lin-xin/sChart.js">sChart.js</a></p>
+<p>参数可配置，很简单就生成一个个性化的柱状图。代码地址：<a href="https://lin-xin.github.io/link/index.html?target=https://github.com/lin-xin/blog/tree/master/canvas-demo" target="_blank" rel="external">canvas-demo</a></p>
+<p>最后加上折线图、饼图、环形图，完整封装成sChart.js插件，插件地址：<a href="https://lin-xin.github.io/link/index.html?target=https://github.com/lin-xin/sChart.js" target="_blank" rel="external">sChart.js</a></p>
 
       
     </div>

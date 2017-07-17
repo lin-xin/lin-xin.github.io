@@ -92,7 +92,7 @@
 <meta name="keywords" content="HTML5,Blob">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTML5 进阶系列：文件上传下载">
-<meta property="og:url" content="https://lin-xin.github.io/2017/06/29/18/index.html">
+<meta property="og:url" content="http://blog.gdfengshuo.com/2017/06/29/18/index.html">
 <meta property="og:site_name" content="林鑫的博客">
 <meta property="og:description" content="HTML5 中提供的文件API在前端中有着丰富的应用，上传、下载、读取内容等在日常的交互中很常见。而且在各个浏览器的兼容也比较好，包括移动端，除了 IE 只支持 IE10 以上的版本。想要更好地掌握好操作文件的功能，先要熟悉每个API。">
 <meta property="og:updated_time" content="2017-07-02T03:39:03.829Z">
@@ -126,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="https://lin-xin.github.io/2017/06/29/18/"/>
+  <link rel="canonical" href="http://blog.gdfengshuo.com/2017/06/29/18/"/>
 
 
 
@@ -292,7 +292,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://lin-xin.github.io/2017/06/29/18/">
+    <link itemprop="mainEntityOfPage" href="http://blog.gdfengshuo.com/2017/06/29/18/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="linshuai">
@@ -428,9 +428,9 @@
 </ul>
 <h3 id="上传图片预览"><a href="#上传图片预览" class="headerlink" title="上传图片预览"></a>上传图片预览</h3><p>在常见的应用就是在客户端上传图片之后通过 readAsDataURL() 来显示图片。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">id</span>=<span class="string">"files"</span> <span class="attr">accept</span>=<span class="string">"image/jpeg,image/jpg,image/png"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"blank.gif"</span> <span class="attr">id</span>=<span class="string">"preview"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">var</span> elem = <span class="built_in">document</span>.getElementById(<span class="string">'files'</span>),</div><div class="line">        img = <span class="built_in">document</span>.getElementById(<span class="string">'preview'</span>);</div><div class="line">    elem.onchange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    	<span class="keyword">var</span> files = elem.files,</div><div class="line">    	    reader = <span class="keyword">new</span> FileReader();</div><div class="line">    	<span class="keyword">if</span>(files &amp;&amp; files[<span class="number">0</span>])&#123;</div><div class="line">    	    reader.onload = <span class="function"><span class="keyword">function</span> (<span class="params">ev</span>) </span>&#123;</div><div class="line">    	        img.src = ev.target.result;</div><div class="line">    	    &#125;</div><div class="line">    	    reader.readAsDataURL(files[<span class="number">0</span>]);</div><div class="line">    	&#125;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>但是在一些手机上竖着拍照上传照片时会有bug，会发现照片倒了，包括三星和iPhone。。。解决方案这里不做讲解，有兴趣可以查看：<a href="https://lin-xin.github.io/link/index.html?target=https://github.com/lin-xin/blog/issues/18">移动端图片上传旋转、压缩的解决方案</a></p>
+<p>但是在一些手机上竖着拍照上传照片时会有bug，会发现照片倒了，包括三星和iPhone。。。解决方案这里不做讲解，有兴趣可以查看：<a href="https://lin-xin.github.io/link/index.html?target=https://github.com/lin-xin/blog/issues/18" target="_blank" rel="external">移动端图片上传旋转、压缩的解决方案</a></p>
 <h3 id="数据备份与恢复"><a href="#数据备份与恢复" class="headerlink" title="数据备份与恢复"></a>数据备份与恢复</h3><p>FileReader 对象的 readAsText() 可以读取文件的文本，结合 Blob 对象下载文件的功能，那就可以实现将数据导出文件备份到本地，当数据要恢复时，通过 input 把备份文件上传，使用 readAsText() 读取文本，恢复数据。</p>
-<p>代码跟上面功能类似，这里不重复，具体的应用可以参考：<a href="https://lin-xin.github.io/link/index.html?target=https://github.com/lin-xin/notepad">notepad</a></p>
+<p>代码跟上面功能类似，这里不重复，具体的应用可以参考：<a href="https://lin-xin.github.io/link/index.html?target=https://github.com/lin-xin/notepad" target="_blank" rel="external">notepad</a></p>
 <h2 id="Base64-编码"><a href="#Base64-编码" class="headerlink" title="Base64 编码"></a>Base64 编码</h2><p>在 HTML5 中新增了 atob 和 btoa 方法来支持 Base64 编码。它们的命名也很简单，b to a 和 a to b，即代表着编码和解码。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="string">"https://lin-xin.github.io"</span>;</div><div class="line"><span class="keyword">var</span> b = btoa(a);</div><div class="line"><span class="keyword">var</span> c = atob(b);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(a);     <span class="comment">// https://lin-xin.github.io</span></div><div class="line"><span class="built_in">console</span>.log(b);     <span class="comment">// aHR0cHM6Ly9saW4teGluLmdpdGh1Yi5pbw==</span></div><div class="line"><span class="built_in">console</span>.log(c);     <span class="comment">// https://lin-xin.github.io</span></div></pre></td></tr></table></figure>
 <p>btoa 方法对字符串 a 进行编码，不会改变 a 的值，返回一个编码后的值。<br>atob 方法对编码后的字符串进行解码。</p>

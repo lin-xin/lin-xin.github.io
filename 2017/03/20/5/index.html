@@ -92,7 +92,7 @@
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript 中 this 的详解">
-<meta property="og:url" content="https://lin-xin.github.io/2017/03/20/5/index.html">
+<meta property="og:url" content="http://blog.gdfengshuo.com/2017/03/20/5/index.html">
 <meta property="og:site_name" content="林鑫的博客">
 <meta property="og:description" content="this 是 js 中定义的关键字，它自动定义于每一个函数域内，但是它的指向却让人很迷惑。在实际应用中，this 的指向大致可以分为以下四种情况。">
 <meta property="og:updated_time" content="2017-07-02T03:32:23.788Z">
@@ -126,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="https://lin-xin.github.io/2017/03/20/5/"/>
+  <link rel="canonical" href="http://blog.gdfengshuo.com/2017/03/20/5/"/>
 
 
 
@@ -292,7 +292,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://lin-xin.github.io/2017/03/20/5/">
+    <link itemprop="mainEntityOfPage" href="http://blog.gdfengshuo.com/2017/03/20/5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="linshuai">
@@ -403,7 +403,7 @@
 <p>如果构造函数显式的返回一个对象，那么 this 则会指向该对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Person = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = <span class="string">'linxin'</span>;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        <span class="attr">name</span> : <span class="string">'linshuai'</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Person();</div><div class="line"><span class="built_in">console</span>.log(obj.name);      <span class="comment">// linshuai</span></div></pre></td></tr></table></figure></p>
 <p>如果该函数不用 new 调用，当作普通函数执行，那么 this 依然指向全局对象。</p>
 <h3 id="4-call-或-apply-调用"><a href="#4-call-或-apply-调用" class="headerlink" title="4.call() 或 apply() 调用"></a>4.call() 或 apply() 调用</h3><p>通过调用函数的 call() 或 apply() 方法可动态的改变 this 的指向。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj1 = &#123;</div><div class="line">    <span class="attr">name</span> : <span class="string">'linxin'</span>,</div><div class="line">    <span class="attr">getName</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj2 = &#123;</div><div class="line">    <span class="attr">name</span> : <span class="string">'linshuai'</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">obj1.getName();             <span class="comment">// linxin</span></div><div class="line">obj1.getName.call(obj2);    <span class="comment">// linshuai</span></div><div class="line">obj1.getName.apply(obj2);   <span class="comment">// linshuai</span></div></pre></td></tr></table></figure></p>
-<p>这两个方法在js中都是非常常用的方法，可以阅读下一篇：<a href="https://lin-xin.github.io/link/index.html?target=https://github.com/lin-xin/blog/issues/7">javascript 中 apply 、call 的详解</a>。</p>
+<p>这两个方法在js中都是非常常用的方法，可以阅读下一篇：<a href="https://lin-xin.github.io/link/index.html?target=https://github.com/lin-xin/blog/issues/7" target="_blank" rel="external">javascript 中 apply 、call 的详解</a>。</p>
 
       
     </div>
