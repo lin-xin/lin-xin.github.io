@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="林鑫的博客">
 <meta property="og:description" content="以往的购物车，基本都是通过大量的 DOM 操作来实现。微信小程序其实跟 vue.js 的用法非常像，接下来就看看小程序可以怎样实现购物车功能。">
 <meta property="og:image" content="https://raw.githubusercontent.com/lin-xin/mini-apps-mall/master/image/1.gif">
-<meta property="og:updated_time" content="2017-07-02T03:35:00.084Z">
+<meta property="og:updated_time" content="2017-07-17T08:49:39.597Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序之购物车功能">
 <meta name="twitter:description" content="以往的购物车，基本都是通过大量的 DOM 操作来实现。微信小程序其实跟 vue.js 的用法非常像，接下来就看看小程序可以怎样实现购物车功能。">
@@ -359,6 +359,17 @@
 
           
             
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2017/05/10/13/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/05/10/13/" itemprop="commentsCount"></span>
+                </a>
+              
+            
           
 
           
@@ -424,7 +435,7 @@
 <h3 id="删除商品"><a href="#删除商品" class="headerlink" title="删除商品"></a>删除商品</h3><p>点击删除按钮则从购物车列表中删除当前元素，删除之后如果购物车为空，改变购物车为空标识hasList为false</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">deleteList(e) &#123;</div><div class="line">    <span class="keyword">const</span> index = e.currentTarget.dataset.index;</div><div class="line">    <span class="keyword">let</span> carts = <span class="keyword">this</span>.data.carts;</div><div class="line">    carts.splice(index,<span class="number">1</span>);              <span class="comment">// 删除购物车列表里这个商品</span></div><div class="line">    <span class="keyword">this</span>.setData(&#123;</div><div class="line">        <span class="attr">carts</span>: carts</div><div class="line">    &#125;);</div><div class="line">    <span class="keyword">if</span>(!carts.length)&#123;                  <span class="comment">// 如果购物车为空</span></div><div class="line">        <span class="keyword">this</span>.setData(&#123;</div><div class="line">            <span class="attr">hasList</span>: <span class="literal">false</span>              <span class="comment">// 修改标识为false，显示购物车为空页面</span></div><div class="line">        &#125;);</div><div class="line">    &#125;<span class="keyword">else</span>&#123;                              <span class="comment">// 如果不为空</span></div><div class="line">        <span class="keyword">this</span>.getTotalPrice();           <span class="comment">// 重新计算总价格</span></div><div class="line">    &#125;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>虽然一个购物车功能比较简单，但是里面涉及到微信小程序的知识点还是比较多的，适合新手练习掌握。</p>
-<p>完整的小程序商城demo含购物车，请戳：<a href="https://lin-xin.github.io/link/index.html?target=https://github.com/lin-xin/wxapp-mall" target="_blank" rel="external">wxapp-mall</a></p>
+<p>完整的小程序商城demo含购物车，请戳：<a href="https://github.com/lin-xin/wxapp-mall" target="_blank" rel="external">wxapp-mall</a></p>
 
       
     </div>
@@ -513,6 +524,8 @@
 
           
   <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
     
   </div>
 
@@ -605,7 +618,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://lin-xin.github.io/link/index.html?target=http://weibo.com/p/1005052062260541" target="_blank" title="Weibo">
+                <a href="http://weibo.com/p/1005052062260541" target="_blank" title="Weibo">
                   
                     <i class="fa fa-fw fa-weibo"></i>
                   
@@ -614,7 +627,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://lin-xin.github.io/link/index.html?target=http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" title="QQ">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" title="QQ">
                   
                     <i class="fa fa-fw fa-qq"></i>
                   
@@ -821,6 +834,21 @@
 
 
 
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt7kdFR9';
+      var conf = 'prod_a1dde8bf3f077e090bd150affe395749';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
 
 
 

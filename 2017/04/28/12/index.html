@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://blog.gdfengshuo.com/2017/04/28/12/index.html">
 <meta property="og:site_name" content="林鑫的博客">
 <meta property="og:description" content="HTML5 中提供了直接拖放的 API，极大的方便我们实现拖放效果，不需要去写一大堆的 js，只需要通过监听元素的拖放事件就能实现各种拖放功能。">
-<meta property="og:updated_time" content="2017-07-02T03:34:46.188Z">
+<meta property="og:updated_time" content="2017-07-17T08:49:40.837Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5 进阶系列：拖放 API 实现拖放排序">
 <meta name="twitter:description" content="HTML5 中提供了直接拖放的 API，极大的方便我们实现拖放效果，不需要去写一大堆的 js，只需要通过监听元素的拖放事件就能实现各种拖放功能。">
@@ -357,6 +357,17 @@
 
           
             
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2017/04/28/12/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/04/28/12/" itemprop="commentsCount"></span>
+                </a>
+              
+            
           
 
           
@@ -434,7 +445,7 @@
 <li>但是会发现，源对象无法排到最后一个去，只能在倒数第二。这时就要监听 dragleave 事件，当过程对象是最后一个元素时，源对象离开了过程对象，这时就把源对象添加到最后去。</li>
 </ul>
 <p>主要代码如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> source = <span class="built_in">document</span>.querySelectorAll(<span class="string">'.list'</span>),</div><div class="line">    dragElement = <span class="literal">null</span>;</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; source.length; i++)&#123;</div><div class="line">    source[i].addEventListener(<span class="string">'dragstart'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line">        dragElement = <span class="keyword">this</span>;</div><div class="line">    &#125;,<span class="literal">false</span>);</div><div class="line"></div><div class="line">    source[i].addEventListener(<span class="string">'dragenter'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span>(dragElement != <span class="keyword">this</span>)&#123;</div><div class="line">            <span class="keyword">this</span>.parentNode.insertBefore(dragElement,<span class="keyword">this</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;, <span class="literal">false</span>)</div><div class="line"></div><div class="line">    source[i].addEventListener(<span class="string">'dragleave'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span>(dragElement != <span class="keyword">this</span>)&#123;</div><div class="line">            <span class="keyword">if</span>(<span class="keyword">this</span> == <span class="keyword">this</span>.parentNode.lastElementChild || <span class="keyword">this</span> == <span class="keyword">this</span>.parentNode.lastChild)&#123;</div><div class="line">                <span class="keyword">this</span>.parentNode.appendChild(dragElement);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;, <span class="literal">false</span>)</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">document</span>.ondragover = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;e.preventDefault();&#125;</div><div class="line"><span class="built_in">document</span>.ondrop = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;e.preventDefault();&#125;</div></pre></td></tr></table></figure></p>
-<p>完整的代码地址：<a href="https://lin-xin.github.io/link/index.html?target=https://github.com/lin-xin/blog/tree/master/drag-demo" target="_blank" rel="external">drag-demo</a></p>
+<p>完整的代码地址：<a href="https://github.com/lin-xin/blog/tree/master/drag-demo" target="_blank" rel="external">drag-demo</a></p>
 <h2 id="兼容"><a href="#兼容" class="headerlink" title="兼容"></a>兼容</h2><p>主要是在IE中的兼容不太好，不过至少在IE10中能兼容上面的拖动排序。</p>
 <p>而且在我简单的试验中发现，就是在 IE 中元素不设置 height 的时候，不会触发 dragleave 事件。</p>
 <p>更重要的一点是在 ios 和安卓上，完全不兼容。不过还好，有一个插件能让它在移动端完美兼容。<br>插件地址：<a href="https://github.com/timruffles/ios-html5-drag-drop-shim" target="_blank" rel="external">ios-html5-drag-drop-shim</a></p>
@@ -530,6 +541,8 @@
           
   <div class="comments" id="comments">
     
+      <div id="SOHUCS"></div>
+    
   </div>
 
 
@@ -621,7 +634,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://lin-xin.github.io/link/index.html?target=http://weibo.com/p/1005052062260541" target="_blank" title="Weibo">
+                <a href="http://weibo.com/p/1005052062260541" target="_blank" title="Weibo">
                   
                     <i class="fa fa-fw fa-weibo"></i>
                   
@@ -630,7 +643,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://lin-xin.github.io/link/index.html?target=http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" title="QQ">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" title="QQ">
                   
                     <i class="fa fa-fw fa-qq"></i>
                   
@@ -837,6 +850,21 @@
 
 
 
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt7kdFR9';
+      var conf = 'prod_a1dde8bf3f077e090bd150affe395749';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
 
 
 

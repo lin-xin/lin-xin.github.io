@@ -4,57 +4,16 @@
 
     
   <url>
-    <loc>http://blog.gdfengshuo.com/2017/07/10/19/</loc>
-    <lastmod>2017-07-10T00:23:07.043Z</lastmod>
+    <loc>http://blog.gdfengshuo.com/2017/04/14/10/</loc>
+    <lastmod>2017-07-17T08:49:43.200Z</lastmod>
     <data>
         <display>
-        <title>vue.js 组件之间传递数据</title>
-        <pubTime>2017-07-10T00:18:33.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-         
-           
-             
-              <breadCrumb title="vue" url="http://blog.gdfengshuo.com/categories/vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://blog.gdfengshuo.com/2017/03/28/8/</loc>
-    <lastmod>2017-07-05T11:34:40.148Z</lastmod>
-    <data>
-        <display>
-        <title>Vue.js 插件开发详解</title>
-        <pubTime>2017-03-28T03:21:46.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-         
-           
-             
-              <breadCrumb title="vue" url="http://blog.gdfengshuo.com/categories/vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.gdfengshuo.com/2017/06/29/18/</loc>
-    <lastmod>2017-07-02T03:39:03.829Z</lastmod>
-    <data>
-        <display>
-        <title>HTML5 进阶系列：文件上传下载</title>
-        <pubTime>2017-06-29T12:46:15.000Z</pubTime>
+        <title>HTML5 进阶系列：web Storage</title>
+        <pubTime>2017-04-14T06:09:23.000Z</pubTime>
         
         <tag>HTML5</tag>
          
-        <tag>Blob</tag>
+        <tag>JavaScript</tag>
          
          
            
@@ -67,67 +26,63 @@
 
     
   <url>
-    <loc>http://blog.gdfengshuo.com/2017/06/29/17/</loc>
-    <lastmod>2017-07-02T03:38:49.540Z</lastmod>
+    <loc>http://blog.gdfengshuo.com/2017/04/25/11/</loc>
+    <lastmod>2017-07-17T08:49:42.061Z</lastmod>
     <data>
         <display>
-        <title>移动端图片上传旋转、压缩的解决方案</title>
-        <pubTime>2017-06-29T12:42:31.000Z</pubTime>
+        <title>HTML5 进阶系列：indexedDB 数据库</title>
+        <pubTime>2017-04-25T01:13:12.000Z</pubTime>
         
-        <tag>canvas</tag>
+        <tag>HTML5</tag>
          
-        <tag>exif</tag>
-         
-        <tag>图片上传</tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaScript" url="http://blog.gdfengshuo.com/categories/JavaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.gdfengshuo.com/2017/06/17/16/</loc>
-    <lastmod>2017-07-02T03:38:27.411Z</lastmod>
-    <data>
-        <display>
-        <title>vue-schart ： vue.js 的图表组件</title>
-        <pubTime>2017-06-17T03:46:37.000Z</pubTime>
-        
-        <tag>图表</tag>
-         
-        <tag>vue</tag>
-         
-         
-           
-             
-              <breadCrumb title="vue" url="http://blog.gdfengshuo.com/categories/vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.gdfengshuo.com/2017/05/31/15/</loc>
-    <lastmod>2017-07-02T03:38:02.470Z</lastmod>
-    <data>
-        <display>
-        <title>sChart.js：一个小型简单的图表库</title>
-        <pubTime>2017-05-31T01:24:46.000Z</pubTime>
-        
         <tag>JavaScript</tag>
          
-        <tag>图表</tag>
+         
+           
+             
+              <breadCrumb title="HTML5" url="http://blog.gdfengshuo.com/categories/HTML5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.gdfengshuo.com/2017/04/28/12/</loc>
+    <lastmod>2017-07-17T08:49:40.837Z</lastmod>
+    <data>
+        <display>
+        <title>HTML5 进阶系列：拖放 API 实现拖放排序</title>
+        <pubTime>2017-04-28T02:35:35.000Z</pubTime>
+        
+        <tag>HTML5</tag>
+         
+        <tag>JavaScript</tag>
          
          
            
              
-              <breadCrumb title="JavaScript" url="http://blog.gdfengshuo.com/categories/JavaScript/"/>
+              <breadCrumb title="HTML5" url="http://blog.gdfengshuo.com/categories/HTML5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.gdfengshuo.com/2017/05/10/13/</loc>
+    <lastmod>2017-07-17T08:49:39.597Z</lastmod>
+    <data>
+        <display>
+        <title>微信小程序之购物车功能</title>
+        <pubTime>2017-05-10T01:20:09.000Z</pubTime>
+        
+        <tag>微信小程序</tag>
+         
+         
+           
+             
+              <breadCrumb title="微信小程序" url="http://blog.gdfengshuo.com/categories/wxapp/"/>
           
         </display>
     </data>
@@ -136,7 +91,7 @@
     
   <url>
     <loc>http://blog.gdfengshuo.com/2017/05/23/14/</loc>
-    <lastmod>2017-07-02T03:35:21.345Z</lastmod>
+    <lastmod>2017-07-17T08:49:38.441Z</lastmod>
     <data>
         <display>
         <title>HTML5 进阶系列：canvas 动态图表</title>
@@ -159,100 +114,16 @@
 
     
   <url>
-    <loc>http://blog.gdfengshuo.com/2017/05/10/13/</loc>
-    <lastmod>2017-07-02T03:35:00.084Z</lastmod>
+    <loc>http://blog.gdfengshuo.com/2017/05/31/15/</loc>
+    <lastmod>2017-07-17T08:49:37.024Z</lastmod>
     <data>
         <display>
-        <title>微信小程序之购物车功能</title>
-        <pubTime>2017-05-10T01:20:09.000Z</pubTime>
-        
-        <tag>微信小程序</tag>
-         
-         
-           
-             
-              <breadCrumb title="微信小程序" url="http://blog.gdfengshuo.com/categories/wxapp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.gdfengshuo.com/2017/04/28/12/</loc>
-    <lastmod>2017-07-02T03:34:46.188Z</lastmod>
-    <data>
-        <display>
-        <title>HTML5 进阶系列：拖放 API 实现拖放排序</title>
-        <pubTime>2017-04-28T02:35:35.000Z</pubTime>
-        
-        <tag>HTML5</tag>
-         
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="HTML5" url="http://blog.gdfengshuo.com/categories/HTML5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.gdfengshuo.com/2017/04/25/11/</loc>
-    <lastmod>2017-07-02T03:34:16.382Z</lastmod>
-    <data>
-        <display>
-        <title>HTML5 进阶系列：indexedDB 数据库</title>
-        <pubTime>2017-04-25T01:13:12.000Z</pubTime>
-        
-        <tag>HTML5</tag>
-         
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="HTML5" url="http://blog.gdfengshuo.com/categories/HTML5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.gdfengshuo.com/2017/04/14/10/</loc>
-    <lastmod>2017-07-02T03:33:56.190Z</lastmod>
-    <data>
-        <display>
-        <title>HTML5 进阶系列：web Storage</title>
-        <pubTime>2017-04-14T06:09:23.000Z</pubTime>
-        
-        <tag>HTML5</tag>
-         
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="HTML5" url="http://blog.gdfengshuo.com/categories/HTML5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.gdfengshuo.com/2017/03/21/6/</loc>
-    <lastmod>2017-07-02T03:32:42.376Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript 中 apply 、call 的详解</title>
-        <pubTime>2017-03-21T05:46:48.000Z</pubTime>
+        <title>sChart.js：一个小型简单的图表库</title>
+        <pubTime>2017-05-31T01:24:46.000Z</pubTime>
         
         <tag>JavaScript</tag>
+         
+        <tag>图表</tag>
          
          
            
@@ -265,19 +136,109 @@
 
     
   <url>
-    <loc>http://blog.gdfengshuo.com/2017/03/20/5/</loc>
-    <lastmod>2017-07-02T03:32:23.788Z</lastmod>
+    <loc>http://blog.gdfengshuo.com/2017/06/17/16/</loc>
+    <lastmod>2017-07-17T08:49:35.743Z</lastmod>
     <data>
         <display>
-        <title>JavaScript 中 this 的详解</title>
-        <pubTime>2017-03-20T03:44:03.000Z</pubTime>
+        <title>vue-schart ： vue.js 的图表组件</title>
+        <pubTime>2017-06-17T03:46:37.000Z</pubTime>
         
-        <tag>JavaScript</tag>
+        <tag>vue</tag>
+         
+        <tag>图表</tag>
+         
+         
+           
+             
+              <breadCrumb title="vue" url="http://blog.gdfengshuo.com/categories/vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.gdfengshuo.com/2017/06/29/17/</loc>
+    <lastmod>2017-07-17T08:49:33.775Z</lastmod>
+    <data>
+        <display>
+        <title>移动端图片上传旋转、压缩的解决方案</title>
+        <pubTime>2017-06-29T12:42:31.000Z</pubTime>
+        
+        <tag>canvas</tag>
+         
+        <tag>exif</tag>
+         
+        <tag>图片上传</tag>
          
          
            
              
               <breadCrumb title="JavaScript" url="http://blog.gdfengshuo.com/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.gdfengshuo.com/2017/06/29/18/</loc>
+    <lastmod>2017-07-17T08:49:32.110Z</lastmod>
+    <data>
+        <display>
+        <title>HTML5 进阶系列：文件上传下载</title>
+        <pubTime>2017-06-29T12:46:15.000Z</pubTime>
+        
+        <tag>HTML5</tag>
+         
+        <tag>Blob</tag>
+         
+         
+           
+             
+              <breadCrumb title="HTML5" url="http://blog.gdfengshuo.com/categories/HTML5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.gdfengshuo.com/2017/07/10/19/</loc>
+    <lastmod>2017-07-17T08:49:30.270Z</lastmod>
+    <data>
+        <display>
+        <title>vue.js 组件之间传递数据</title>
+        <pubTime>2017-07-10T00:18:33.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="vue" url="http://blog.gdfengshuo.com/categories/vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.gdfengshuo.com/2017/03/11/3/</loc>
+    <lastmod>2017-07-17T08:49:29.197Z</lastmod>
+    <data>
+        <display>
+        <title>Vue2 后台管理系统解决方案</title>
+        <pubTime>2017-03-11T03:22:01.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+        <tag>element</tag>
+         
+         
+           
+             
+              <breadCrumb title="vue" url="http://blog.gdfengshuo.com/categories/vue/"/>
           
         </display>
     </data>
@@ -286,7 +247,7 @@
     
   <url>
     <loc>http://blog.gdfengshuo.com/2017/03/14/4/</loc>
-    <lastmod>2017-07-02T03:32:07.114Z</lastmod>
+    <lastmod>2017-07-17T08:49:28.106Z</lastmod>
     <data>
         <display>
         <title>Vuex 模块化实现待办事项的状态管理</title>
@@ -307,8 +268,68 @@
 
     
   <url>
+    <loc>http://blog.gdfengshuo.com/2017/03/20/5/</loc>
+    <lastmod>2017-07-17T08:49:26.759Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript 中 this 的详解</title>
+        <pubTime>2017-03-20T03:44:03.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="http://blog.gdfengshuo.com/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.gdfengshuo.com/2017/03/21/6/</loc>
+    <lastmod>2017-07-17T08:49:25.541Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript 中 apply 、call 的详解</title>
+        <pubTime>2017-03-21T05:46:48.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="http://blog.gdfengshuo.com/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.gdfengshuo.com/2017/03/28/8/</loc>
+    <lastmod>2017-07-17T08:49:23.451Z</lastmod>
+    <data>
+        <display>
+        <title>Vue.js 插件开发详解</title>
+        <pubTime>2017-03-28T03:21:46.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="vue" url="http://blog.gdfengshuo.com/categories/vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.gdfengshuo.com/2017/03/10/2/</loc>
-    <lastmod>2017-07-02T03:31:42.231Z</lastmod>
+    <lastmod>2017-07-17T08:43:20.870Z</lastmod>
     <data>
         <display>
         <title>gulp自动化压缩合并、加版本号解决方案</title>
@@ -326,27 +347,6 @@
     </url>
 
     
-  <url>
-    <loc>http://blog.gdfengshuo.com/2017/03/11/3/</loc>
-    <lastmod>2017-07-02T03:31:31.026Z</lastmod>
-    <data>
-        <display>
-        <title>Vue2 后台管理系统解决方案</title>
-        <pubTime>2017-03-11T03:22:01.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>element</tag>
-         
-         
-           
-             
-              <breadCrumb title="vue" url="http://blog.gdfengshuo.com/categories/vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
     
     

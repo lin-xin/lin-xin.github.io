@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://blog.gdfengshuo.com/2017/03/28/8/index.html">
 <meta property="og:site_name" content="林鑫的博客">
 <meta property="og:description" content="随着 Vue.js 越来越火，Vue.js 的相关插件也在不断的被贡献出来，数不胜数。比如官方推荐的 vue-router、vuex 等，都是非常优秀的插件。但是我们更多的人还只停留在使用的阶段，比较少自己开发。所以接下来会通过一个简单的 vue-toast 插件，来了解掌握插件的开发和使用。">
-<meta property="og:updated_time" content="2017-07-05T11:34:40.148Z">
+<meta property="og:updated_time" content="2017-07-17T08:49:23.451Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue.js 插件开发详解">
 <meta name="twitter:description" content="随着 Vue.js 越来越火，Vue.js 的相关插件也在不断的被贡献出来，数不胜数。比如官方推荐的 vue-router、vuex 等，都是非常优秀的插件。但是我们更多的人还只停留在使用的阶段，比较少自己开发。所以接下来会通过一个简单的 vue-toast 插件，来了解掌握插件的开发和使用。">
@@ -357,6 +357,17 @@
 
           
             
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2017/03/28/8/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/03/28/8/" itemprop="commentsCount"></span>
+                </a>
+              
+            
           
 
           
@@ -408,7 +419,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Vue.prototype.$toast = <span class="function">(<span class="params">tips,type</span>) =&gt;</span> &#123;     <span class="comment">// 添加 type 参数</span></div><div class="line">    <span class="keyword">let</span> toastTpl = Vue.extend(&#123;             <span class="comment">// 模板添加位置类</span></div><div class="line">        data()&#123;</div><div class="line">            <span class="keyword">return</span> &#123;</div><div class="line">                <span class="attr">show</span>: showToast</div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">template</span>: <span class="string">'&lt;div v-show="show" class="vue-toast toast-'</span>+ type +<span class="string">'"&gt;'</span> + tips + <span class="string">'&lt;/div&gt;'</span></div><div class="line">    &#125;);</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>好像差不多了。但是如果我想默认在顶部显示，我每次都要调用 this.$toast.top() 好像就有点多余了，我能不能 this.$toast() 就直接在我想要的地方呢？还有我不想要 2.5s 后才消失呢？这时候注意到 Toast.install(Vue,options) 里的 options 参数，我们可以在 Vue.use() 通过 options 传进我们想要的参数。最后修改插件如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Toast = &#123;&#125;;</div><div class="line"><span class="keyword">var</span> showToast = <span class="literal">false</span>;</div><div class="line">Toast.install = <span class="function"><span class="keyword">function</span> (<span class="params">Vue, options</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> opt = &#123;</div><div class="line">        <span class="attr">defaultType</span>:<span class="string">'bottom'</span>,   <span class="comment">// 默认显示位置</span></div><div class="line">        duration:<span class="string">'2500'</span>         <span class="comment">// 持续时间</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> property <span class="keyword">in</span> options)&#123;</div><div class="line">        opt[property] = options[property];  <span class="comment">// 使用 options 的配置</span></div><div class="line">    &#125;</div><div class="line">    Vue.prototype.$toast = <span class="function">(<span class="params">tips,type</span>) =&gt;</span> &#123;</div><div class="line">        <span class="keyword">if</span>(type)&#123;</div><div class="line">            opt.defaultType = type;         <span class="comment">// 如果有传type，位置则设为该type</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(showToast)&#123;</div><div class="line">            <span class="comment">// 如果toast还在，则不再执行</span></div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">let</span> toastTpl = Vue.extend(&#123;</div><div class="line">            data()&#123;</div><div class="line">                <span class="keyword">return</span> &#123;</div><div class="line">                    <span class="attr">show</span>: showToast</div><div class="line">                &#125;</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">template</span>: <span class="string">'&lt;div v-show="show" class="vue-toast toast-'</span>+opt.defaultType+<span class="string">'"&gt;'</span> + tips + <span class="string">'&lt;/div&gt;'</span></div><div class="line">        &#125;);</div><div class="line">        <span class="keyword">var</span> vm = <span class="keyword">new</span> toastTpl()</div><div class="line">        <span class="keyword">var</span> tpl = vm.$mount().$el;</div><div class="line">        </div><div class="line">        <span class="built_in">document</span>.body.appendChild(tpl);</div><div class="line">        vm.show = showToast = <span class="literal">true</span>;</div><div class="line">        </div><div class="line">        setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            vm.show = showToast = <span class="literal">false</span>;</div><div class="line">        &#125;, opt.duration)</div><div class="line">    &#125;</div><div class="line">    [<span class="string">'bottom'</span>, <span class="string">'center'</span>, <span class="string">'top'</span>].forEach(<span class="function"><span class="params">type</span> =&gt;</span> &#123;</div><div class="line">        Vue.prototype.$toast[type] = <span class="function">(<span class="params">tips</span>) =&gt;</span> &#123;</div><div class="line">            <span class="keyword">return</span> Vue.prototype.$toast(tips,type)</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line"><span class="built_in">module</span>.exports = Toast;</div></pre></td></tr></table></figure></p>
 <p>这样子一个简单的 vue 插件就实现了，并且可以通过 npm 打包发布，下次就可以使用 npm install 来安装了。</p>
-<p>源码地址：<a href="https://lin-xin.github.io/link/index.html?target=https://github.com/lin-xin/vue-toast" target="_blank" rel="external">vue-toast</a></p>
+<p>源码地址：<a href="https://github.com/lin-xin/vue-toast" target="_blank" rel="external">vue-toast</a></p>
 
       
     </div>
@@ -497,6 +508,8 @@
 
           
   <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
     
   </div>
 
@@ -589,7 +602,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://lin-xin.github.io/link/index.html?target=http://weibo.com/p/1005052062260541" target="_blank" title="Weibo">
+                <a href="http://weibo.com/p/1005052062260541" target="_blank" title="Weibo">
                   
                     <i class="fa fa-fw fa-weibo"></i>
                   
@@ -598,7 +611,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://lin-xin.github.io/link/index.html?target=http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" title="QQ">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" title="QQ">
                   
                     <i class="fa fa-fw fa-qq"></i>
                   
@@ -805,6 +818,21 @@
 
 
 
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt7kdFR9';
+      var conf = 'prod_a1dde8bf3f077e090bd150affe395749';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
 
 
 

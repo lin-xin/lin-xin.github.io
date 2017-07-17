@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://blog.gdfengshuo.com/2017/07/10/19/index.html">
 <meta property="og:site_name" content="林鑫的博客">
 <meta property="og:description" content="组件是 vue.js 最强大的功能之一，而组件实例的作用域是相互独立的，这就意味着不同组件之间的数据无法相互引用。如何传递数据也成了组件的重要知识点之一。">
-<meta property="og:updated_time" content="2017-07-10T00:23:07.043Z">
+<meta property="og:updated_time" content="2017-07-17T08:49:30.270Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue.js 组件之间传递数据">
 <meta name="twitter:description" content="组件是 vue.js 最强大的功能之一，而组件实例的作用域是相互独立的，这就意味着不同组件之间的数据无法相互引用。如何传递数据也成了组件的重要知识点之一。">
@@ -357,6 +357,17 @@
 
           
             
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2017/07/10/19/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/07/10/19/" itemprop="commentsCount"></span>
+                </a>
+              
+            
           
 
           
@@ -422,8 +433,8 @@
 <p>在子组件 dialog.vue 中：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"dialog"</span> <span class="attr">v-show</span>=<span class="string">"isShow"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>这里是弹框子组件<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"toHide"</span>&gt;</span>关闭弹框<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">        <span class="comment">// 驼峰式命名的 prop 需要转换为相对应的短横线隔开式 is-show</span></div><div class="line">        props: [<span class="string">'isShow'</span>],</div><div class="line">        <span class="attr">methods</span>: &#123;</div><div class="line">            toHide()&#123;</div><div class="line">                <span class="comment">// $emit 方法触发父组件的监听事件</span></div><div class="line">                <span class="keyword">this</span>.$emit(<span class="string">'hide'</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>这样就实现了父子组件之间的相互通讯。</p>
-<h2 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a>Vuex</h2><p>上面的例子都是建立在父子关系的组件上，但是对于其他层级的关系，实现起来就比较繁琐了。那么这时候 Vuex 就能更好的帮你在各个组件间实时通讯了。关于 Vuex，可查看我的另一篇文章：<a href="https://lin-xin.github.io/link/index.html?target=https://github.com/lin-xin/blog/issues/5" target="_blank" rel="external">Vuex 模块化实现待办事项的状态管理</a></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>组件通讯并不是一定要使用必须要使用 Vuex，对于一些简单的数据传递，prop 也可以完成。本文主要是对组件传参的一些基础知识点的记录，实战可以参考 <a href="https://lin-xin.github.io/link/index.html?target=https://github.com/lin-xin/notepad" target="_blank" rel="external">notepad</a> 这个例子，使用 prop 实现子组件的显示与隐藏，使用 vuex 来实现组件间的数据状态管理。</p>
+<h2 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a>Vuex</h2><p>上面的例子都是建立在父子关系的组件上，但是对于其他层级的关系，实现起来就比较繁琐了。那么这时候 Vuex 就能更好的帮你在各个组件间实时通讯了。关于 Vuex，可查看我的另一篇文章：<a href="https://github.com/lin-xin/blog/issues/5" target="_blank" rel="external">Vuex 模块化实现待办事项的状态管理</a></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>组件通讯并不是一定要使用必须要使用 Vuex，对于一些简单的数据传递，prop 也可以完成。本文主要是对组件传参的一些基础知识点的记录，实战可以参考 <a href="https://github.com/lin-xin/notepad" target="_blank" rel="external">notepad</a> 这个例子，使用 prop 实现子组件的显示与隐藏，使用 vuex 来实现组件间的数据状态管理。</p>
 
       
     </div>
@@ -508,6 +519,8 @@
 
           
   <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
     
   </div>
 
@@ -600,7 +613,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://lin-xin.github.io/link/index.html?target=http://weibo.com/p/1005052062260541" target="_blank" title="Weibo">
+                <a href="http://weibo.com/p/1005052062260541" target="_blank" title="Weibo">
                   
                     <i class="fa fa-fw fa-weibo"></i>
                   
@@ -609,7 +622,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://lin-xin.github.io/link/index.html?target=http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" title="QQ">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" title="QQ">
                   
                     <i class="fa fa-fw fa-qq"></i>
                   
@@ -816,6 +829,21 @@
 
 
 
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt7kdFR9';
+      var conf = 'prod_a1dde8bf3f077e090bd150affe395749';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
 
 
 

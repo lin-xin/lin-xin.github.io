@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://blog.gdfengshuo.com/2017/04/14/10/index.html">
 <meta property="og:site_name" content="林鑫的博客">
 <meta property="og:description" content="HTML5 的 web Storage 存储方式有两种：localStorage 和 sessionStorage。 这两种方式都是通过键值对保存数据，存取方便，不影响网站性能。他们的用法相同，存储时间不同。">
-<meta property="og:updated_time" content="2017-07-02T03:33:56.190Z">
+<meta property="og:updated_time" content="2017-07-17T08:49:43.200Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5 进阶系列：web Storage">
 <meta name="twitter:description" content="HTML5 的 web Storage 存储方式有两种：localStorage 和 sessionStorage。 这两种方式都是通过键值对保存数据，存取方便，不影响网站性能。他们的用法相同，存储时间不同。">
@@ -357,6 +357,17 @@
 
           
             
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2017/04/14/10/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/04/14/10/" itemprop="commentsCount"></span>
+                </a>
+              
+            
           
 
           
@@ -424,7 +435,7 @@
 <p>注意：在谷歌浏览器中，需要在不同标签页中修改 storage 才会触发该事件，即 网页A 监听该事件，在 网页B 中修改 localStorage，则 网页A 会触发事件函数。但是在 IE 中，在同个网页修改 localStorage 都会触发该事件。</p>
 <h2 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h2><p>谷歌浏览器自带调试工具(chrome devtools)非常好用，可以用来调试  localStorage 和 sessionStorage。打开浏览器按f12调出调试工具，可以看到 Application ，点击打开可以看到左边栏有 Storage，包括了 localStorage、sessionStorage、IndexedDB等，选中我们要调试的网站域名，可以看到右边有对应的 key 和 value，可以通过右键进行编辑或删除等。</p>
 <h2 id="兼容"><a href="#兼容" class="headerlink" title="兼容"></a>兼容</h2><p>IE8 以上就兼容，但是比较特别，需要在服务器上打开的才支持，直接双击打开文件的 file:// 是不兼容的。</p>
-<p>到了 IE11 才支持 file:// 下打开的，其他浏览器的支持程度都很高，包括在手机上的兼容。具体兼容可查看：<a href="https://lin-xin.github.io/link/index.html?target=http://caniuse.com/#search=localstorage" target="_blank" rel="external">caniuse.com/#search=localstorage</a></p>
+<p>到了 IE11 才支持 file:// 下打开的，其他浏览器的支持程度都很高，包括在手机上的兼容。具体兼容可查看：<a href="http://caniuse.com/#search=localstorage" target="_blank" rel="external">caniuse.com/#search=localstorage</a></p>
 
       
     </div>
@@ -515,6 +526,8 @@
 
           
   <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
     
   </div>
 
@@ -607,7 +620,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://lin-xin.github.io/link/index.html?target=http://weibo.com/p/1005052062260541" target="_blank" title="Weibo">
+                <a href="http://weibo.com/p/1005052062260541" target="_blank" title="Weibo">
                   
                     <i class="fa fa-fw fa-weibo"></i>
                   
@@ -616,7 +629,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://lin-xin.github.io/link/index.html?target=http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" title="QQ">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" title="QQ">
                   
                     <i class="fa fa-fw fa-qq"></i>
                   
@@ -823,6 +836,21 @@
 
 
 
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt7kdFR9';
+      var conf = 'prod_a1dde8bf3f077e090bd150affe395749';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
 
 
 

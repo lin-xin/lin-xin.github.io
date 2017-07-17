@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://blog.gdfengshuo.com/2017/03/21/6/index.html">
 <meta property="og:site_name" content="林鑫的博客">
 <meta property="og:description" content="ECMAScript 规范给所有函数都定义了 call 与 apply 两个方法，它们的应用非常广泛，它们的作用也是一模一样，只是传参的形式有区别而已。">
-<meta property="og:updated_time" content="2017-07-02T03:32:42.376Z">
+<meta property="og:updated_time" content="2017-07-17T08:49:25.541Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript 中 apply 、call 的详解">
 <meta name="twitter:description" content="ECMAScript 规范给所有函数都定义了 call 与 apply 两个方法，它们的应用非常广泛，它们的作用也是一模一样，只是传参的形式有区别而已。">
@@ -357,6 +357,17 @@
 
           
             
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2017/03/21/6/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/03/21/6/" itemprop="commentsCount"></span>
+                </a>
+              
+            
           
 
           
@@ -407,7 +418,7 @@
 <h3 id="2-参数的使用"><a href="#2-参数的使用" class="headerlink" title="2.参数的使用"></a>2.参数的使用</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">a, b, c</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(a, b, c);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> func1 = func.bind(<span class="literal">null</span>,<span class="string">'linxin'</span>);</div><div class="line"></div><div class="line">func(<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>);            <span class="comment">// A B C</span></div><div class="line">func1(<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>);           <span class="comment">// linxin A B</span></div><div class="line">func1(<span class="string">'B'</span>, <span class="string">'C'</span>);                <span class="comment">// linxin B C</span></div><div class="line">func.call(<span class="literal">null</span>, <span class="string">'linxin'</span>);      <span class="comment">// linxin undefined undefined</span></div></pre></td></tr></table></figure>
 <p>call 是把第二个及以后的参数作为 func 方法的实参传进去，而 func1 方法的实参实则是在 bind 中参数的基础上再往后排。</p>
 <p>在低版本浏览器没有 bind 方法，我们也可以自己实现一个。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (!<span class="built_in">Function</span>.prototype.bind) &#123;</div><div class="line">    <span class="built_in">Function</span>.prototype.bind = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> self = <span class="keyword">this</span>,                        <span class="comment">// 保存原函数</span></div><div class="line">            context = [].shift.call(<span class="built_in">arguments</span>), <span class="comment">// 保存需要绑定的this上下文</span></div><div class="line">            args = [].slice.call(<span class="built_in">arguments</span>);    <span class="comment">// 剩余的参数转为数组</span></div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;                    <span class="comment">// 返回一个新函数</span></div><div class="line">            self.apply(context,[].concat.call(args, [].slice.call(<span class="built_in">arguments</span>)));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>下一篇介绍闭包：<a href="https://lin-xin.github.io/link/index.html?target=https://github.com/lin-xin/blog/issues/8" target="_blank" rel="external">JavaScript 中 闭包 的详解</a>。</p>
+<p>下一篇介绍闭包：<a href="https://github.com/lin-xin/blog/issues/8" target="_blank" rel="external">JavaScript 中 闭包 的详解</a>。</p>
 
       
     </div>
@@ -496,6 +507,8 @@
 
           
   <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
     
   </div>
 
@@ -588,7 +601,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://lin-xin.github.io/link/index.html?target=http://weibo.com/p/1005052062260541" target="_blank" title="Weibo">
+                <a href="http://weibo.com/p/1005052062260541" target="_blank" title="Weibo">
                   
                     <i class="fa fa-fw fa-weibo"></i>
                   
@@ -597,7 +610,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://lin-xin.github.io/link/index.html?target=http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" title="QQ">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" title="QQ">
                   
                     <i class="fa fa-fw fa-qq"></i>
                   
@@ -804,6 +817,21 @@
 
 
 
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt7kdFR9';
+      var conf = 'prod_a1dde8bf3f077e090bd150affe395749';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
 
 
 
