@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.gdfengshuo.com/about/index.html</loc>
+    
+    <lastmod>2017-07-17T09:36:38.961Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.gdfengshuo.com/categories/index.html</loc>
+    
+    <lastmod>2017-07-17T09:36:26.874Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.gdfengshuo.com/open/index.html</loc>
+    
+    <lastmod>2017-07-17T09:36:13.776Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.gdfengshuo.com/tags/index.html</loc>
+    
+    <lastmod>2017-07-17T09:35:34.481Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.gdfengshuo.com/2017/04/14/10/</loc>
     
     <lastmod>2017-07-17T08:49:43.200Z</lastmod>
@@ -114,37 +142,9 @@
   </url>
   
   <url>
-    <loc>http://blog.gdfengshuo.com/about/index.html</loc>
-    
-    <lastmod>2017-07-08T02:32:06.213Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.gdfengshuo.com/link/index.html</loc>
     
     <lastmod>2017-07-02T03:16:04.263Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.gdfengshuo.com/open/index.html</loc>
-    
-    <lastmod>2017-06-21T02:54:20.334Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.gdfengshuo.com/categories/index.html</loc>
-    
-    <lastmod>2017-06-07T06:53:46.440Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.gdfengshuo.com/tags/index.html</loc>
-    
-    <lastmod>2017-06-07T06:50:46.987Z</lastmod>
     
   </url>
   
