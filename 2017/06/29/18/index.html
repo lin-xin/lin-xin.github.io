@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HTML5,Blob," />
+  <meta name="keywords" content="HTML5,文件上传,file api,blob" />
 
 
 
@@ -89,13 +89,13 @@
 
 
 <meta name="description" content="HTML5 中提供的文件API在前端中有着丰富的应用，上传、下载、读取内容等在日常的交互中很常见。而且在各个浏览器的兼容也比较好，包括移动端，除了 IE 只支持 IE10 以上的版本。想要更好地掌握好操作文件的功能，先要熟悉每个API。">
-<meta name="keywords" content="HTML5,Blob">
+<meta name="keywords" content="HTML5,文件上传,file api,blob">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTML5 进阶系列：文件上传下载">
 <meta property="og:url" content="http://blog.gdfengshuo.com/2017/06/29/18/index.html">
 <meta property="og:site_name" content="林鑫的博客">
 <meta property="og:description" content="HTML5 中提供的文件API在前端中有着丰富的应用，上传、下载、读取内容等在日常的交互中很常见。而且在各个浏览器的兼容也比较好，包括移动端，除了 IE 只支持 IE10 以上的版本。想要更好地掌握好操作文件的功能，先要熟悉每个API。">
-<meta property="og:updated_time" content="2017-07-17T08:49:32.110Z">
+<meta property="og:updated_time" content="2017-07-19T09:17:15.806Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5 进阶系列：文件上传下载">
 <meta name="twitter:description" content="HTML5 中提供的文件API在前端中有着丰富的应用，上传、下载、读取内容等在日常的交互中很常见。而且在各个浏览器的兼容也比较好，包括移动端，除了 IE 只支持 IE10 以上的版本。想要更好地掌握好操作文件的功能，先要熟悉每个API。">
@@ -107,7 +107,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: false,
     motion: true,
     duoshuo: {
@@ -303,7 +303,7 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="林鑫的博客">
     </span>
-
+    
     
       <header class="post-header">
 
@@ -438,7 +438,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="string">"哈喽 世界"</span>;</div><div class="line"><span class="keyword">var</span> b = btoa(<span class="built_in">encodeURIComponent</span>(a));</div><div class="line"><span class="keyword">var</span> c = <span class="built_in">decodeURIComponent</span>(atob(b));</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(b);     <span class="comment">// JUU1JTkzJTg4JUU1JTk2JUJEJTIwJUU0JUI4JTk2JUU3JTk1JThD</span></div><div class="line"><span class="built_in">console</span>.log(c);     <span class="comment">// 哈喽 世界</span></div></pre></td></tr></table></figure>
       
     </div>
-
+    
     <div>
       
         

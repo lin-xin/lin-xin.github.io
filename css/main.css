@@ -1685,7 +1685,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffdbaa;
+  background: #83ff1f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2840,4 +2840,36 @@ hr {
 }
 .clear {
   clear: both;
+}
+.index-post-banner {
+  display: none;
+}
+@media (min-width: 900px) {
+  .index-post {
+    padding-right: 220px;
+    position: relative;
+  }
+  .index-post-banner {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+  .post-banner-img {
+    height: 200px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all linear 0.3s;
+  }
+  .index-post-banner:hover .post-banner-img {
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    -ms-transform: scale(1.7);
+    -o-transform: scale(1.7);
+    transform: scale(1.7);
+  }
 }
