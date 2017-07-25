@@ -1,0 +1,7 @@
+# robots.txt generated at http://tool.chinaz.com/robots/ 
+User-agent: *
+Disallow: 
+Disallow: /lib
+Disallow: /link
+Sitemap: http://blog.gdfengshuo.com/sitemap.xml
+Sitemap: http://blog.gdfengshuo.com/baidusitemap.xml

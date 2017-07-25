@@ -1692,7 +1692,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #bed5ff;
+  background: #ff1bbe;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2884,4 +2884,7 @@ hr {
     -o-transform: scale(1.2);
     transform: scale(1.2);
   }
+}
+::-webkit-scrollbar {
+  width: 0;
 }
