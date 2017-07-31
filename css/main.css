@@ -835,7 +835,7 @@ pre .javascript .function {
   display: block;
   width: 22px;
   height: 2px;
-  background: #555;
+  background: #eee;
   border-radius: 1px;
 }
 .btn-bar+.btn-bar {
@@ -1692,7 +1692,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4effff;
+  background: #47a7bd;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2887,4 +2887,42 @@ hr {
 }
 ::-webkit-scrollbar {
   width: 0;
+}
+.post-like {
+  margin: 30px 0;
+  text-align: center;
+}
+.post-like-btn {
+  display: inline-block;
+  padding: 13px 0 15px;
+  font-size: 0;
+  border: 1px solid #ea6f5a;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.post-like-btn.active {
+  background-color: #ea6f5a;
+}
+.post-like-btn span {
+  font-size: 19px;
+  display: inline-block;
+  color: #ea6f5a;
+  line-height: 1.5;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.post-like-btn.active span {
+  color: #fff;
+}
+.post-like-btn .post-like-text {
+  font-size: 19px;
+  padding: 0 15px 0 30px;
+}
+.post-like-btn .post-like-number {
+  font-size: 18px;
+  border-left: 1px solid rgba(236,97,73,0.4);
+  padding: 0 30px 0 17px;
+}
+.post-like-btn.active .post-like-number {
+  border-left: 1px solid #fff;
 }

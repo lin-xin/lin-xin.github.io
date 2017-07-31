@@ -369,9 +369,17 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数 </span>
+                 <span class="post-meta-item-text">阅读数 </span>
                
                  <span class="leancloud-visitors-count"></span>
+             </span>
+             <span class="leancloud_likes">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-heart"></i>
+               </span>
+                <span class="post-meta-item-text">喜欢数 </span>
+                <span class="leancloud-likes-count"></span>
              </span>
           
 
@@ -449,6 +457,13 @@
         </div>
       
 
+      
+        <div class="post-like">
+          <div class="post-like-btn">
+            <span class="post-like-text"><i class="fa fa-heart"></i> 喜欢</span>
+            <span class="post-like-number"></span>
+          </div>
+        </div>
       
         <p style="color:#f74949;margin-top:25px;">原创文章，转发请保留原地址！商业用途请联系作者！</p>
       
@@ -870,9 +885,11 @@
             var item = results[i];
             var url = item.get('url');
             var time = item.get('time');
+            var like = item.get('like');
             var element = document.getElementById(url);
 
             $(element).find(COUNT_CONTAINER_REF).text(time);
+            $(element).next('.leancloud_likes').find('.leancloud-likes-count').text(like);
           }
           for(var i = 0; i < entries.length; i++) {
             var url = entries[i];
@@ -905,6 +922,7 @@
               success: function(counter) {
                 var $element = $(document.getElementById(url));
                 $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                $('.post-like-number,.leancloud-likes-count').text(counter.get('like'));
               },
               error: function(counter, error) {
                 console.log('Failed to save Visitor num, with error message: ' + error.message);
@@ -925,12 +943,40 @@
               success: function(newcounter) {
                 var $element = $(document.getElementById(url));
                 $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                $('.post-like-number,.leancloud-likes-count').text(counter.get('like'));
               },
               error: function(newcounter, error) {
                 console.log('Failed to create');
               }
             });
           }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    function addLike(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("like");
+            counter.save(null, {
+              success: function(counter) {
+                $('.post-like-number,.leancloud-likes-count').text(counter.get('like'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Like num, with error message: ' + error.message);
+              }
+            });
         },
         error: function(error) {
           console.log('Error:' + error.code + " " + error.message);
@@ -945,6 +991,14 @@
       } else if ($('.post-title-link').length > 1) {
         showTime(Counter);
       }
+
+      $('.post-like-btn').on('click', function(){
+        var $self = $(this);
+        if(!$self.hasClass('active')){
+          $self.addClass('active');
+          addLike(Counter);
+        }
+      })
     });
   </script>
 
