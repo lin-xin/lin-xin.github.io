@@ -95,10 +95,12 @@
 <meta property="og:url" content="http://blog.gdfengshuo.com/2017/04/14/10/index.html">
 <meta property="og:site_name" content="林鑫的博客">
 <meta property="og:description" content="HTML5 的 web Storage 存储方式有两种：localStorage 和 sessionStorage。 这两种方式都是通过键值对保存数据，存取方便，不影响网站性能。他们的用法相同，存储时间不同。">
-<meta property="og:updated_time" content="2017-07-18T13:36:24.690Z">
+<meta property="og:image" content="http://blog.gdfengshuo.com/images/avatar.jpg">
+<meta property="og:updated_time" content="2017-08-07T13:54:55.158Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5 进阶系列：web Storage">
 <meta name="twitter:description" content="HTML5 的 web Storage 存储方式有两种：localStorage 和 sessionStorage。 这两种方式都是通过键值对保存数据，存取方便，不影响网站性能。他们的用法相同，存储时间不同。">
+<meta name="twitter:image" content="http://blog.gdfengshuo.com/images/avatar.jpg">
 
 
 
@@ -402,6 +404,7 @@
 <a id="more"></a>
 <p>localStorage 的数据保存在本地硬件上，可以永久保存，可以手动调用api清除数据。sessionStorage 保存在 session 对象中，会在浏览器关闭时被清除。</p>
 <p>web Storage 的大小在浏览器上是有限制的，不同浏览器大小会有区别，在主流浏览器中，大小约为 5M，用来存储普通数据其实已经足够。</p>
+<p><img src="/images/avatar.jpg" style="-webkit-filter:blur(10vw);filter:blur(10vw)"></p>
 <h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p>以 localStorage 为例，sessionStorage 用法一样：</p>
 <h3 id="setItem"><a href="#setItem" class="headerlink" title="setItem"></a>setItem</h3><p>保存数据：localStorage.setItem(key,value);</p>
 <p>示例：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">localStorage.setItem(<span class="string">'name'</span>,<span class="string">'Hello World'</span>);</div></pre></td></tr></table></figure></p>
