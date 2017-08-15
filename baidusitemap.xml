@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://blog.gdfengshuo.com/2017/06/17/16/</loc>
+    <lastmod>2017-08-15T11:05:35.639Z</lastmod>
+    <data>
+        <display>
+        <title>vue-schart ： vue.js 的图表组件</title>
+        <pubTime>2017-06-17T03:46:37.000Z</pubTime>
+        
+        <tag>图表</tag>
+         
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="vue" url="http://blog.gdfengshuo.com/categories/vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.gdfengshuo.com/2017/07/10/19/</loc>
     <lastmod>2017-08-08T09:05:13.227Z</lastmod>
     <data>
@@ -168,28 +190,6 @@
         <tag>vue</tag>
          
         <tag>vuex</tag>
-         
-         
-           
-             
-              <breadCrumb title="vue" url="http://blog.gdfengshuo.com/categories/vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.gdfengshuo.com/2017/06/17/16/</loc>
-    <lastmod>2017-07-19T09:19:36.438Z</lastmod>
-    <data>
-        <display>
-        <title>vue-schart ： vue.js 的图表组件</title>
-        <pubTime>2017-06-17T03:46:37.000Z</pubTime>
-        
-        <tag>图表</tag>
-         
-        <tag>vue</tag>
          
          
            
