@@ -1692,7 +1692,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #bd1dff;
+  background: #67291a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2923,4 +2923,46 @@ hr {
 }
 .post-like-btn.active .post-like-number {
   border-left: 1px solid #fff;
+}
+#img-hover {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#img-hover:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+.blur-box {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  background: url("/images/post/blur.jpg");
+  padding-top: 50px;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+.blur-img {
+  position: relative;
+  width: 180px;
+  height: 80px;
+  padding: 10px;
+  margin: auto;
+  color: #fff;
+  overflow: hidden;
+}
+.blur-img:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/images/post/blur.jpg") no-repeat;
+  background-position: -50px -50px;
+  background-size: 300px 200px;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  z-index: -1;
 }
