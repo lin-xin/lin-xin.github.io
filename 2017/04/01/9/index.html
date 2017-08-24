@@ -1,1 +1,1031 @@
-<!doctype html><html class="theme-next mist use-motion" lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><link rel="stylesheet" href="/lib/overtrue-share.js/css/share.min.css"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css"><meta name="keywords" content="vue,webpack,"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1"><meta name="description" content="在项目中，引入了比较多的第三方库，导致项目大，而每次修改，都不会去修改到这些库，构建却都要再打包这些库，浪费了不少时间。所以，把这些不常变动的第三方库都提取出来，下次 build 的时候不再构建这些库，这样既可大大缩短构建时间。那么要怎么去实现呢？"><meta name="keywords" content="vue,webpack"><meta property="og:type" content="article"><meta property="og:title" content="提高 webpack 构建 Vue 项目的速度"><meta property="og:url" content="http://blog.gdfengshuo.com/2017/04/01/9/index.html"><meta property="og:site_name" content="林鑫的博客"><meta property="og:description" content="在项目中，引入了比较多的第三方库，导致项目大，而每次修改，都不会去修改到这些库，构建却都要再打包这些库，浪费了不少时间。所以，把这些不常变动的第三方库都提取出来，下次 build 的时候不再构建这些库，这样既可大大缩短构建时间。那么要怎么去实现呢？"><meta property="og:updated_time" content="2017-08-17T09:22:34.927Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="提高 webpack 构建 Vue 项目的速度"><meta name="twitter:description" content="在项目中，引入了比较多的第三方库，导致项目大，而每次修改，都不会去修改到这些库，构建却都要再打包这些库，浪费了不少时间。所以，把这些不常变动的第三方库都提取出来，下次 build 的时候不再构建这些库，这样既可大大缩短构建时间。那么要怎么去实现呢？"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Mist",sidebar:{position:"left",display:"post",offset:12,offset_float:0,b2t:!1,scrollpercent:!1},fancybox:!1,motion:!0,duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="http://blog.gdfengshuo.com/2017/04/01/9/"><title>提高 webpack 构建 Vue 项目的速度 | 林鑫的博客</title></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans"><script type="text/javascript">var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?1c343a080809502ac823823ae4c9ffe3";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">林鑫的博客</span><span class="logo-line-after"><i></i></span></a></div><h1 class="site-subtitle" itemprop="description"></h1></div><div class="site-nav-toggle"> <button><span class="btn-bar"></span><span class="btn-bar"></span><span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br> 首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br> 分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br> 归档</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br> 标签</a></li><li class="menu-item menu-item-open"><a href="/open/" rel="section"><i class="menu-item-icon fa fa-fw fa-github"></i><br> 开源</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br> 关于</a></li></ul></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><link itemprop="mainEntityOfPage" href="http://blog.gdfengshuo.com/2017/04/01/9/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="linshuai"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatar.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="林鑫的博客"></span><header class="post-header"><h2 class="post-title" itemprop="name headline">提高 webpack 构建 Vue 项目的速度</h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-01T13:55:07+08:00">2017-04-01</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tools/" itemprop="url" rel="index"><span itemprop="name">前端工具</span></a></span></span> <span id="/2017/04/01/9/" class="leancloud_visitors" data-flag-title="提高 webpack 构建 Vue 项目的速度"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">阅读数</span><span class="leancloud-visitors-count"></span></span> <span class="leancloud_likes"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-heart"></i></span> <span class="post-meta-item-text">喜欢数</span><span class="leancloud-likes-count"></span></span></div></header><div class="post-body" itemprop="articleBody"><p>在项目中，引入了比较多的第三方库，导致项目大，而每次修改，都不会去修改到这些库，构建却都要再打包这些库，浪费了不少时间。所以，把这些不常变动的第三方库都提取出来，下次 build 的时候不再构建这些库，这样既可大大缩短构建时间。那么要怎么去实现呢？</p><a id="more"></a><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="DllPlugin-和-DllReferencePlugin"><a href="#DllPlugin-和-DllReferencePlugin" class="headerlink" title="DllPlugin 和 DllReferencePlugin"></a>DllPlugin 和 DllReferencePlugin</h3><p>查找了一下资料，发现我们可以利用 webpack 的插件 DllPlugin 和 DllReferencePlugin 来实现我们要的功能。</p><p>DllPlugin 可以把我们需要打包的第三方库打包成一个 js 文件和一个 json 文件，这个 json 文件中会映射每个打包的模块地址和 id，DllReferencePlugin 通过读取这个json文件来使用打包的这些模块。</p><p>接下来就看如何实现。</p><h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>在 build 文件夹中新建 webpack.dll.config.js (项目基于 vue-cli 的)</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: &#123;</div><div class="line">    <span class="attr">vendor</span>: [<span class="string">'vue/dist/vue.common.js'</span>,<span class="string">'vue-router'</span>, <span class="string">'babel-polyfill'</span>,<span class="string">'axios'</span>,<span class="string">'vue-echarts-v3'</span>]</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">path</span>: path.join(__dirname, <span class="string">'../static/js'</span>),</div><div class="line">    <span class="attr">filename</span>: <span class="string">'[name].dll.js'</span>,</div><div class="line">    <span class="attr">library</span>: <span class="string">'[name]_library'</span>       <span class="comment">// vendor.dll.js中暴露出的全局变量名</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">plugins</span>: [</div><div class="line">    <span class="keyword">new</span> webpack.DllPlugin(&#123;</div><div class="line">      <span class="attr">path</span>: path.join(__dirname, <span class="string">'.'</span>, <span class="string">'[name]-manifest.json'</span>),</div><div class="line">      <span class="attr">name</span>: <span class="string">'[name]_library'</span></div><div class="line">    &#125;),</div><div class="line">    <span class="keyword">new</span> webpack.optimize.UglifyJsPlugin(&#123;</div><div class="line">      <span class="attr">compress</span>: &#123;</div><div class="line">        <span class="attr">warnings</span>: <span class="literal">false</span></div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  ]</div><div class="line">&#125;;</div></pre></td></tr></table></figure><p>然后在 package.json 中配置命令</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    ...</div><div class="line">    <span class="string">"build:dll"</span>: <span class="string">"webpack --config build/webpack.dll.conf.js"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><p>执行 npm run build:dll 命令来生成 vendor.dll.js 和 vendor-manifest.json</p><p>需要在 index.html 引入 vendor.dll.js</p><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./static/js/vendor.dll.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure><p>vendor-manifest.json 的内容大概如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;name&quot;: &quot;vendor_library&quot;,</div><div class="line">  &quot;content&quot;: &#123;</div><div class="line">    &quot;./node_modules/core-js/modules/_export.js&quot;: &#123;</div><div class="line">      &quot;id&quot;: 0,</div><div class="line">      &quot;meta&quot;: &#123;&#125;</div><div class="line">    &#125;,</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>接下来就在 webpack.base.config.js 中通过 DLLReferencePlugin 来使用 DllPlugin 生成的 DLL Bundle</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="attr">entry</span>: &#123;</div><div class="line">        <span class="attr">app</span>: [<span class="string">'./src/main.js'</span>]</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">module</span>: &#123;</div><div class="line">        ...</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 添加DllReferencePlugin插件</span></div><div class="line">    plugins: [</div><div class="line">        <span class="keyword">new</span> webpack.DllReferencePlugin(&#123;</div><div class="line">            <span class="attr">context</span>: path.resolve(__dirname, <span class="string">'..'</span>),</div><div class="line">            <span class="attr">manifest</span>: <span class="built_in">require</span>(<span class="string">'./vendor-manifest.json'</span>)</div><div class="line">        &#125;),</div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>原先 build 需要 95446ms，配置之后执行 build 只需 14360ms，减少了 75% 的时间。</p><p>但是存在一个问题，当把太多的第三方依赖都打包到 vendor.dll.js 中去，该文件太大也会影响首屏加载时间。所以要权衡利弊，可以异步加载的插件就没有必要打包进来了，不要一味的把所有都打包到这里面来获取构建时的快感。</p></div><div></div><div></div><div></div><div class="donate"> <img src="../../../../images/weixin.jpg"><p style="text-align:center">请作者喝杯饮料！</p></div><footer class="post-footer"><div class="post-tags"> <a href="/tags/vue/" rel="tag"># vue</a> <a href="/tags/webpack/" rel="tag"># webpack</a></div><div class="post-like"><div class="post-like-btn"><span class="post-like-text"><i class="fa fa-heart"></i> 喜欢</span><span class="post-like-number"></span></div></div><p style="color:#f74949;margin-top:25px">原创文章，转发请保留原地址！商业用途请联系作者！</p><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/2017/03/28/8/" rel="next" title="Vue.js 插件开发详解"><i class="fa fa-chevron-left"></i> Vue.js 插件开发详解</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"> <a href="/2017/04/14/10/" rel="prev" title="HTML5 进阶系列：web Storage">HTML5 进阶系列：web Storage<i class="fa fa-chevron-right"></i></a></div></div></footer></article><div class="post-spread"><div class="social-share" data-initialized="true"><a href="#" class="social-share-icon icon-weibo"></a><a href="#" class="social-share-icon icon-qq"></a><a href="#" class="social-share-icon icon-wechat"></a><a href="#" class="social-share-icon icon-douban"></a><a href="#" class="social-share-icon icon-facebook"></a><a href="#" class="social-share-icon icon-twitter"></a></div><script src="/lib/overtrue-share.js/js/social-share.min.js"></script></div></div></div><div class="comments" id="comments"><div id="SOHUCS"></div></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span><span class="sidebar-toggle-line sidebar-toggle-line-middle"></span><span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap"> 文章目录</li><li class="sidebar-nav-overview" data-target="site-overview"> 站点概览</li></ul><section class="site-overview sidebar-panel"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"> <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="linshuai"><p class="site-author-name" itemprop="name">linshuai</p><p class="site-description motion-element" itemprop="description"></p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"> <a href="/archives/"><span class="site-state-item-count">21</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"> <a href="/categories/index.html"><span class="site-state-item-count">7</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"> <a href="/tags/index.html"><span class="site-state-item-count">18</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/lin-xin" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i> GitHub</a></span><span class="links-of-author-item"><a href="http://weibo.com/p/1005052062260541" target="_blank" title="Weibo"><i class="fa fa-fw fa-weibo"></i> Weibo</a></span><span class="links-of-author-item"><a href="http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" title="QQ"><i class="fa fa-fw fa-qq"></i> QQ</a></span><span class="links-of-author-item"><a href="https://www.zhihu.com/people/linshuai-15/pins/posts" target="_blank" title="知乎"><i class="fa fa-fw fa-globe"></i> 知乎</a></span><span class="links-of-author-item"><a href="https://segmentfault.com/u/linshuai" target="_blank" title="SegmentFault"><i class="fa fa-fw fa-scribd"></i> SegmentFault</a></span><span class="links-of-author-item"><a href="https://juejin.im/user/57b13227128fe10055c39be2" target="_blank" title="掘金"><i class="fa fa-fw fa-angle-double-down"></i> 掘金</a></span></div></section><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">1.</span> <span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DllPlugin-和-DllReferencePlugin"><span class="nav-number">1.1.</span> <span class="nav-text">DllPlugin 和 DllReferencePlugin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件"><span class="nav-number">1.2.</span> <span class="nav-text">配置文件</span></a></li></ol></li></ol></div></div></section></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><div class="copyright"> &copy; <span itemprop="copyrightYear">2017</span><span class="with-love"><i class="fa fa-heart"></i></span> <span class="author" itemprop="copyrightHolder">linshuai</span> <span style="margin:0 10px">|</span> <span><a href="http://www.gdfengshuo.com/blog/static/weixin.jpg" target="_blank">赞赏</a></span></div></div></footer><div class="back-to-top"><i class="fa fa-arrow-up"></i></div></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script><script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script><script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script><script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script><script type="text/javascript">!function(){var t="prod_a1dde8bf3f077e090bd150affe395749";if((window.innerWidth||document.documentElement.clientWidth)<960)window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=cyt7kdFR9&conf='+t+'"><\/script>');else{!function(t,e){var n=document.getElementsByTagName("head")[0]||document.head||document.documentElement,a=document.createElement("script");a.setAttribute("type","text/javascript"),a.setAttribute("charset","UTF-8"),a.setAttribute("src",t),"function"==typeof e&&(window.attachEvent?a.onreadystatechange=function(){var t=a.readyState;"loaded"!==t&&"complete"!==t||(a.onreadystatechange=null,e())}:a.onload=e),n.appendChild(a)}("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:"cyt7kdFR9",conf:t})})}}()</script><script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script><script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script><script>AV.initialize("FjAwbRjyNVgW7rVkidLeKRNB-gzGzoHsz","A914GlBus7kWj7pmqtikEUJy")</script><script>function showTime(e){var t=new AV.Query(e),n=[],o=$(".leancloud_visitors");o.each(function(){n.push($(this).attr("id").trim())}),t.containedIn("url",n),t.find().done(function(e){if(0!==e.length){for(r=0;r<e.length;r++){var t=e[r],i=t.get("url"),l=t.get("time"),s=t.get("like"),c=document.getElementById(i);$(c).find(".leancloud-visitors-count").text(l),$(c).next(".leancloud_likes").find(".leancloud-likes-count").text(s)}for(var r=0;r<n.length;r++){var i=n[r],c=document.getElementById(i),u=$(c).find(".leancloud-visitors-count");""==u.text()&&u.text(0)}}else o.find(".leancloud-visitors-count").text(0)}).fail(function(e,t){console.log("Error: "+t.code+" "+t.message)})}function addCount(e){var t=$(".leancloud_visitors"),n=t.attr("id").trim(),o=t.attr("data-flag-title").trim(),i=new AV.Query(e);i.equalTo("url",n),i.find({success:function(t){if(t.length>0){var i=t[0];i.fetchWhenSave(!0),i.increment("time"),i.save(null,{success:function(e){$(document.getElementById(n)).find(".leancloud-visitors-count").text(e.get("time")),$(".post-like-number,.leancloud-likes-count").text(e.get("like"))},error:function(e,t){console.log("Failed to save Visitor num, with error message: "+t.message)}})}else{var l=new e,s=new AV.ACL;s.setPublicReadAccess(!0),s.setPublicWriteAccess(!0),l.setACL(s),l.set("title",o),l.set("url",n),l.set("time",1),l.save(null,{success:function(e){$(document.getElementById(n)).find(".leancloud-visitors-count").text(e.get("time")),$(".post-like-number,.leancloud-likes-count").text(i.get("like"))},error:function(e,t){console.log("Failed to create")}})}},error:function(e){console.log("Error:"+e.code+" "+e.message)}})}function addLike(e){var t=$(".leancloud_visitors"),n=t.attr("id").trim(),o=(t.attr("data-flag-title").trim(),new AV.Query(e));o.equalTo("url",n),o.find({success:function(e){var t=e[0];t.fetchWhenSave(!0),t.increment("like"),t.save(null,{success:function(e){$(".post-like-number,.leancloud-likes-count").text(e.get("like"))},error:function(e,t){console.log("Failed to save Like num, with error message: "+t.message)}})},error:function(e){console.log("Error:"+e.code+" "+e.message)}})}$(function(){var e=AV.Object.extend("Counter");1==$(".leancloud_visitors").length?addCount(e):$(".post-title-link").length>1&&showTime(e),$(".post-like-btn").on("click",function(){var t=$(this);t.hasClass("active")||(t.addClass("active"),addLike(e))})})</script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script></body></html>
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<link rel="stylesheet" href="/lib/overtrue-share.js/css/share.min.css">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="vue,webpack," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="在项目中，引入了比较多的第三方库，导致项目大，而每次修改，都不会去修改到这些库，构建却都要再打包这些库，浪费了不少时间。所以，把这些不常变动的第三方库都提取出来，下次 build 的时候不再构建这些库，这样既可大大缩短构建时间。那么要怎么去实现呢？">
+<meta name="keywords" content="vue,webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="提高 webpack 构建 Vue 项目的速度">
+<meta property="og:url" content="http://blog.gdfengshuo.com/2017/04/01/9/index.html">
+<meta property="og:site_name" content="林鑫的博客">
+<meta property="og:description" content="在项目中，引入了比较多的第三方库，导致项目大，而每次修改，都不会去修改到这些库，构建却都要再打包这些库，浪费了不少时间。所以，把这些不常变动的第三方库都提取出来，下次 build 的时候不再构建这些库，这样既可大大缩短构建时间。那么要怎么去实现呢？">
+<meta property="og:updated_time" content="2017-08-17T09:22:34.927Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="提高 webpack 构建 Vue 项目的速度">
+<meta name="twitter:description" content="在项目中，引入了比较多的第三方库，导致项目大，而每次修改，都不会去修改到这些库，构建却都要再打包这些库，浪费了不少时间。所以，把这些不常变动的第三方库都提取出来，下次 build 的时候不再构建这些库，这样既可大大缩短构建时间。那么要怎么去实现呢？">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: false,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.gdfengshuo.com/2017/04/01/9/"/>
+
+
+
+
+
+  <title>提高 webpack 构建 Vue 项目的速度 | 林鑫的博客</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">林鑫的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-open">
+          <a href="/open/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-github"></i> <br />
+            
+            开源
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://blog.gdfengshuo.com/2017/04/01/9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="linshuai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林鑫的博客">
+    </span>
+    
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">提高 webpack 构建 Vue 项目的速度</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-01T13:55:07+08:00">
+                2017-04-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/tools/" itemprop="url" rel="index">
+                    <span itemprop="name">前端工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/04/01/9/" class="leancloud_visitors" data-flag-title="提高 webpack 构建 Vue 项目的速度">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+             <span class="leancloud_likes">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-heart"></i>
+               </span>
+                <span class="post-meta-item-text">喜欢数 </span>
+                <span class="leancloud-likes-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在项目中，引入了比较多的第三方库，导致项目大，而每次修改，都不会去修改到这些库，构建却都要再打包这些库，浪费了不少时间。所以，把这些不常变动的第三方库都提取出来，下次 build 的时候不再构建这些库，这样既可大大缩短构建时间。那么要怎么去实现呢？</p>
+<a id="more"></a>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="DllPlugin-和-DllReferencePlugin"><a href="#DllPlugin-和-DllReferencePlugin" class="headerlink" title="DllPlugin 和 DllReferencePlugin"></a>DllPlugin 和 DllReferencePlugin</h3><p>查找了一下资料，发现我们可以利用 webpack 的插件 DllPlugin 和 DllReferencePlugin 来实现我们要的功能。</p>
+<p>DllPlugin 可以把我们需要打包的第三方库打包成一个 js 文件和一个 json 文件，这个 json 文件中会映射每个打包的模块地址和 id，DllReferencePlugin 通过读取这个json文件来使用打包的这些模块。</p>
+<p>接下来就看如何实现。</p>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>在 build 文件夹中新建 webpack.dll.config.js (项目基于 vue-cli 的)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">entry</span>: &#123;</div><div class="line">    <span class="attr">vendor</span>: [<span class="string">'vue/dist/vue.common.js'</span>,<span class="string">'vue-router'</span>, <span class="string">'babel-polyfill'</span>,<span class="string">'axios'</span>,<span class="string">'vue-echarts-v3'</span>]</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">output</span>: &#123;</div><div class="line">    <span class="attr">path</span>: path.join(__dirname, <span class="string">'../static/js'</span>),</div><div class="line">    <span class="attr">filename</span>: <span class="string">'[name].dll.js'</span>,</div><div class="line">    <span class="attr">library</span>: <span class="string">'[name]_library'</span>       <span class="comment">// vendor.dll.js中暴露出的全局变量名</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">plugins</span>: [</div><div class="line">    <span class="keyword">new</span> webpack.DllPlugin(&#123;</div><div class="line">      <span class="attr">path</span>: path.join(__dirname, <span class="string">'.'</span>, <span class="string">'[name]-manifest.json'</span>),</div><div class="line">      <span class="attr">name</span>: <span class="string">'[name]_library'</span></div><div class="line">    &#125;),</div><div class="line">    <span class="keyword">new</span> webpack.optimize.UglifyJsPlugin(&#123;</div><div class="line">      <span class="attr">compress</span>: &#123;</div><div class="line">        <span class="attr">warnings</span>: <span class="literal">false</span></div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  ]</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>然后在 package.json 中配置命令</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    ...</div><div class="line">    <span class="string">"build:dll"</span>: <span class="string">"webpack --config build/webpack.dll.conf.js"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>执行 npm run build:dll 命令来生成 vendor.dll.js 和 vendor-manifest.json</p>
+<p>需要在 index.html 引入 vendor.dll.js</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./static/js/vendor.dll.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>vendor-manifest.json 的内容大概如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;name&quot;: &quot;vendor_library&quot;,</div><div class="line">  &quot;content&quot;: &#123;</div><div class="line">    &quot;./node_modules/core-js/modules/_export.js&quot;: &#123;</div><div class="line">      &quot;id&quot;: 0,</div><div class="line">      &quot;meta&quot;: &#123;&#125;</div><div class="line">    &#125;,</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>接下来就在 webpack.base.config.js 中通过 DLLReferencePlugin 来使用 DllPlugin 生成的 DLL Bundle</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="attr">entry</span>: &#123;</div><div class="line">        <span class="attr">app</span>: [<span class="string">'./src/main.js'</span>]</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">module</span>: &#123;</div><div class="line">        ...</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 添加DllReferencePlugin插件</span></div><div class="line">    plugins: [</div><div class="line">        <span class="keyword">new</span> webpack.DllReferencePlugin(&#123;</div><div class="line">            <span class="attr">context</span>: path.resolve(__dirname, <span class="string">'..'</span>),</div><div class="line">            <span class="attr">manifest</span>: <span class="built_in">require</span>(<span class="string">'./vendor-manifest.json'</span>)</div><div class="line">        &#125;),</div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>原先 build 需要 95446ms，配置之后执行 build 只需 14360ms，减少了 75% 的时间。</p>
+<p>但是存在一个问题，当把太多的第三方依赖都打包到 vendor.dll.js 中去，该文件太大也会影响首屏加载时间。所以要权衡利弊，可以异步加载的插件就没有必要打包进来了，不要一味的把所有都打包到这里面来获取构建时的快感。</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+    
+    <div class="donate">
+      <img src="../../../../images/weixin.jpg">
+      <p style="text-align:center;">请作者喝杯饮料！</p>
+    </div>
+    
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vue/" rel="tag"># vue</a>
+          
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
+          
+        </div>
+      
+
+      
+        <div class="post-like">
+          <div class="post-like-btn">
+            <span class="post-like-text"><i class="fa fa-heart"></i> 喜欢</span>
+            <span class="post-like-number"></span>
+          </div>
+        </div>
+      
+        <p style="color:#f74949;margin-top:25px;">原创文章，转发请保留原地址！商业用途请联系作者！</p>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/28/8/" rel="next" title="Vue.js 插件开发详解">
+                <i class="fa fa-chevron-left"></i> Vue.js 插件开发详解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/14/10/" rel="prev" title="HTML5 进阶系列：web Storage">
+                HTML5 进阶系列：web Storage <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      <div class="social-share" data-initialized="true">
+        <a href="#" class="social-share-icon icon-weibo"></a>
+        <a href="#" class="social-share-icon icon-qq"></a>
+        <a href="#" class="social-share-icon icon-wechat"></a>
+        <a href="#" class="social-share-icon icon-douban"></a>
+        <a href="#" class="social-share-icon icon-facebook"></a>
+        <a href="#" class="social-share-icon icon-twitter"></a>
+      </div>
+      <script src="/lib/overtrue-share.js/js/social-share.min.js"></script>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="linshuai" />
+          <p class="site-author-name" itemprop="name">linshuai</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lin-xin" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/p/1005052062260541" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" title="QQ">
+                  
+                    <i class="fa fa-fw fa-qq"></i>
+                  
+                  QQ
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/linshuai-15/pins/posts" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/linshuai" target="_blank" title="SegmentFault">
+                  
+                    <i class="fa fa-fw fa-scribd"></i>
+                  
+                  SegmentFault
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://juejin.im/user/57b13227128fe10055c39be2" target="_blank" title="掘金">
+                  
+                    <i class="fa fa-fw fa-angle-double-down"></i>
+                  
+                  掘金
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">1.</span> <span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DllPlugin-和-DllReferencePlugin"><span class="nav-number">1.1.</span> <span class="nav-text">DllPlugin 和 DllReferencePlugin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件"><span class="nav-number">1.2.</span> <span class="nav-text">配置文件</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">linshuai</span>
+  <span style="margin:0 10px;"> | </span>
+  <span><a href="http://www.gdfengshuo.com/blog/static/weixin.jpg" target="_blank">赞赏</a></span>
+</div>
+<!--
+
+-->
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt7kdFR9';
+      var conf = 'prod_a1dde8bf3f077e090bd150affe395749';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("FjAwbRjyNVgW7rVkidLeKRNB-gzGzoHsz", "A914GlBus7kWj7pmqtikEUJy");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var like = item.get('like');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+            $(element).next('.leancloud_likes').find('.leancloud-likes-count').text(like);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                $('.post-like-number,.leancloud-likes-count').text(counter.get('like'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                $('.post-like-number,.leancloud-likes-count').text(counter.get('like'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    function addLike(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("like");
+            counter.save(null, {
+              success: function(counter) {
+                $('.post-like-number,.leancloud-likes-count').text(counter.get('like'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Like num, with error message: ' + error.message);
+              }
+            });
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+
+      $('.post-like-btn').on('click', function(){
+        var $self = $(this);
+        if(!$self.hasClass('active')){
+          $self.addClass('active');
+          addLike(Counter);
+        }
+      })
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1c343a080809502ac823823ae4c9ffe3";
+      document.body.appendChild(hm);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    document.body.appendChild(bp);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
