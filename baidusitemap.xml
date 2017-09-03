@@ -3,6 +3,28 @@
 
 
     
+  <url>
+    <loc>http://blog.gdfengshuo.com/article/22/</loc>
+    <lastmod>2017-09-03T12:50:11.647Z</lastmod>
+    <data>
+        <display>
+        <title>Electron 实战桌面计算器应用</title>
+        <pubTime>2017-09-03T12:45:38.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>electron</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="http://blog.gdfengshuo.com/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://blog.gdfengshuo.com/article/21/</loc>
@@ -395,8 +417,6 @@
     </data>
     </url>
 
-    
-    
     
     
     
