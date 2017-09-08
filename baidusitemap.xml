@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://blog.gdfengshuo.com/article/19/</loc>
+    <lastmod>2017-09-08T06:39:14.661Z</lastmod>
+    <data>
+        <display>
+        <title>vue.js 组件之间传递数据</title>
+        <pubTime>2017-07-10T00:18:33.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="vue" url="http://blog.gdfengshuo.com/categories/vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.gdfengshuo.com/article/22/</loc>
     <lastmod>2017-09-03T12:50:11.647Z</lastmod>
     <data>
@@ -392,26 +412,6 @@
            
              
               <breadCrumb title="HTML5" url="http://blog.gdfengshuo.com/categories/HTML5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.gdfengshuo.com/article/19/</loc>
-    <lastmod>2017-08-17T09:21:38.466Z</lastmod>
-    <data>
-        <display>
-        <title>vue.js 组件之间传递数据</title>
-        <pubTime>2017-07-10T00:18:33.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-         
-           
-             
-              <breadCrumb title="vue" url="http://blog.gdfengshuo.com/categories/vue/"/>
           
         </display>
     </data>
