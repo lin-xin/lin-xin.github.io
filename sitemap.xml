@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.gdfengshuo.com/about/index.html</loc>
+    
+    <lastmod>2017-10-14T08:57:35.694Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.gdfengshuo.com/article/19/</loc>
     
     <lastmod>2017-09-08T06:39:14.661Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://blog.gdfengshuo.com/article/22/</loc>
     
     <lastmod>2017-09-03T12:50:11.647Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.gdfengshuo.com/about/index.html</loc>
-    
-    <lastmod>2017-08-24T00:55:28.566Z</lastmod>
     
   </url>
   
