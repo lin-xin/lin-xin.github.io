@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://blog.gdfengshuo.com/article/24/</loc>
+    <lastmod>2017-12-28T03:24:16.121Z</lastmod>
+    <data>
+        <display>
+        <title>Parcel：常见技术栈的集成方式</title>
+        <pubTime>2017-12-28T03:18:10.000Z</pubTime>
+        
+        <tag>Parcel</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端工具" url="http://blog.gdfengshuo.com/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.gdfengshuo.com/article/23/</loc>
     <lastmod>2017-10-23T00:20:38.380Z</lastmod>
     <data>
@@ -134,7 +154,7 @@
     
   <url>
     <loc>http://blog.gdfengshuo.com/article/2/</loc>
-    <lastmod>2017-08-17T09:22:53.959Z</lastmod>
+    <lastmod>2017-08-17T09:22:53.960Z</lastmod>
     <data>
         <display>
         <title>gulp自动化压缩合并、加版本号解决方案</title>
@@ -154,7 +174,7 @@
     
   <url>
     <loc>http://blog.gdfengshuo.com/article/3/</loc>
-    <lastmod>2017-08-17T09:22:50.711Z</lastmod>
+    <lastmod>2017-08-17T09:22:50.712Z</lastmod>
     <data>
         <display>
         <title>Vue2 后台管理系统解决方案</title>
@@ -176,7 +196,7 @@
     
   <url>
     <loc>http://blog.gdfengshuo.com/article/4/</loc>
-    <lastmod>2017-08-17T09:22:46.967Z</lastmod>
+    <lastmod>2017-08-17T09:22:46.968Z</lastmod>
     <data>
         <display>
         <title>Vuex 模块化实现待办事项的状态管理</title>
@@ -198,7 +218,7 @@
     
   <url>
     <loc>http://blog.gdfengshuo.com/article/9/</loc>
-    <lastmod>2017-08-17T09:22:34.927Z</lastmod>
+    <lastmod>2017-08-17T09:22:34.928Z</lastmod>
     <data>
         <display>
         <title>提高 webpack 构建 Vue 项目的速度</title>
@@ -220,7 +240,7 @@
     
   <url>
     <loc>http://blog.gdfengshuo.com/article/8/</loc>
-    <lastmod>2017-08-17T09:22:30.480Z</lastmod>
+    <lastmod>2017-08-17T09:22:30.481Z</lastmod>
     <data>
         <display>
         <title>Vue.js 插件开发详解</title>
@@ -284,7 +304,7 @@
     
   <url>
     <loc>http://blog.gdfengshuo.com/article/12/</loc>
-    <lastmod>2017-08-17T09:22:16.386Z</lastmod>
+    <lastmod>2017-08-17T09:22:16.387Z</lastmod>
     <data>
         <display>
         <title>HTML5 进阶系列：拖放 API 实现拖放排序</title>
@@ -350,7 +370,7 @@
     
   <url>
     <loc>http://blog.gdfengshuo.com/article/15/</loc>
-    <lastmod>2017-08-17T09:21:59.430Z</lastmod>
+    <lastmod>2017-08-17T09:21:59.431Z</lastmod>
     <data>
         <display>
         <title>sChart.js：一个小型简单的图表库</title>
@@ -418,7 +438,7 @@
     
   <url>
     <loc>http://blog.gdfengshuo.com/article/18/</loc>
-    <lastmod>2017-08-17T09:21:43.592Z</lastmod>
+    <lastmod>2017-08-17T09:21:43.593Z</lastmod>
     <data>
         <display>
         <title>HTML5 进阶系列：文件上传下载</title>
@@ -443,7 +463,7 @@
     
   <url>
     <loc>http://blog.gdfengshuo.com/article/5/</loc>
-    <lastmod>2017-07-17T08:49:26.759Z</lastmod>
+    <lastmod>2017-07-17T08:49:26.760Z</lastmod>
     <data>
         <display>
         <title>JavaScript 中 this 的详解</title>
@@ -463,7 +483,7 @@
     
   <url>
     <loc>http://blog.gdfengshuo.com/article/6/</loc>
-    <lastmod>2017-07-17T08:49:25.541Z</lastmod>
+    <lastmod>2017-07-17T08:49:25.542Z</lastmod>
     <data>
         <display>
         <title>JavaScript 中 apply 、call 的详解</title>
@@ -483,7 +503,7 @@
     
   <url>
     <loc>http://blog.gdfengshuo.com/article/7/</loc>
-    <lastmod>2017-06-07T06:19:16.921Z</lastmod>
+    <lastmod>2017-06-07T06:19:16.922Z</lastmod>
     <data>
         <display>
         <title>JavaScript 中 闭包 的详解</title>
