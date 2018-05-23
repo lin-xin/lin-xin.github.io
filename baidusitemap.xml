@@ -4,13 +4,35 @@
 
     
   <url>
+    <loc>http://blog.gdfengshuo.com/article/26/</loc>
+    <lastmod>2018-05-23T01:16:00.033Z</lastmod>
+    <data>
+        <display>
+        <title>React Native组件集成到Android原生项目</title>
+        <pubTime>2018-05-22T15:33:52.000Z</pubTime>
+        
+        <tag>ReactNative</tag>
+         
+         
+           
+             
+              <breadCrumb title="ReactNative" url="http://blog.gdfengshuo.com/categories/ReactNative/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.gdfengshuo.com/article/25/</loc>
-    <lastmod>2018-04-09T11:53:37.538Z</lastmod>
+    <lastmod>2018-05-23T01:02:46.680Z</lastmod>
     <data>
         <display>
         <title>Koa2 之文件上传下载</title>
         <pubTime>2018-03-25T11:18:10.000Z</pubTime>
         
+        <tag>图片上传</tag>
+         
         <tag>node.js</tag>
          
         <tag>Koa</tag>
@@ -19,6 +41,50 @@
            
              
               <breadCrumb title="Node" url="http://blog.gdfengshuo.com/categories/Node/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.gdfengshuo.com/article/3/</loc>
+    <lastmod>2018-05-09T06:47:30.699Z</lastmod>
+    <data>
+        <display>
+        <title>Vue2 后台管理系统解决方案</title>
+        <pubTime>2017-03-11T03:22:01.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+        <tag>element</tag>
+         
+         
+           
+             
+              <breadCrumb title="vue" url="http://blog.gdfengshuo.com/categories/vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.gdfengshuo.com/article/4/</loc>
+    <lastmod>2018-05-09T06:42:58.464Z</lastmod>
+    <data>
+        <display>
+        <title>Vuex 模块化实现待办事项的状态管理</title>
+        <pubTime>2017-03-14T00:56:24.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+        <tag>vuex</tag>
+         
+         
+           
+             
+              <breadCrumb title="vue" url="http://blog.gdfengshuo.com/categories/vue/"/>
           
         </display>
     </data>
@@ -188,50 +254,6 @@
            
              
               <breadCrumb title="前端工具" url="http://blog.gdfengshuo.com/categories/tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.gdfengshuo.com/article/3/</loc>
-    <lastmod>2017-08-17T09:22:50.712Z</lastmod>
-    <data>
-        <display>
-        <title>Vue2 后台管理系统解决方案</title>
-        <pubTime>2017-03-11T03:22:01.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>element</tag>
-         
-         
-           
-             
-              <breadCrumb title="vue" url="http://blog.gdfengshuo.com/categories/vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.gdfengshuo.com/article/4/</loc>
-    <lastmod>2017-08-17T09:22:46.968Z</lastmod>
-    <data>
-        <display>
-        <title>Vuex 模块化实现待办事项的状态管理</title>
-        <pubTime>2017-03-14T00:56:24.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>vuex</tag>
-         
-         
-           
-             
-              <breadCrumb title="vue" url="http://blog.gdfengshuo.com/categories/vue/"/>
           
         </display>
     </data>
@@ -420,9 +442,9 @@
         <title>vue-schart ： vue.js 的图表组件</title>
         <pubTime>2017-06-17T03:46:37.000Z</pubTime>
         
-        <tag>vue</tag>
-         
         <tag>图表</tag>
+         
+        <tag>vue</tag>
          
          
            
