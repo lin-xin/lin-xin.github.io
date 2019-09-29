@@ -1,1 +1,1071 @@
-<!doctype html><html class="theme-next mist" lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><link rel="stylesheet" href="/lib/overtrue-share.js/css/share.min.css"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css"><meta name="keywords" content="css filter, 滤镜, css毛玻璃"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1"><meta name="description" content="CSS3 filter 滤镜为图片提供了非常强大的效果，只需简单地给图片加上 filter 属性，就可以实现 ps 出来的效果。"><meta name="keywords" content="css filter, 滤镜, css毛玻璃"><meta property="og:type" content="article"><meta property="og:title" content="玩转 CSS3 filter 滤镜"><meta property="og:url" content="http://blog.gdfengshuo.com/article/21/index.html"><meta property="og:site_name" content="林鑫的博客-前端博客-web前端技术"><meta property="og:description" content="CSS3 filter 滤镜为图片提供了非常强大的效果，只需简单地给图片加上 filter 属性，就可以实现 ps 出来的效果。"><meta property="og:image" content="http://blog.gdfengshuo.com/images/avatar.jpg"><meta property="og:image" content="http://blog.gdfengshuo.com/images/avatar.jpg"><meta property="og:image" content="http://blog.gdfengshuo.com/images/avatar.jpg"><meta property="og:image" content="http://blog.gdfengshuo.com/images/avatar.jpg"><meta property="og:image" content="http://blog.gdfengshuo.com/images/avatar.jpg"><meta property="og:image" content="http://blog.gdfengshuo.com/images/avatar.jpg"><meta property="og:image" content="http://blog.gdfengshuo.com/images/avatar.jpg"><meta property="og:image" content="http://blog.gdfengshuo.com/images/avatar.jpg"><meta property="og:image" content="http://blog.gdfengshuo.com/images/avatar.jpg"><meta property="og:image" content="http://blog.gdfengshuo.com/images/avatar.jpg"><meta property="og:image" content="http://blog.gdfengshuo.com/images/avatar.jpg"><meta property="og:image" content="http://blog.gdfengshuo.com/images/avatar.jpg"><meta property="og:image" content="http://blog.gdfengshuo.com/images/post/blur.jpg"><meta property="og:updated_time" content="2017-08-17T12:51:01.049Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="玩转 CSS3 filter 滤镜"><meta name="twitter:description" content="CSS3 filter 滤镜为图片提供了非常强大的效果，只需简单地给图片加上 filter 属性，就可以实现 ps 出来的效果。"><meta name="twitter:image" content="http://blog.gdfengshuo.com/images/avatar.jpg"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Mist",sidebar:{position:"right",display:"always",offset:12,offset_float:0,b2t:!1,scrollpercent:!1},fancybox:!1,motion:!1,duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="http://blog.gdfengshuo.com/article/21/"><title>玩转 CSS3 filter 滤镜 | 林鑫的博客-前端博客-web前端技术</title></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans"> <img src="/images/linxin_seo.jpg" alt="玩转 CSS3 filter 滤镜 | 林鑫的博客-前端博客-web前端技术" style="display:none"><div class="container sidebar-position-right page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"> <a href="/" class="brand" rel="start"><span class="site-title">林鑫的博客</span></a></div><h1 class="site-subtitle" itemprop="description"></h1></div><div class="site-nav-toggle"> <button><span class="btn-bar"></span><span class="btn-bar"></span><span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br> 首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br> 分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br> 归档</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br> 标签</a></li><li class="menu-item menu-item-open"><a href="/open/" rel="section"><i class="menu-item-icon fa fa-fw fa-github"></i><br> 开源</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br> 关于</a></li></ul></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><link itemprop="mainEntityOfPage" href="http://blog.gdfengshuo.com/article/21/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="linshuai"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatar.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="林鑫的博客-前端博客-web前端技术"></span><header class="post-header"><h2 class="post-title" itemprop="name headline">玩转 CSS3 filter 滤镜</h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-16T19:48:27+08:00">2017-08-16</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CSS3/" itemprop="url" rel="index"><span itemprop="name">CSS3</span></a></span></span> <span id="/article/21/" class="leancloud_visitors" data-flag-title="玩转 CSS3 filter 滤镜"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">阅读数</span><span class="leancloud-visitors-count"></span></span> <span class="leancloud_likes"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-heart"></i></span> <span class="post-meta-item-text">喜欢数</span><span class="leancloud-likes-count"></span></span></div></header><div class="post-body" itemprop="articleBody"><p>CSS3 filter 滤镜为图片提供了非常强大的效果，只需简单地给图片加上 filter 属性，就可以实现 ps 出来的效果。</p><a id="more"></a><p>filter 提供了多种可视效果，而这些效果又可以互相混合，形成新的效果。接下来就用下面这张原图来体验一下 filter 的各种效果。</p><p><img src="/images/avatar.jpg"></p><h2 id="filter-函数"><a href="#filter-函数" class="headerlink" title="filter 函数"></a>filter 函数</h2><h3 id="blur"><a href="#blur" class="headerlink" title="blur()"></a>blur()</h3><p>高斯模糊。接受一个 css 长度值作为参数，可以是 px/vw/vh/rem 等单位，唯独不能是 % 。值越大越模糊。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">blur</span>(5px);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">blur</span>(5px);</div><div class="line">&#125;</div></pre></td></tr></table></figure><p><img src="/images/avatar.jpg" style="-webkit-filter:blur(5px);filter:blur(5px)"></p><h3 id="brightness"><a href="#brightness" class="headerlink" title="brightness()"></a>brightness()</h3><p>亮度，使图片更亮或者更暗。参数为百分比，默认为1。当参数为 0 时，图片全黑；参数可以大于 100%，也可以写成小数点的形式。<br></p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">brightness</span>(.5);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">brightness</span>(.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p><p><img src="/images/avatar.jpg" style="-webkit-filter:brightness(.5);filter:brightness(.5)"></p><h3 id="contrast"><a href="#contrast" class="headerlink" title="contrast()"></a>contrast()</h3><p>对比度。对比度指的是一幅图像中明暗区域最亮的白和最暗的黑之间不同亮度层级的测量，差异范围越大代表对比越大，差异范围越小代表对比越小。参数为百分比，默认为1。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">contrast</span>(.5);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">contrast</span>(.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure><p><img src="/images/avatar.jpg" style="-webkit-filter:contrast(.5);filter:contrast(.5)"></p><h3 id="saturate"><a href="#saturate" class="headerlink" title="saturate()"></a>saturate()</h3><p>饱和度，是图片变暗下来或更加鲜明。参数为百分比，默认为1，可以大于 100%。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">saturate</span>(200%);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">saturate</span>(200%);</div><div class="line">&#125;</div></pre></td></tr></table></figure><p><img src="/images/avatar.jpg" style="-webkit-filter:saturate(200%);filter:saturate(200%)"></p><h3 id="opacity"><a href="#opacity" class="headerlink" title="opacity()"></a>opacity()</h3><p>透明度。跟 CSS3 中的 opacity 属性效果是一致的。而使用 filter，一些浏览器为了提升性能会提供硬件加速。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">opacity</span>(.5);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">opacity</span>(.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure><p><img src="/images/avatar.jpg" style="-webkit-filter:opacity(.5);filter:opacity(.5)"></p><h3 id="drop-shadow"><a href="#drop-shadow" class="headerlink" title="drop-shadow()"></a>drop-shadow()</h3><p>阴影效果。该函数与 CSS3 中的 box-shadow 属性的视觉效果是一致的，参数也跟该属性的值相似。为什么只说相似呢？因为 box-shadow 有个属性值 inset 将阴影效果设为内阴影或者外阴影，而 drop-shadow() 是没有这个参数的。而 spread 参数，兼容却很差，加了也不会渲染，box-shadow 的 spread 值是可以渲染的，所以 drop-shadow() 函数就可以不要写这个参数了。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">drop-shadow</span>(5px 5px 5px red);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">drop-shadow</span>(5px 5px 5px red);</div><div class="line">&#125;</div></pre></td></tr></table></figure><p><img src="/images/avatar.jpg" style="-webkit-filter:drop-shadow(5px 5px 5px red);filter:drop-shadow(5px 5px 5px red)"></p><h3 id="grayscale"><a href="#grayscale" class="headerlink" title="grayscale()"></a>grayscale()</h3><p>灰度级，将图像转为灰度图像。参数为百分比，默认为0。若设为 100%，则完全转为灰度图像。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">grayscale</span>(1);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">grayscale</span>(1);</div><div class="line">&#125;</div></pre></td></tr></table></figure><p><img src="/images/avatar.jpg" style="-webkit-filter:grayscale(1);filter:grayscale(1)"></p><h3 id="hue-rotate"><a href="#hue-rotate" class="headerlink" title="hue-rotate()"></a>hue-rotate()</h3><p>色相旋转。色相是色彩的首要特征，是区别各种不同色彩的最准确的标准。事实上任何黑白灰以外的颜色都有色相的属性，而色相也就是由原色、间色和复色来构成的。hue-rotate() 函数通过旋转角度对色相进行旋转从而改变图像在视觉上的效果。参数为度数，单位为 deg</p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">hue-rotate</span>(180deg);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">hue-rotate</span>(180deg);</div><div class="line">&#125;</div></pre></td></tr></table></figure><p><img src="/images/avatar.jpg" style="-webkit-filter:hue-rotate(180deg);filter:hue-rotate(180deg)"></p><h3 id="invert"><a href="#invert" class="headerlink" title="invert()"></a>invert()</h3><p>反色。反色又叫补色，红的补色是绿色，蓝的补色是橙色，黄的补色是紫色，由这三种对比关系可引出很多对比的反色。在“画图”程序中，反色操作是指把画面中的黑色变成白色，白色变成黑色，绿色变成红色，黄色变成紫色。参数为百分比，不能超过 100%。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">invert</span>(1);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">invert</span>(1);</div><div class="line">&#125;</div></pre></td></tr></table></figure><p><img src="/images/avatar.jpg" style="-webkit-filter:invert(1);filter:invert(1)"></p><h3 id="sepia"><a href="#sepia" class="headerlink" title="sepia()"></a>sepia()</h3><p>将图像转换为深褐色，发黄老旧的效果。参数为百分比，默认为 0，不超过 100%。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">sepia</span>(.5);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">sepia</span>(.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure><p><img src="/images/avatar.jpg" style="-webkit-filter:sepia(.5);filter:sepia(.5)"></p><h2 id="复合函数"><a href="#复合函数" class="headerlink" title="复合函数"></a>复合函数</h2><p>上面的例子都只是单个效果的展示，而这些效果，都可以混合在一起使用，生成更多的视觉效果。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">brightness</span>(120%) <span class="built_in">contrast</span>(70%) <span class="built_in">saturate</span>(200%) <span class="built_in">hue-rotate</span>(30deg) <span class="built_in">drop-shadow</span>(5px 5px 5px green);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">brightness</span>(120%) <span class="built_in">contrast</span>(70%) <span class="built_in">saturate</span>(200%) <span class="built_in">hue-rotate</span>(30deg) <span class="built_in">drop-shadow</span>(5px 5px 5px green);</div><div class="line">&#125;</div></pre></td></tr></table></figure><p><img src="/images/avatar.jpg" style="-webkit-filter:brightness(120%) contrast(70%) saturate(200%) hue-rotate(30deg) drop-shadow(5px 5px 5px green);filter:brightness(120%) contrast(70%) saturate(200%) hue-rotate(30deg) drop-shadow(5px 5px 5px green)"></p><h2 id="常见案例"><a href="#常见案例" class="headerlink" title="常见案例"></a>常见案例</h2><p>那么这么炫酷的效果，我们可以用到哪些地方呢？</p><h3 id="鼠标移上效果"><a href="#鼠标移上效果" class="headerlink" title="鼠标移上效果"></a>鼠标移上效果</h3><p>图片默认为灰色，鼠标移上去变回彩色。</p><p><img id="img-hover" src="/images/post/blur.jpg"></p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">grayscale</span>(1);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">grayscale</span>(1);</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">img</span><span class="selector-pseudo">:hover</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">grayscale</span>(0);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">grayscale</span>(0);</div><div class="line">&#125;</div></pre></td></tr></table></figure><h3 id="毛玻璃"><a href="#毛玻璃" class="headerlink" title="毛玻璃"></a>毛玻璃</h3><div class="blur-box"><div class="blur-img">这里是 CSS3 filter 实现的毛玻璃效果</div></div><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">.blur-box&#123;</div><div class="line">    position: relative;</div><div class="line">    width: 300px;</div><div class="line">    height: 150px;</div><div class="line">    background: url("/images/post/blur.jpg");</div><div class="line">    padding-top: 50px;</div><div class="line">    background-size: 100% 100%;;</div><div class="line">    z-index: -1;</div><div class="line">&#125;</div><div class="line">.blur-img&#123;</div><div class="line">    position: relative;</div><div class="line">    width: 180px;</div><div class="line">    height: 80px;</div><div class="line">    padding: 10px;;</div><div class="line">    margin: auto;</div><div class="line">    color: #fff;</div><div class="line">    overflow: hidden;</div><div class="line">&#125;</div><div class="line">.blur-img:before&#123;</div><div class="line">    content: '';</div><div class="line">    position: absolute;</div><div class="line">    left: 0;</div><div class="line">    top: 0;</div><div class="line">    right: 0;</div><div class="line">    bottom: 0;</div><div class="line">    background: url("/images/post/blur.jpg") no-repeat;</div><div class="line">    background-position: -50px -50px;</div><div class="line">    background-size: 300px 200px;</div><div class="line">    -webkit-filter: blur(5px);</div><div class="line">    filter: blur(5px);</div><div class="line">    z-index: -1;</div><div class="line">&#125;</div></pre></td></tr></table></figure><h3 id="滑动比较图像"><a href="#滑动比较图像" class="headerlink" title="滑动比较图像"></a>滑动比较图像</h3><div class="slide-box"><div class="slide-box-item slide-item-1"></div><div class="slide-box-item slide-item-2"></div></div><p>拉动交界线下方可以滑动对比两边效果。这里纯 css 实现，使用了 resize 属性来拉伸，效果不是很好，如果是结合 js，那就会比较完美。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.slide-box</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">    <span class="attribute">overflow-x</span>: hidden;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.slide-box-item</span>&#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">    <span class="attribute">position</span>: absolute;</div><div class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">background</span>: <span class="built_in">url</span>(/images/post/blur.jpg);</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.slide-item-1</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">30%</span>;</div><div class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">resize</span>: horizontal;</div><div class="line">    <span class="attribute">overflow</span>: auto;</div><div class="line">    <span class="attribute">cursor</span>: w-resize;</div><div class="line">    <span class="attribute">z-index</span>: <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.slide-item-2</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">70%</span>;</div><div class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">-webkit-filter</span>: <span class="built_in">hue-rotate</span>(90deg);</div><div class="line">    <span class="attribute">filter</span>: <span class="built_in">hue-rotate</span>(90deg);</div><div class="line">    <span class="attribute">background-position</span>: -<span class="number">90px</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></div><div></div><div></div><div></div><div class="donate"> <img src="../../../../images/weixin.jpg"><p style="text-align:center">请作者喝杯饮料！</p></div><footer class="post-footer"><div class="post-tags"> <a href="/tags/CSS3/" rel="tag"># CSS3</a> <a href="/tags/filter/" rel="tag"># filter</a></div><div class="post-like"><div class="post-like-btn"><span class="post-like-text"><i class="fa fa-heart"></i> 喜欢</span><span class="post-like-number"></span></div></div><p style="color:#f74949;margin-top:25px">原创文章，转发请保留原地址！商业用途请联系作者！</p><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/article/20/" rel="next" title="Node.js 入门：Express + Mongoose 基础使用"><i class="fa fa-chevron-left"></i> Node.js 入门：Express + Mongoose 基础使用</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"> <a href="/article/22/" rel="prev" title="Electron 实战桌面计算器应用">Electron 实战桌面计算器应用<i class="fa fa-chevron-right"></i></a></div></div></footer></article><div class="post-spread"><div class="social-share" data-initialized="true"><a href="#" class="social-share-icon icon-weibo"></a><a href="#" class="social-share-icon icon-qq"></a><a href="#" class="social-share-icon icon-wechat"></a><a href="#" class="social-share-icon icon-douban"></a><a href="#" class="social-share-icon icon-facebook"></a><a href="#" class="social-share-icon icon-twitter"></a></div><script src="/lib/overtrue-share.js/js/social-share.min.js"></script></div></div></div><div class="comments" id="comments"><div id="SOHUCS"></div></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span><span class="sidebar-toggle-line sidebar-toggle-line-middle"></span><span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap"> 文章目录</li><li class="sidebar-nav-overview" data-target="site-overview"> 站点概览</li></ul><section class="site-overview sidebar-panel"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"> <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="linshuai"><p class="site-author-name" itemprop="name">linshuai</p><p class="site-description motion-element" itemprop="description"></p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"> <a href="/archives/"><span class="site-state-item-count">29</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"> <a href="/categories/index.html"><span class="site-state-item-count">8</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"> <a href="/tags/index.html"><span class="site-state-item-count">23</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/lin-xin" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i> GitHub</a></span><span class="links-of-author-item"><a href="http://weibo.com/p/1005052062260541" target="_blank" title="Weibo"><i class="fa fa-fw fa-weibo"></i> Weibo</a></span><span class="links-of-author-item"><a href="http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" title="QQ"><i class="fa fa-fw fa-qq"></i> QQ</a></span><span class="links-of-author-item"><a href="https://www.zhihu.com/people/linshuai-15/pins/posts" target="_blank" title="知乎"><i class="fa fa-fw fa-globe"></i> 知乎</a></span><span class="links-of-author-item"><a href="https://segmentfault.com/u/linshuai" target="_blank" title="SegmentFault"><i class="fa fa-fw fa-scribd"></i> SegmentFault</a></span><span class="links-of-author-item"><a href="https://juejin.im/user/57b13227128fe10055c39be2" target="_blank" title="掘金"><i class="fa fa-fw fa-angle-double-down"></i> 掘金</a></span></div></section><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#filter-函数"><span class="nav-number">1.</span> <span class="nav-text">filter 函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#blur"><span class="nav-number">1.1.</span> <span class="nav-text">blur()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#brightness"><span class="nav-number">1.2.</span> <span class="nav-text">brightness()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#contrast"><span class="nav-number">1.3.</span> <span class="nav-text">contrast()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#saturate"><span class="nav-number">1.4.</span> <span class="nav-text">saturate()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#opacity"><span class="nav-number">1.5.</span> <span class="nav-text">opacity()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#drop-shadow"><span class="nav-number">1.6.</span> <span class="nav-text">drop-shadow()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#grayscale"><span class="nav-number">1.7.</span> <span class="nav-text">grayscale()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hue-rotate"><span class="nav-number">1.8.</span> <span class="nav-text">hue-rotate()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#invert"><span class="nav-number">1.9.</span> <span class="nav-text">invert()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sepia"><span class="nav-number">1.10.</span> <span class="nav-text">sepia()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复合函数"><span class="nav-number">2.</span> <span class="nav-text">复合函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见案例"><span class="nav-number">3.</span> <span class="nav-text">常见案例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#鼠标移上效果"><span class="nav-number">3.1.</span> <span class="nav-text">鼠标移上效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#毛玻璃"><span class="nav-number">3.2.</span> <span class="nav-text">毛玻璃</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#滑动比较图像"><span class="nav-number">3.3.</span> <span class="nav-text">滑动比较图像</span></a></li></ol></li></ol></div></div></section></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><div class="copyright"> &copy; <span itemprop="copyrightYear">2019</span><span class="with-love"><i class="fa fa-heart"></i></span> <span class="author" itemprop="copyrightHolder">linshuai</span> <span style="margin:0 10px">|</span> <span><a href="../../../../images/weixin.jpg" target="_blank">赞赏</a></span></div><script>var host=window.location.host;"blog.gdfengshuo.com"!==host&&"localhost:4000"!=host&&(document.body.innerHTML="")</script></div></footer><div class="back-to-top"><i class="fa fa-arrow-up"></i></div></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script><script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script><script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script><script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script><script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script><script>AV.initialize("FjAwbRjyNVgW7rVkidLeKRNB-gzGzoHsz","A914GlBus7kWj7pmqtikEUJy")</script><script>function showTime(e){var t=new AV.Query(e),n=[],o=$(".leancloud_visitors");o.each(function(){n.push($(this).attr("id").trim())}),t.containedIn("url",n),t.find().done(function(e){if(0!==e.length){for(r=0;r<e.length;r++){var t=e[r],i=t.get("url"),l=t.get("time"),s=t.get("like"),c=document.getElementById(i);$(c).find(".leancloud-visitors-count").text(l),$(c).next(".leancloud_likes").find(".leancloud-likes-count").text(s)}for(var r=0;r<n.length;r++){var i=n[r],c=document.getElementById(i),u=$(c).find(".leancloud-visitors-count");""==u.text()&&u.text(0)}}else o.find(".leancloud-visitors-count").text(0)}).fail(function(e,t){console.log("Error: "+t.code+" "+t.message)})}function addCount(e){var t=$(".leancloud_visitors"),n=t.attr("id").trim(),o=t.attr("data-flag-title").trim(),i=new AV.Query(e);i.equalTo("url",n),i.find({success:function(t){if(t.length>0){var i=t[0];i.fetchWhenSave(!0),i.increment("time"),i.save(null,{success:function(e){$(document.getElementById(n)).find(".leancloud-visitors-count").text(e.get("time")),$(".post-like-number,.leancloud-likes-count").text(e.get("like"))},error:function(e,t){console.log("Failed to save Visitor num, with error message: "+t.message)}})}else{var l=new e,s=new AV.ACL;s.setPublicReadAccess(!0),s.setPublicWriteAccess(!0),l.setACL(s),l.set("title",o),l.set("url",n),l.set("time",1),l.save(null,{success:function(e){$(document.getElementById(n)).find(".leancloud-visitors-count").text(e.get("time")),$(".post-like-number,.leancloud-likes-count").text(i.get("like"))},error:function(e,t){console.log("Failed to create")}})}},error:function(e){console.log("Error:"+e.code+" "+e.message)}})}function addLike(e){var t=$(".leancloud_visitors"),n=t.attr("id").trim(),o=(t.attr("data-flag-title").trim(),new AV.Query(e));o.equalTo("url",n),o.find({success:function(e){var t=e[0];t.fetchWhenSave(!0),t.increment("like"),t.save(null,{success:function(e){$(".post-like-number,.leancloud-likes-count").text(e.get("like"))},error:function(e,t){console.log("Failed to save Like num, with error message: "+t.message)}})},error:function(e){console.log("Error:"+e.code+" "+e.message)}})}$(function(){var e=AV.Object.extend("Counter");1==$(".leancloud_visitors").length?addCount(e):$(".post-title-link").length>1&&showTime(e),$(".post-like-btn").on("click",function(){var t=$(this);t.hasClass("active")||(t.addClass("active"),addLike(e))})})</script><script type="text/javascript">var _hmt=_hmt||[];!function(){var c=document.createElement("script");c.src="https://hm.baidu.com/hm.js?b455f7e1c6ca6e239edaccf0e6aa11fb",document.body.appendChild(c)}()</script><script>!function(){var t=document.createElement("script"),o=window.location.protocol.split(":")[0];t.src="https"===o?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js",document.body.appendChild(t)}()</script></body></html>
+<!doctype html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<link rel="stylesheet" href="/lib/overtrue-share.js/css/share.min.css">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css filter, 滤镜, css毛玻璃" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="CSS3 filter 滤镜为图片提供了非常强大的效果，只需简单地给图片加上 filter 属性，就可以实现 ps 出来的效果。">
+<meta name="keywords" content="css filter, 滤镜, css毛玻璃">
+<meta property="og:type" content="article">
+<meta property="og:title" content="玩转 CSS3 filter 滤镜">
+<meta property="og:url" content="https://lin-xin.github.io/article/21/index.html">
+<meta property="og:site_name" content="林鑫的博客-前端博客-web前端技术">
+<meta property="og:description" content="CSS3 filter 滤镜为图片提供了非常强大的效果，只需简单地给图片加上 filter 属性，就可以实现 ps 出来的效果。">
+<meta property="og:image" content="https://lin-xin.github.io/images/avatar.jpg">
+<meta property="og:image" content="https://lin-xin.github.io/images/avatar.jpg">
+<meta property="og:image" content="https://lin-xin.github.io/images/avatar.jpg">
+<meta property="og:image" content="https://lin-xin.github.io/images/avatar.jpg">
+<meta property="og:image" content="https://lin-xin.github.io/images/avatar.jpg">
+<meta property="og:image" content="https://lin-xin.github.io/images/avatar.jpg">
+<meta property="og:image" content="https://lin-xin.github.io/images/avatar.jpg">
+<meta property="og:image" content="https://lin-xin.github.io/images/avatar.jpg">
+<meta property="og:image" content="https://lin-xin.github.io/images/avatar.jpg">
+<meta property="og:image" content="https://lin-xin.github.io/images/avatar.jpg">
+<meta property="og:image" content="https://lin-xin.github.io/images/avatar.jpg">
+<meta property="og:image" content="https://lin-xin.github.io/images/avatar.jpg">
+<meta property="og:image" content="https://lin-xin.github.io/images/post/blur.jpg">
+<meta property="og:updated_time" content="2017-08-17T12:51:01.049Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="玩转 CSS3 filter 滤镜">
+<meta name="twitter:description" content="CSS3 filter 滤镜为图片提供了非常强大的效果，只需简单地给图片加上 filter 属性，就可以实现 ps 出来的效果。">
+<meta name="twitter:image" content="https://lin-xin.github.io/images/avatar.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: false,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://lin-xin.github.io/article/21/"/>
+
+
+
+
+
+  <title>玩转 CSS3 filter 滤镜 | 林鑫的博客-前端博客-web前端技术</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <img src="/images/linxin_seo.jpg" alt="玩转 CSS3 filter 滤镜 | 林鑫的博客-前端博客-web前端技术" style="display:none">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <!-- <span class="logo-line-before"><i></i></span> -->
+        <span class="site-title">林鑫的博客</span>
+        <!-- <span class="logo-line-after"><i></i></span> -->
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-open">
+          <a href="/open/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-github"></i> <br />
+            
+            开源
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://lin-xin.github.io/article/21/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="linshuai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林鑫的博客-前端博客-web前端技术">
+    </span>
+    
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">玩转 CSS3 filter 滤镜</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-16T19:48:27+08:00">
+                2017-08-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS3/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS3</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/article/21/" class="leancloud_visitors" data-flag-title="玩转 CSS3 filter 滤镜">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+             <span class="leancloud_likes">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-heart"></i>
+               </span>
+                <span class="post-meta-item-text">喜欢数 </span>
+                <span class="leancloud-likes-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>CSS3 filter 滤镜为图片提供了非常强大的效果，只需简单地给图片加上 filter 属性，就可以实现 ps 出来的效果。</p>
+<a id="more"></a>
+<p>filter 提供了多种可视效果，而这些效果又可以互相混合，形成新的效果。接下来就用下面这张原图来体验一下 filter 的各种效果。</p>
+<p><img src="/images/avatar.jpg"></p>
+<h2 id="filter-函数"><a href="#filter-函数" class="headerlink" title="filter 函数"></a>filter 函数</h2><h3 id="blur"><a href="#blur" class="headerlink" title="blur()"></a>blur()</h3><p>高斯模糊。接受一个 css 长度值作为参数，可以是 px/vw/vh/rem 等单位，唯独不能是 % 。值越大越模糊。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">blur</span>(5px);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">blur</span>(5px);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="/images/avatar.jpg" style="-webkit-filter:blur(5px);filter:blur(5px)"></p>
+<h3 id="brightness"><a href="#brightness" class="headerlink" title="brightness()"></a>brightness()</h3><p>亮度，使图片更亮或者更暗。参数为百分比，默认为1。当参数为 0 时，图片全黑；参数可以大于 100%，也可以写成小数点的形式。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">brightness</span>(.5);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">brightness</span>(.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="/images/avatar.jpg" style="-webkit-filter:brightness(.5);filter:brightness(.5)"></p>
+<h3 id="contrast"><a href="#contrast" class="headerlink" title="contrast()"></a>contrast()</h3><p>对比度。对比度指的是一幅图像中明暗区域最亮的白和最暗的黑之间不同亮度层级的测量，差异范围越大代表对比越大，差异范围越小代表对比越小。参数为百分比，默认为1。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">contrast</span>(.5);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">contrast</span>(.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="/images/avatar.jpg" style="-webkit-filter:contrast(.5);filter:contrast(.5)"></p>
+<h3 id="saturate"><a href="#saturate" class="headerlink" title="saturate()"></a>saturate()</h3><p>饱和度，是图片变暗下来或更加鲜明。参数为百分比，默认为1，可以大于 100%。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">saturate</span>(200%);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">saturate</span>(200%);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="/images/avatar.jpg" style="-webkit-filter:saturate(200%);filter:saturate(200%)"></p>
+<h3 id="opacity"><a href="#opacity" class="headerlink" title="opacity()"></a>opacity()</h3><p>透明度。跟 CSS3 中的 opacity 属性效果是一致的。而使用 filter，一些浏览器为了提升性能会提供硬件加速。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">opacity</span>(.5);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">opacity</span>(.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="/images/avatar.jpg" style="-webkit-filter:opacity(.5);filter:opacity(.5)"></p>
+<h3 id="drop-shadow"><a href="#drop-shadow" class="headerlink" title="drop-shadow()"></a>drop-shadow()</h3><p>阴影效果。该函数与 CSS3 中的 box-shadow 属性的视觉效果是一致的，参数也跟该属性的值相似。为什么只说相似呢？因为 box-shadow 有个属性值 inset 将阴影效果设为内阴影或者外阴影，而 drop-shadow() 是没有这个参数的。而 spread 参数，兼容却很差，加了也不会渲染，box-shadow 的 spread 值是可以渲染的，所以 drop-shadow() 函数就可以不要写这个参数了。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">drop-shadow</span>(5px 5px 5px red);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">drop-shadow</span>(5px 5px 5px red);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="/images/avatar.jpg" style="-webkit-filter:drop-shadow(5px 5px 5px red);filter:drop-shadow(5px 5px 5px red)"></p>
+<h3 id="grayscale"><a href="#grayscale" class="headerlink" title="grayscale()"></a>grayscale()</h3><p>灰度级，将图像转为灰度图像。参数为百分比，默认为0。若设为 100%，则完全转为灰度图像。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">grayscale</span>(1);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">grayscale</span>(1);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="/images/avatar.jpg" style="-webkit-filter:grayscale(1);filter:grayscale(1)"></p>
+<h3 id="hue-rotate"><a href="#hue-rotate" class="headerlink" title="hue-rotate()"></a>hue-rotate()</h3><p>色相旋转。色相是色彩的首要特征，是区别各种不同色彩的最准确的标准。事实上任何黑白灰以外的颜色都有色相的属性，而色相也就是由原色、间色和复色来构成的。hue-rotate() 函数通过旋转角度对色相进行旋转从而改变图像在视觉上的效果。参数为度数，单位为 deg</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">hue-rotate</span>(180deg);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">hue-rotate</span>(180deg);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="/images/avatar.jpg" style="-webkit-filter:hue-rotate(180deg);filter:hue-rotate(180deg)"></p>
+<h3 id="invert"><a href="#invert" class="headerlink" title="invert()"></a>invert()</h3><p>反色。反色又叫补色，红的补色是绿色，蓝的补色是橙色，黄的补色是紫色，由这三种对比关系可引出很多对比的反色。在“画图”程序中，反色操作是指把画面中的黑色变成白色，白色变成黑色，绿色变成红色，黄色变成紫色。参数为百分比，不能超过 100%。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">invert</span>(1);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">invert</span>(1);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="/images/avatar.jpg" style="-webkit-filter:invert(1);filter:invert(1)"></p>
+<h3 id="sepia"><a href="#sepia" class="headerlink" title="sepia()"></a>sepia()</h3><p>将图像转换为深褐色，发黄老旧的效果。参数为百分比，默认为 0，不超过 100%。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">sepia</span>(.5);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">sepia</span>(.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="/images/avatar.jpg" style="-webkit-filter:sepia(.5);filter:sepia(.5)"></p>
+<h2 id="复合函数"><a href="#复合函数" class="headerlink" title="复合函数"></a>复合函数</h2><p>上面的例子都只是单个效果的展示，而这些效果，都可以混合在一起使用，生成更多的视觉效果。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">brightness</span>(120%) <span class="built_in">contrast</span>(70%) <span class="built_in">saturate</span>(200%) <span class="built_in">hue-rotate</span>(30deg) <span class="built_in">drop-shadow</span>(5px 5px 5px green);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">brightness</span>(120%) <span class="built_in">contrast</span>(70%) <span class="built_in">saturate</span>(200%) <span class="built_in">hue-rotate</span>(30deg) <span class="built_in">drop-shadow</span>(5px 5px 5px green);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="/images/avatar.jpg" style="-webkit-filter:brightness(120%) contrast(70%) saturate(200%) hue-rotate(30deg) drop-shadow(5px 5px 5px green);filter:brightness(120%) contrast(70%) saturate(200%) hue-rotate(30deg) drop-shadow(5px 5px 5px green);"></p>
+<h2 id="常见案例"><a href="#常见案例" class="headerlink" title="常见案例"></a>常见案例</h2><p>那么这么炫酷的效果，我们可以用到哪些地方呢？</p>
+<h3 id="鼠标移上效果"><a href="#鼠标移上效果" class="headerlink" title="鼠标移上效果"></a>鼠标移上效果</h3><p>图片默认为灰色，鼠标移上去变回彩色。</p>
+<p><img id="img-hover" src="/images/post/blur.jpg"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">grayscale</span>(1);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">grayscale</span>(1);</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">img</span><span class="selector-pseudo">:hover</span>&#123;</div><div class="line">    <span class="attribute">-webkit-filter</span>:<span class="built_in">grayscale</span>(0);</div><div class="line">    <span class="attribute">filter</span>:<span class="built_in">grayscale</span>(0);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="毛玻璃"><a href="#毛玻璃" class="headerlink" title="毛玻璃"></a>毛玻璃</h3><div class="blur-box"><div class="blur-img">这里是 CSS3 filter 实现的毛玻璃效果</div></div>
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">.blur-box&#123;</div><div class="line">    position: relative;</div><div class="line">    width: 300px;</div><div class="line">    height: 150px;</div><div class="line">    background: url("/images/post/blur.jpg");</div><div class="line">    padding-top: 50px;</div><div class="line">    background-size: 100% 100%;;</div><div class="line">    z-index: -1;</div><div class="line">&#125;</div><div class="line">.blur-img&#123;</div><div class="line">    position: relative;</div><div class="line">    width: 180px;</div><div class="line">    height: 80px;</div><div class="line">    padding: 10px;;</div><div class="line">    margin: auto;</div><div class="line">    color: #fff;</div><div class="line">    overflow: hidden;</div><div class="line">&#125;</div><div class="line">.blur-img:before&#123;</div><div class="line">    content: '';</div><div class="line">    position: absolute;</div><div class="line">    left: 0;</div><div class="line">    top: 0;</div><div class="line">    right: 0;</div><div class="line">    bottom: 0;</div><div class="line">    background: url("/images/post/blur.jpg") no-repeat;</div><div class="line">    background-position: -50px -50px;</div><div class="line">    background-size: 300px 200px;</div><div class="line">    -webkit-filter: blur(5px);</div><div class="line">    filter: blur(5px);</div><div class="line">    z-index: -1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="滑动比较图像"><a href="#滑动比较图像" class="headerlink" title="滑动比较图像"></a>滑动比较图像</h3><div class="slide-box"><div class="slide-box-item slide-item-1"></div><div class="slide-box-item slide-item-2"></div></div>
+
+<p>拉动交界线下方可以滑动对比两边效果。这里纯 css 实现，使用了 resize 属性来拉伸，效果不是很好，如果是结合 js，那就会比较完美。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.slide-box</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">    <span class="attribute">overflow-x</span>: hidden;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.slide-box-item</span>&#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">    <span class="attribute">position</span>: absolute;</div><div class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">background</span>: <span class="built_in">url</span>(/images/post/blur.jpg);</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.slide-item-1</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">30%</span>;</div><div class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">resize</span>: horizontal;</div><div class="line">    <span class="attribute">overflow</span>: auto;</div><div class="line">    <span class="attribute">cursor</span>: w-resize;</div><div class="line">    <span class="attribute">z-index</span>: <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.slide-item-2</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">70%</span>;</div><div class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">-webkit-filter</span>: <span class="built_in">hue-rotate</span>(90deg);</div><div class="line">    <span class="attribute">filter</span>: <span class="built_in">hue-rotate</span>(90deg);</div><div class="line">    <span class="attribute">background-position</span>: -<span class="number">90px</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+    
+    <div class="donate">
+      <img src="../../../../images/weixin.jpg">
+      <p style="text-align:center;">请作者喝杯饮料！</p>
+    </div>
+    
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS3/" rel="tag"># CSS3</a>
+          
+            <a href="/tags/filter/" rel="tag"># filter</a>
+          
+        </div>
+      
+
+      
+        <div class="post-like">
+          <div class="post-like-btn">
+            <span class="post-like-text"><i class="fa fa-heart"></i> 喜欢</span>
+            <span class="post-like-number"></span>
+          </div>
+        </div>
+      
+        <p style="color:#f74949;margin-top:25px;">原创文章，转发请保留原地址！商业用途请联系作者！</p>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/article/20/" rel="next" title="Node.js 入门：Express + Mongoose 基础使用">
+                <i class="fa fa-chevron-left"></i> Node.js 入门：Express + Mongoose 基础使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/article/22/" rel="prev" title="Electron 实战桌面计算器应用">
+                Electron 实战桌面计算器应用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      <div class="social-share" data-initialized="true">
+        <a href="#" class="social-share-icon icon-weibo"></a>
+        <a href="#" class="social-share-icon icon-qq"></a>
+        <a href="#" class="social-share-icon icon-wechat"></a>
+        <a href="#" class="social-share-icon icon-douban"></a>
+        <a href="#" class="social-share-icon icon-facebook"></a>
+        <a href="#" class="social-share-icon icon-twitter"></a>
+      </div>
+      <script src="/lib/overtrue-share.js/js/social-share.min.js"></script>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="linshuai" />
+          <p class="site-author-name" itemprop="name">linshuai</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lin-xin" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/p/1005052062260541" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" title="QQ">
+                  
+                    <i class="fa fa-fw fa-qq"></i>
+                  
+                  QQ
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/linshuai-15/pins/posts" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/linshuai" target="_blank" title="SegmentFault">
+                  
+                    <i class="fa fa-fw fa-scribd"></i>
+                  
+                  SegmentFault
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://juejin.im/user/57b13227128fe10055c39be2" target="_blank" title="掘金">
+                  
+                    <i class="fa fa-fw fa-angle-double-down"></i>
+                  
+                  掘金
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#filter-函数"><span class="nav-number">1.</span> <span class="nav-text">filter 函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#blur"><span class="nav-number">1.1.</span> <span class="nav-text">blur()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#brightness"><span class="nav-number">1.2.</span> <span class="nav-text">brightness()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#contrast"><span class="nav-number">1.3.</span> <span class="nav-text">contrast()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#saturate"><span class="nav-number">1.4.</span> <span class="nav-text">saturate()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#opacity"><span class="nav-number">1.5.</span> <span class="nav-text">opacity()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#drop-shadow"><span class="nav-number">1.6.</span> <span class="nav-text">drop-shadow()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#grayscale"><span class="nav-number">1.7.</span> <span class="nav-text">grayscale()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hue-rotate"><span class="nav-number">1.8.</span> <span class="nav-text">hue-rotate()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#invert"><span class="nav-number">1.9.</span> <span class="nav-text">invert()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sepia"><span class="nav-number">1.10.</span> <span class="nav-text">sepia()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复合函数"><span class="nav-number">2.</span> <span class="nav-text">复合函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见案例"><span class="nav-number">3.</span> <span class="nav-text">常见案例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#鼠标移上效果"><span class="nav-number">3.1.</span> <span class="nav-text">鼠标移上效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#毛玻璃"><span class="nav-number">3.2.</span> <span class="nav-text">毛玻璃</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#滑动比较图像"><span class="nav-number">3.3.</span> <span class="nav-text">滑动比较图像</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">linshuai</span>
+  <span style="margin:0 10px;"> | </span>
+  <span><a href="../../../../images/weixin.jpg" target="_blank">赞赏</a></span>
+</div>
+<!--
+
+-->
+<script>
+	var host = window.location.host;
+	if(!(host === 'lin-xin.github.io' || host == 'localhost:4000')){
+		document.body.innerHTML = '';
+	}
+</script>
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    <!--<div id="fuli" class="fuli" style="position: fixed;right: 30px;bottom: 0;z-index: 10000;">
+        <span id="close-fuli" class="close-fuli" @click="visible = false" style="position: absolute;top: 0;right: 0;background: #000;color: #fff;font-size: 14px;padding: 2px 5px;cursor: pointer;">关闭</span>
+        <img src="http://blog.gdfengshuo.com/example/work/static/img/alipay.f2fa983.png" alt="支付宝领红包" title="支付宝扫码领红包">
+    </div>
+    <script>
+      document.getElementById('close-fuli').onclick = function(){
+        document.getElementById('fuli').style.display = 'none';
+      }
+    </script>-->
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("FjAwbRjyNVgW7rVkidLeKRNB-gzGzoHsz", "A914GlBus7kWj7pmqtikEUJy");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var like = item.get('like');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+            $(element).next('.leancloud_likes').find('.leancloud-likes-count').text(like);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                $('.post-like-number,.leancloud-likes-count').text(counter.get('like'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                $('.post-like-number,.leancloud-likes-count').text(counter.get('like'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    function addLike(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("like");
+            counter.save(null, {
+              success: function(counter) {
+                $('.post-like-number,.leancloud-likes-count').text(counter.get('like'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Like num, with error message: ' + error.message);
+              }
+            });
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+
+      $('.post-like-btn').on('click', function(){
+        var $self = $(this);
+        if(!$self.hasClass('active')){
+          $self.addClass('active');
+          addLike(Counter);
+        }
+      })
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b455f7e1c6ca6e239edaccf0e6aa11fb";
+      document.body.appendChild(hm);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    document.body.appendChild(bp);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
