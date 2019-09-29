@@ -4,30 +4,8 @@
 
     
   <url>
-    <loc>https://lin-xin.github.io/article/4/</loc>
-    <lastmod>2019-09-29T02:14:45.016Z</lastmod>
-    <data>
-        <display>
-        <title>Vuex 模块化实现待办事项的状态管理</title>
-        <pubTime>2017-03-14T00:56:24.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>vuex</tag>
-         
-         
-           
-             
-              <breadCrumb title="vue" url="https://lin-xin.github.io/categories/vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://lin-xin.github.io/article/29/</loc>
-    <lastmod>2019-09-29T02:14:45.016Z</lastmod>
+    <lastmod>2019-09-29T02:19:18.904Z</lastmod>
     <data>
         <display>
         <title>vue-manage-system 后台管理系统开发总结</title>
@@ -48,8 +26,52 @@
 
     
   <url>
+    <loc>https://lin-xin.github.io/article/15/</loc>
+    <lastmod>2019-09-29T02:19:18.904Z</lastmod>
+    <data>
+        <display>
+        <title>sChart.js：一个小型简单的图表库</title>
+        <pubTime>2017-05-31T01:24:46.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>图表</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="https://lin-xin.github.io/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lin-xin.github.io/article/16/</loc>
+    <lastmod>2019-09-29T02:19:18.904Z</lastmod>
+    <data>
+        <display>
+        <title>vue-schart ： vue.js 的图表组件</title>
+        <pubTime>2017-06-17T03:46:37.000Z</pubTime>
+        
+        <tag>图表</tag>
+         
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="vue" url="https://lin-xin.github.io/categories/vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://lin-xin.github.io/article/27/</loc>
-    <lastmod>2019-09-29T02:14:45.016Z</lastmod>
+    <lastmod>2019-09-29T02:15:27.111Z</lastmod>
     <data>
         <display>
         <title>使用 Node.js 开发简单的脚手架工具</title>
@@ -68,8 +90,50 @@
 
     
   <url>
+    <loc>https://lin-xin.github.io/article/4/</loc>
+    <lastmod>2019-09-29T02:15:27.098Z</lastmod>
+    <data>
+        <display>
+        <title>Vuex 模块化实现待办事项的状态管理</title>
+        <pubTime>2017-03-14T00:56:24.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+        <tag>vuex</tag>
+         
+         
+           
+             
+              <breadCrumb title="vue" url="https://lin-xin.github.io/categories/vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lin-xin.github.io/article/23/</loc>
+    <lastmod>2019-09-29T02:15:27.096Z</lastmod>
+    <data>
+        <display>
+        <title>HTML5 桌面通知：Notification API</title>
+        <pubTime>2017-10-23T00:12:12.000Z</pubTime>
+        
+        <tag>HTML5</tag>
+         
+         
+           
+             
+              <breadCrumb title="HTML5" url="https://lin-xin.github.io/categories/HTML5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://lin-xin.github.io/article/3/</loc>
-    <lastmod>2019-09-29T02:14:45.016Z</lastmod>
+    <lastmod>2019-09-29T02:15:27.096Z</lastmod>
     <data>
         <display>
         <title>Vue2 后台管理系统解决方案</title>
@@ -78,6 +142,26 @@
         <tag>vue</tag>
          
         <tag>element</tag>
+         
+         
+           
+             
+              <breadCrumb title="vue" url="https://lin-xin.github.io/categories/vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lin-xin.github.io/article/19/</loc>
+    <lastmod>2019-09-29T02:15:27.094Z</lastmod>
+    <data>
+        <display>
+        <title>vue.js 组件之间传递数据</title>
+        <pubTime>2017-07-10T00:18:33.000Z</pubTime>
+        
+        <tag>vue</tag>
          
          
            
@@ -105,90 +189,6 @@
            
              
               <breadCrumb title="JavaScript" url="https://lin-xin.github.io/categories/JavaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lin-xin.github.io/article/23/</loc>
-    <lastmod>2019-09-29T02:14:45.015Z</lastmod>
-    <data>
-        <display>
-        <title>HTML5 桌面通知：Notification API</title>
-        <pubTime>2017-10-23T00:12:12.000Z</pubTime>
-        
-        <tag>HTML5</tag>
-         
-         
-           
-             
-              <breadCrumb title="HTML5" url="https://lin-xin.github.io/categories/HTML5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lin-xin.github.io/article/15/</loc>
-    <lastmod>2019-09-29T02:14:45.011Z</lastmod>
-    <data>
-        <display>
-        <title>sChart.js：一个小型简单的图表库</title>
-        <pubTime>2017-05-31T01:24:46.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>图表</tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaScript" url="https://lin-xin.github.io/categories/JavaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lin-xin.github.io/article/16/</loc>
-    <lastmod>2019-09-29T02:14:45.011Z</lastmod>
-    <data>
-        <display>
-        <title>vue-schart ： vue.js 的图表组件</title>
-        <pubTime>2017-06-17T03:46:37.000Z</pubTime>
-        
-        <tag>图表</tag>
-         
-        <tag>vue</tag>
-         
-         
-           
-             
-              <breadCrumb title="vue" url="https://lin-xin.github.io/categories/vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lin-xin.github.io/article/19/</loc>
-    <lastmod>2019-09-29T02:14:45.011Z</lastmod>
-    <data>
-        <display>
-        <title>vue.js 组件之间传递数据</title>
-        <pubTime>2017-07-10T00:18:33.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-         
-           
-             
-              <breadCrumb title="vue" url="https://lin-xin.github.io/categories/vue/"/>
           
         </display>
     </data>

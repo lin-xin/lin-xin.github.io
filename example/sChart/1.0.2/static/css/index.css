@@ -1,0 +1,81 @@
+.layui-header {
+    line-height: 60px;
+}
+.layui-header a.logo{
+    display: inline-block;
+    width: 180px;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+}
+.layui-tab-content{
+    padding:30px 30px 50px;
+}
+.index-title-h1{
+    font-size: 50px;
+    line-height: 90px;
+    font-weight: bold;
+}
+.index-title-h2{
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: bold;
+}
+.layui-elem-quote{
+    font-size: 20px;
+    padding:20px;
+    margin-bottom: 20px;
+}
+.download-btn{
+    margin-bottom: 50px;
+}
+p{
+    font-size: 16px;
+    color: #666;
+}
+.layui-code-view .layui-code-ol li{
+    font-size: 14px;
+}
+.schart-main{
+    display: none;
+}
+.schart-main .demo-img{
+    width: 500px;
+    height: 400px;
+}
+.footer{
+    line-height: 44px;
+    color: #666;
+    text-align: center;
+}
+.donate-box{
+    text-align: center
+}
+.donate-box p{
+    line-height: 30px;
+}
+a.side-contact{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    color: #fff;
+    background: #494c55;
+}
+a.side-contact:hover{
+    color: #fff
+}
+.lang{
+    float: right;
+    color: #fff;
+    margin-right: 50px;
+}
+.lang a{
+    color: #fff;
+}
+.lang a.on{
+    color: #5FB878;
+}

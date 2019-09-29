@@ -17,7 +17,7 @@
     <div class="layui-layout-admin">
         <div class="layui-header header">
             <div class="layui-main">
-                <a class="logo" href="http://test.omwteam.com/sChart/index.html">
+                <a class="logo" href="https://lin-xin.github.io/example/sChart/">
                     sChart.js
                 </a>
                 <div class="lang">
@@ -67,7 +67,7 @@
             <div class="schart-main" style="display:block">
                 <h1 class="index-title-h1">sChart.js documentation</h1>
                 <blockquote class="layui-elem-quote">sChart.js：Small & simple HTML5 charts.This document describes all of the knowledge of the library.</blockquote>
-                <a href="http://test.omwteam.com/sChart/download/schart.js.rar" class="layui-btn layui-btn-big download-btn"><i class="layui-icon">&#xe601;</i> Download</a>
+                <a href="https://lin-xin.github.io/example/sChart/download/schart.js.rar" class="layui-btn layui-btn-big download-btn"><i class="layui-icon">&#xe601;</i> Download</a>
                 <h2 class="index-title-h2">Getting started</h2>
                 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
                     <legend>Using sChart.js</legend>
@@ -93,34 +93,47 @@
                 </fieldset>
                 <img class="demo-img" src="static/img/bar.png">
                 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+                    <legend>HTML</legend>
+                </fieldset>
+                <pre class="layui-code" lay-title="html">
+<div class="canvas-wrapper">
+    <canvas id="canvas1"></canvas>
+</div></pre>
+                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
                     <legend>Data structure</legend>
                 </fieldset>
                 <pre class="layui-code" lay-title="JavaScript">
 var data = [
-    {name:'2012', value:1141},
-    {name:'2013', value:1499},
-    {name:'2014', value:2260},
-    {name:'2015', value:1170},
-    {name:'2016', value:970},
-    {name:'2017', value:1450}
+    {name:'2012',value:1141},
+    {name:'2013',value:500},
+    {name:'2014',value:2260},
+    {name:'2015',value:1170},
+    {name:'2016',value:970},
+    {name:'2017',value:1450}
 ]</pre>
                 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
                     <legend>Create chart</legend>
                 </fieldset>
                 <pre class="layui-code" lay-title="JavaScript">
-new sChart('canvas', 'bar', data, {
-    title: 'Total sales of stores in recent years',
-    bgColor: '#829dda',
-    titleColor: '#ffffff',
-    fillColor: '#72f6ff',
-    axisColor: '#eeeeee',
-    contentColor: '#bbbbbb'
+new sChart('canvas1', 'bar', data1, {
+    title: '某商店近年营业总额',
+    autoWidth: true,   // 设置宽高自适应
+    showValue: false,
+    bgColor: '#F9EFCC',
+    fillColor: '#00887C',
+    contentColor: 'rgba(46,199,201,0.3)',
+    yEqual: 7
 });</pre>
                 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
                     <legend>Chart parameter</legend>
                 </fieldset>
                 <pre class="layui-code" lay-title="JavaScript">options = {
-    padding: 50,                    // Inside margin of chart
+    autoWidth: true,                // Adaptive width and height
+    showValue: false,               // Display the value in the chart
+    topPadding: 50,                 // Inside top margin of chart
+    bottomPadding: 50,              // Inside bottom margin of chart
+    leftPadding: 50,                // Inside left margin of chart
+    rightPadding: 0,                // Inside right margin of chart
     yEqual: 5,                      // The number of points on the Y axis
     bgColor: '#ffffff',             // The background color of chart
     fillColor: '#1E9FFF',           // The color of bar chart
@@ -142,12 +155,12 @@ new sChart('canvas', 'bar', data, {
                 </fieldset>
                 <pre class="layui-code" lay-title="JavaScript">
 var data = [
-    {name:'2012', value:1141},
-    {name:'2013', value:1499},
-    {name:'2014', value:2260},
-    {name:'2015', value:1170},
-    {name:'2016', value:970},
-    {name:'2017', value:1450}
+    {name:'2012',value:1141},
+    {name:'2013',value:500},
+    {name:'2014',value:2260},
+    {name:'2015',value:1170},
+    {name:'2016',value:970},
+    {name:'2017',value:1450}
 ]</pre>
                 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
                     <legend>Create chart</legend>
@@ -155,17 +168,21 @@ var data = [
                 <pre class="layui-code" lay-title="JavaScript">
 new sChart('canvas', 'line', data, {
     title: 'Total sales of stores in recent years',
-    bgColor: '#829dba',
-    titleColor: '#ffffff',
-    fillColor: '#72f6ff',
-    axisColor: '#eeeeee',
-    contentColor: '#bbbbbb'
+    bgColor: '#D5E4EB',
+    titleColor: '#00887C',
+    fillColor: 'red',
+    contentColor: 'rgba(46,199,201,0.3)'
 });</pre>
                 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
                     <legend>Chart parameter</legend>
                 </fieldset>
                 <pre class="layui-code" lay-title="JavaScript">options = {
-    padding: 50,                    // Inside margin of chart
+    autoWidth: true,                // Adaptive width and height
+    showValue: false,               // Display the value in the chart
+    topPadding: 50,                 // Inside top margin of chart
+    bottomPadding: 50,              // Inside bottom margin of chart
+    leftPadding: 50,                // Inside left margin of chart
+    rightPadding: 0,                // Inside right margin of chart
     yEqual: 5,                      // The number of points on the Y axis
     bgColor: '#ffffff',             // The background color of chart
     fillColor: '#1E9FFF',           // The color of line chart
@@ -276,12 +293,12 @@ new sChart('canvas', 'ring', data, {
     <script src="static/js/index.js"></script>
     <script>
 var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?1c343a080809502ac823823ae4c9ffe3";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b455f7e1c6ca6e239edaccf0e6aa11fb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
 </script>
 
 </body>
