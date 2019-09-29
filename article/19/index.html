@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://lin-xin.github.io/article/19/index.html">
 <meta property="og:site_name" content="林鑫的博客-前端博客-web前端技术">
 <meta property="og:description" content="组件是 vue.js 最强大的功能之一，而组件实例的作用域是相互独立的，这就意味着不同组件之间的数据无法相互引用。如何传递数据也成了组件的重要知识点之一。">
-<meta property="og:updated_time" content="2017-09-08T06:39:14.661Z">
+<meta property="og:updated_time" content="2019-09-29T02:14:45.011Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue.js 组件之间传递数据">
 <meta name="twitter:description" content="组件是 vue.js 最强大的功能之一，而组件实例的作用域是相互独立的，这就意味着不同组件之间的数据无法相互引用。如何传递数据也成了组件的重要知识点之一。">
@@ -406,7 +406,7 @@
 <p>这样就实现了父子组件之间的相互通讯。</p>
 <h2 id="Event-Bus"><a href="#Event-Bus" class="headerlink" title="Event Bus"></a>Event Bus</h2><p>有时候两个组件之间需要进行通信，但是它们彼此不是父子组件的关系。在一些简单场景，你可以使用一个空的 Vue 实例作为一个事件总线中心(central event bus)：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bus = <span class="keyword">new</span> Vue();</div><div class="line"></div><div class="line"><span class="comment">// 在组件 A 的 methods 方法中触发事件</span></div><div class="line">bus.$emit(<span class="string">'say-hello'</span>, <span class="string">'world'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 在组件 B 的 created 钩子函数中监听事件</span></div><div class="line">bus.$on(<span class="string">'say-hello'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">arg</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'hello '</span> + arg);          <span class="comment">// hello world</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h2 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a>Vuex</h2><p>在复杂场景中，你应该考虑使用专门的状态管理模式 Vuex。关于 Vuex，可查看我的另一篇文章：<a href="http://blog.gdfengshuo.com/article/4/" target="_blank" rel="external">Vuex 模块化实现待办事项的状态管理</a></p>
+<h2 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a>Vuex</h2><p>在复杂场景中，你应该考虑使用专门的状态管理模式 Vuex。关于 Vuex，可查看我的另一篇文章：<a href="https://lin-xin.github.io/article/4/">Vuex 模块化实现待办事项的状态管理</a></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>组件通讯并不是一定要使用必须要使用 Vuex，对于一些简单的数据传递，event bus 或者 prop 也可以完成。本文主要是对组件传参的一些基础知识点的记录，实战可以参考 <a href="https://github.com/lin-xin/notepad" target="_blank" rel="external">notepad</a> 这个例子，使用 prop 实现子组件的显示与隐藏，使用 vuex 来实现组件间的数据状态管理。</p>
 
       
@@ -726,16 +726,6 @@
         
       </div>
     
-
-    <!--<div id="fuli" class="fuli" style="position: fixed;right: 30px;bottom: 0;z-index: 10000;">
-        <span id="close-fuli" class="close-fuli" @click="visible = false" style="position: absolute;top: 0;right: 0;background: #000;color: #fff;font-size: 14px;padding: 2px 5px;cursor: pointer;">关闭</span>
-        <img src="http://blog.gdfengshuo.com/example/work/static/img/alipay.f2fa983.png" alt="支付宝领红包" title="支付宝扫码领红包">
-    </div>
-    <script>
-      document.getElementById('close-fuli').onclick = function(){
-        document.getElementById('fuli').style.display = 'none';
-      }
-    </script>-->
 
   </div>
 

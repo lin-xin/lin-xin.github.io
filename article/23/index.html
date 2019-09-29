@@ -93,12 +93,12 @@
 <meta property="og:url" content="https://lin-xin.github.io/article/23/index.html">
 <meta property="og:site_name" content="林鑫的博客-前端博客-web前端技术">
 <meta property="og:description" content="Notification API 是 HTML5 新增的桌面通知 API，用于向用户显示通知信息。该通知是脱离浏览器的，即使用户没有停留在当前标签页，甚至最小化了浏览器，该通知信息也一样会置顶显示出来。">
-<meta property="og:image" content="http://blog.gdfengshuo.com/images/post/notification.png">
-<meta property="og:updated_time" content="2017-10-23T00:20:38.380Z">
+<meta property="og:image" content="https://lin-xin.github.io/images/post/notification.png">
+<meta property="og:updated_time" content="2019-09-29T02:14:45.015Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5 桌面通知：Notification API">
 <meta name="twitter:description" content="Notification API 是 HTML5 新增的桌面通知 API，用于向用户显示通知信息。该通知是脱离浏览器的，即使用户没有停留在当前标签页，甚至最小化了浏览器，该通知信息也一样会置顶显示出来。">
-<meta name="twitter:image" content="http://blog.gdfengshuo.com/images/post/notification.png">
+<meta name="twitter:image" content="https://lin-xin.github.io/images/post/notification.png">
 
 
 
@@ -402,13 +402,13 @@
 </li>
 </ul>
 <p>还有一些其他的参数，因为用不了或者没什么用这里就没必要说了。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> n = <span class="keyword">new</span> Notification(<span class="string">'状态更新提醒'</span>,&#123;</div><div class="line">    <span class="attr">body</span>: <span class="string">'你的朋友圈有3条新状态，快去查看吧'</span>,</div><div class="line">    <span class="attr">tag</span>: <span class="string">'linxin'</span>,</div><div class="line">    <span class="attr">icon</span>: <span class="string">'http://blog.gdfengshuo.com/images/avatar.jpg'</span>,</div><div class="line">    <span class="attr">requireInteraction</span>: <span class="literal">true</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> n = <span class="keyword">new</span> Notification(<span class="string">'状态更新提醒'</span>,&#123;</div><div class="line">    <span class="attr">body</span>: <span class="string">'你的朋友圈有3条新状态，快去查看吧'</span>,</div><div class="line">    <span class="attr">tag</span>: <span class="string">'linxin'</span>,</div><div class="line">    <span class="attr">icon</span>: <span class="string">'https://lin-xin.github.io/images/avatar.jpg'</span>,</div><div class="line">    <span class="attr">requireInteraction</span>: <span class="literal">true</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>通知消息的效果图如下：</p>
-<p><img src="http://blog.gdfengshuo.com/images/post/notification.png" alt="image"></p>
+<p><img src="https://lin-xin.github.io/images/post/notification.png" alt="image"></p>
 <h2 id="关闭通知"><a href="#关闭通知" class="headerlink" title="关闭通知"></a>关闭通知</h2><p>从上面的参数可以看出，并没有一个参数用来配置显示时长的。我想要它 3s 后自动关闭的话，这时可以调用 close() 方法来关闭通知。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> n = <span class="keyword">new</span> Notification(<span class="string">'状态更新提醒'</span>,&#123;</div><div class="line">    <span class="attr">body</span>: <span class="string">'你的朋友圈有3条新状态，快去查看吧'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    n.close();</div><div class="line">&#125;, <span class="number">3000</span>);</div></pre></td></tr></table></figure>
 <h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>Notification 接口的 onclick属性指定一个事件侦听器来接收 click 事件。当点击通知窗口时会触发相应事件，比如打开一个网址，引导用户回到自己的网站去。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> n = <span class="keyword">new</span> Notification(<span class="string">'状态更新提醒'</span>,&#123;</div><div class="line">    <span class="attr">body</span>: <span class="string">'你的朋友圈有3条新状态，快去查看吧'</span>,</div><div class="line">    <span class="attr">data</span>: &#123;</div><div class="line">        <span class="attr">url</span>: <span class="string">'http://blog.gdfengshuo.com'</span></div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line">n.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">window</span>.open(n.data.url, <span class="string">'_blank'</span>);      <span class="comment">// 打开网址</span></div><div class="line">    n.close();                              <span class="comment">// 并且关闭通知</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> n = <span class="keyword">new</span> Notification(<span class="string">'状态更新提醒'</span>,&#123;</div><div class="line">    <span class="attr">body</span>: <span class="string">'你的朋友圈有3条新状态，快去查看吧'</span>,</div><div class="line">    <span class="attr">data</span>: &#123;</div><div class="line">        <span class="attr">url</span>: <span class="string">'https://lin-xin.github.io/'</span></div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line">n.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">window</span>.open(n.data.url, <span class="string">'_blank'</span>);      <span class="comment">// 打开网址</span></div><div class="line">    n.close();                              <span class="comment">// 并且关闭通知</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>前面说那么多，其实就是为了用。那么到底哪些地方可以用到呢？</p>
 <p>现在网站的消息提醒，大多数都是在消息中心显示个消息数量，然后发邮件告诉用户，这流程完全没有错。不过像我这种用户，觉得别人点个赞，收藏一下都要发个邮件提醒我，老是要去删邮件（强迫症），我是觉得挺烦的甚至关闭了邮件提醒。</p>
 <p>当然这里并不是说要用 Notification，毕竟它和邮件的功能完全不一样。</p>
@@ -734,16 +734,6 @@
         
       </div>
     
-
-    <!--<div id="fuli" class="fuli" style="position: fixed;right: 30px;bottom: 0;z-index: 10000;">
-        <span id="close-fuli" class="close-fuli" @click="visible = false" style="position: absolute;top: 0;right: 0;background: #000;color: #fff;font-size: 14px;padding: 2px 5px;cursor: pointer;">关闭</span>
-        <img src="http://blog.gdfengshuo.com/example/work/static/img/alipay.f2fa983.png" alt="支付宝领红包" title="支付宝扫码领红包">
-    </div>
-    <script>
-      document.getElementById('close-fuli').onclick = function(){
-        document.getElementById('fuli').style.display = 'none';
-      }
-    </script>-->
 
   </div>
 

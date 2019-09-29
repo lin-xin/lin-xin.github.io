@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="林鑫的博客-前端博客-web前端技术">
 <meta property="og:description" content="sChart.js 作为一个小型简单的图表库，没有过多的图表类型，只包含了柱状图、折线图、饼状图和环形图四种基本的图表。麻雀虽小，五脏俱全。sChart.js 基本可以满足这四种图表的需求。而它的小，体现在它的体积上，代码只有 8kb，如果经过服务器的Gzip压缩，那就更小了，因此不用担心造成项目代码冗余。">
 <meta property="og:image" content="https://camo.githubusercontent.com/319339910cd95edaa0ea948c6c9d1d9a422129ba/687474703a2f2f626c6f672e676466656e677368756f2e636f6d2f6578616d706c652f7343686172742f7374617469632f696d672f64656d6f2e706e67">
-<meta property="og:updated_time" content="2019-03-21T00:51:10.365Z">
+<meta property="og:updated_time" content="2019-09-29T02:14:45.011Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sChart.js：一个小型简单的图表库">
 <meta name="twitter:description" content="sChart.js 作为一个小型简单的图表库，没有过多的图表类型，只包含了柱状图、折线图、饼状图和环形图四种基本的图表。麻雀虽小，五脏俱全。sChart.js 基本可以满足这四种图表的需求。而它的小，体现在它的体积上，代码只有 8kb，如果经过服务器的Gzip压缩，那就更小了，因此不用担心造成项目代码冗余。">
@@ -378,19 +378,19 @@
 <p>该库使用 canvas 实现，兼容 IE9 以上浏览器。</p>
 <ul>
 <li>仓库地址：<a href="https://github.com/lin-xin/sChart.js" target="_blank" rel="external">sChart.js</a></li>
-<li>文档(中英文)：<a href="http://blog.gdfengshuo.com/example/sChart/" target="_blank" rel="external">blog.gdfengshuo.com/example/sChart/</a></li>
-<li>演示地址：<a href="http://blog.gdfengshuo.com/example/sChart/" target="_blank" rel="external">blog.gdfengshuo.com/example/sChart/demo.html</a></li>
+<li>文档(中英文)：<a href="https://lin-xin.github.io/example/sChart/">blog.gdfengshuo.com/example/sChart/</a></li>
+<li>演示地址：<a href="https://lin-xin.github.io/example/sChart/">blog.gdfengshuo.com/example/sChart/demo.html</a></li>
 </ul>
 <p><img src="https://camo.githubusercontent.com/319339910cd95edaa0ea948c6c9d1d9a422129ba/687474703a2f2f626c6f672e676466656e677368756f2e636f6d2f6578616d706c652f7343686172742f7374617469632f696d672f64656d6f2e706e67" alt="demo"></p>
 <h2 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install schart.js</div><div class="line">import sChart from &apos;schart.js&apos;</div></pre></td></tr></table></figure>
 <p>也可以直接插入script到你的HTML页面:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://blog.gdfengshuo.com/example/sChart/static/js/sChart.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://lin-xin.github.io/example/sChart/static/js/sChart.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>使用简单：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> sChart(canvasId, type, data, options);</div></pre></td></tr></table></figure>
 <p>即可生成一个图表。</p>
 <p>canvasId：canvas标签的id，必填。</p>
 <p>type：图表类型，必填。</p>
-<p>options：图表配置参数，可选，具体参考<a href="http://blog.gdfengshuo.com/example/sChart/index.html" target="_blank" rel="external">文档</a>。</p>
+<p>options：图表配置参数，可选，具体参考<a href="https://lin-xin.github.io/example/sChart/index.html">文档</a>。</p>
 <p>data：要生成图表的数据，格式为：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">data:[</div><div class="line">    &#123;<span class="attr">name</span>: <span class="string">'xx'</span>, <span class="attr">value</span>: <span class="string">'yy'</span>&#125;</div><div class="line">]</div></pre></td></tr></table></figure>
 <p>name则为坐标值，value则为柱状数据值。</p>
@@ -721,16 +721,6 @@
         
       </div>
     
-
-    <!--<div id="fuli" class="fuli" style="position: fixed;right: 30px;bottom: 0;z-index: 10000;">
-        <span id="close-fuli" class="close-fuli" @click="visible = false" style="position: absolute;top: 0;right: 0;background: #000;color: #fff;font-size: 14px;padding: 2px 5px;cursor: pointer;">关闭</span>
-        <img src="http://blog.gdfengshuo.com/example/work/static/img/alipay.f2fa983.png" alt="支付宝领红包" title="支付宝扫码领红包">
-    </div>
-    <script>
-      document.getElementById('close-fuli').onclick = function(){
-        document.getElementById('fuli').style.display = 'none';
-      }
-    </script>-->
 
   </div>
 

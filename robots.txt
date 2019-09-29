@@ -3,5 +3,5 @@ User-agent: *
 Disallow: 
 Disallow: /lib
 Disallow: /link
-Sitemap: http://blog.gdfengshuo.com/sitemap.xml
-Sitemap: http://blog.gdfengshuo.com/baidusitemap.xml
+Sitemap: https://lin-xin.github.io/sitemap.xml
+Sitemap: https://lin-xin.github.io/baidusitemap.xml

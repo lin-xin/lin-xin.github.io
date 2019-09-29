@@ -4,8 +4,136 @@
 
     
   <url>
+    <loc>https://lin-xin.github.io/article/4/</loc>
+    <lastmod>2019-09-29T02:14:45.016Z</lastmod>
+    <data>
+        <display>
+        <title>Vuex 模块化实现待办事项的状态管理</title>
+        <pubTime>2017-03-14T00:56:24.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+        <tag>vuex</tag>
+         
+         
+           
+             
+              <breadCrumb title="vue" url="https://lin-xin.github.io/categories/vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lin-xin.github.io/article/29/</loc>
+    <lastmod>2019-09-29T02:14:45.016Z</lastmod>
+    <data>
+        <display>
+        <title>vue-manage-system 后台管理系统开发总结</title>
+        <pubTime>2018-09-12T11:39:45.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+        <tag>element</tag>
+         
+         
+           
+             
+              <breadCrumb title="vue" url="https://lin-xin.github.io/categories/vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lin-xin.github.io/article/27/</loc>
+    <lastmod>2019-09-29T02:14:45.016Z</lastmod>
+    <data>
+        <display>
+        <title>使用 Node.js 开发简单的脚手架工具</title>
+        <pubTime>2018-06-07T14:38:14.000Z</pubTime>
+        
+        <tag>node.js</tag>
+         
+         
+           
+             
+              <breadCrumb title="Node" url="https://lin-xin.github.io/categories/Node/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lin-xin.github.io/article/3/</loc>
+    <lastmod>2019-09-29T02:14:45.016Z</lastmod>
+    <data>
+        <display>
+        <title>Vue2 后台管理系统解决方案</title>
+        <pubTime>2017-03-11T03:22:01.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+        <tag>element</tag>
+         
+         
+           
+             
+              <breadCrumb title="vue" url="https://lin-xin.github.io/categories/vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lin-xin.github.io/article/22/</loc>
+    <lastmod>2019-09-29T02:14:45.015Z</lastmod>
+    <data>
+        <display>
+        <title>Electron 实战桌面计算器应用</title>
+        <pubTime>2017-09-03T12:45:38.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>electron</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="https://lin-xin.github.io/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lin-xin.github.io/article/23/</loc>
+    <lastmod>2019-09-29T02:14:45.015Z</lastmod>
+    <data>
+        <display>
+        <title>HTML5 桌面通知：Notification API</title>
+        <pubTime>2017-10-23T00:12:12.000Z</pubTime>
+        
+        <tag>HTML5</tag>
+         
+         
+           
+             
+              <breadCrumb title="HTML5" url="https://lin-xin.github.io/categories/HTML5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://lin-xin.github.io/article/15/</loc>
-    <lastmod>2019-03-21T00:51:10.365Z</lastmod>
+    <lastmod>2019-09-29T02:14:45.011Z</lastmod>
     <data>
         <display>
         <title>sChart.js：一个小型简单的图表库</title>
@@ -27,7 +155,7 @@
     
   <url>
     <loc>https://lin-xin.github.io/article/16/</loc>
-    <lastmod>2019-03-21T00:50:30.744Z</lastmod>
+    <lastmod>2019-09-29T02:14:45.011Z</lastmod>
     <data>
         <display>
         <title>vue-schart ： vue.js 的图表组件</title>
@@ -48,16 +176,14 @@
 
     
   <url>
-    <loc>https://lin-xin.github.io/article/29/</loc>
-    <lastmod>2018-09-12T11:41:31.218Z</lastmod>
+    <loc>https://lin-xin.github.io/article/19/</loc>
+    <lastmod>2019-09-29T02:14:45.011Z</lastmod>
     <data>
         <display>
-        <title>vue-manage-system 后台管理系统开发总结</title>
-        <pubTime>2018-09-12T11:39:45.000Z</pubTime>
+        <title>vue.js 组件之间传递数据</title>
+        <pubTime>2017-07-10T00:18:33.000Z</pubTime>
         
         <tag>vue</tag>
-         
-        <tag>element</tag>
          
          
            
@@ -140,28 +266,6 @@
 
     
   <url>
-    <loc>https://lin-xin.github.io/article/3/</loc>
-    <lastmod>2018-08-16T12:36:08.120Z</lastmod>
-    <data>
-        <display>
-        <title>Vue2 后台管理系统解决方案</title>
-        <pubTime>2017-03-11T03:22:01.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>element</tag>
-         
-         
-           
-             
-              <breadCrumb title="vue" url="https://lin-xin.github.io/categories/vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://lin-xin.github.io/article/8/</loc>
     <lastmod>2018-08-16T09:27:24.460Z</lastmod>
     <data>
@@ -204,26 +308,6 @@
 
     
   <url>
-    <loc>https://lin-xin.github.io/article/27/</loc>
-    <lastmod>2018-06-08T01:42:24.907Z</lastmod>
-    <data>
-        <display>
-        <title>使用 Node.js 开发简单的脚手架工具</title>
-        <pubTime>2018-06-07T14:38:14.000Z</pubTime>
-        
-        <tag>node.js</tag>
-         
-         
-           
-             
-              <breadCrumb title="Node" url="https://lin-xin.github.io/categories/Node/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://lin-xin.github.io/article/26/</loc>
     <lastmod>2018-05-23T01:16:00.033Z</lastmod>
     <data>
@@ -237,28 +321,6 @@
            
              
               <breadCrumb title="ReactNative" url="https://lin-xin.github.io/categories/ReactNative/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lin-xin.github.io/article/4/</loc>
-    <lastmod>2018-05-09T06:42:58.464Z</lastmod>
-    <data>
-        <display>
-        <title>Vuex 模块化实现待办事项的状态管理</title>
-        <pubTime>2017-03-14T00:56:24.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>vuex</tag>
-         
-         
-           
-             
-              <breadCrumb title="vue" url="https://lin-xin.github.io/categories/vue/"/>
           
         </display>
     </data>
@@ -285,68 +347,6 @@
     </url>
 
     
-  <url>
-    <loc>https://lin-xin.github.io/article/23/</loc>
-    <lastmod>2017-10-23T00:20:38.380Z</lastmod>
-    <data>
-        <display>
-        <title>HTML5 桌面通知：Notification API</title>
-        <pubTime>2017-10-23T00:12:12.000Z</pubTime>
-        
-        <tag>HTML5</tag>
-         
-         
-           
-             
-              <breadCrumb title="HTML5" url="https://lin-xin.github.io/categories/HTML5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>https://lin-xin.github.io/article/19/</loc>
-    <lastmod>2017-09-08T06:39:14.661Z</lastmod>
-    <data>
-        <display>
-        <title>vue.js 组件之间传递数据</title>
-        <pubTime>2017-07-10T00:18:33.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-         
-           
-             
-              <breadCrumb title="vue" url="https://lin-xin.github.io/categories/vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lin-xin.github.io/article/22/</loc>
-    <lastmod>2017-09-03T12:50:11.647Z</lastmod>
-    <data>
-        <display>
-        <title>Electron 实战桌面计算器应用</title>
-        <pubTime>2017-09-03T12:45:38.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>electron</tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaScript" url="https://lin-xin.github.io/categories/JavaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://lin-xin.github.io/article/21/</loc>

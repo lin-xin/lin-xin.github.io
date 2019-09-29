@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="林鑫的博客-前端博客-web前端技术">
 <meta property="og:description" content="vue-schart 是使用vue.js封装了sChart.js图表库的一个小组件。支持vue.js 1.x &amp;amp; 2.x">
 <meta property="og:image" content="https://camo.githubusercontent.com/bf8a6bac764070152404eb36a7d28cc76311917f/687474703a2f2f6f70656e2e6f6d777465616d2e636f6d2f7343686172742f7374617469632f696d672f64656d6f2e6a7067">
-<meta property="og:updated_time" content="2019-03-21T00:50:30.744Z">
+<meta property="og:updated_time" content="2019-09-29T02:14:45.011Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue-schart ： vue.js 的图表组件">
 <meta name="twitter:description" content="vue-schart 是使用vue.js封装了sChart.js图表库的一个小组件。支持vue.js 1.x &amp;amp; 2.x">
@@ -382,8 +382,8 @@
 <p>该库使用 canvas 实现，兼容 IE9 以上浏览器。</p>
 <ul>
 <li>仓库地址：<a href="https://github.com/lin-xin/sChart.js" target="_blank" rel="external">github.com/lin-xin/sChart.js</a></li>
-<li>文档(中英文)：<a href="http://blog.gdfengshuo.com/example/sChart/" target="_blank" rel="external">blog.gdfengshuo.com/example/sChart/</a></li>
-<li>演示地址：<a href="http://blog.gdfengshuo.com/example/sChart/demo.html" target="_blank" rel="external">blog.gdfengshuo.com/example/sChart/demo.html</a></li>
+<li>文档(中英文)：<a href="https://lin-xin.github.io/example/sChart/">blog.gdfengshuo.com/example/sChart/</a></li>
+<li>演示地址：<a href="https://lin-xin.github.io/example/sChart/demo.html">blog.gdfengshuo.com/example/sChart/demo.html</a></li>
 </ul>
 <h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img src="https://camo.githubusercontent.com/bf8a6bac764070152404eb36a7d28cc76311917f/687474703a2f2f6f70656e2e6f6d777465616d2e636f6d2f7343686172742f7374617469632f696d672f64656d6f2e6a7067" alt="demo"></p>
 <h2 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h2><p>安装:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install vue-schart -S</div></pre></td></tr></table></figure></p>
@@ -392,7 +392,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">methods: &#123;</div><div class="line">    changeData()&#123;</div><div class="line">        <span class="comment">// 整个 data 被重新赋值时</span></div><div class="line">        <span class="keyword">this</span>.data = [</div><div class="line">            &#123;<span class="attr">name</span>:<span class="string">'短袖'</span>, <span class="attr">value</span>:<span class="number">1200</span>&#125;,</div><div class="line">            &#123;<span class="attr">name</span>:<span class="string">'休闲裤'</span>, <span class="attr">value</span>:<span class="number">1222</span>&#125;,</div><div class="line">            &#123;<span class="attr">name</span>:<span class="string">'连衣裙'</span>, <span class="attr">value</span>:<span class="number">1283</span>&#125;,</div><div class="line">            &#123;<span class="attr">name</span>:<span class="string">'外套'</span>, <span class="attr">value</span>:<span class="number">1314</span>&#125;</div><div class="line">        ];</div><div class="line"></div><div class="line">        <span class="comment">// data 里一个属性值被修改时</span></div><div class="line">        <span class="keyword">this</span>.$set(<span class="keyword">this</span>.data, <span class="number">1</span>, &#123;<span class="attr">name</span>:<span class="string">'短裙'</span>,<span class="attr">value</span>:<span class="number">500</span>&#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>当 changeData 方法被调用时，data 会被修改，图表则会重新渲染。（修改其他属性的方法一样）</p>
 <h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p><a href="https://github.com/lin-xin/vue-manage-system" target="_blank" rel="external">vue-manage-system</a> 后台框架中应用了 vue-schart 组件，体积小，加载快。</p>
-<p>演示地址：<a href="http://blog.gdfengshuo.com/example/work/" target="_blank" rel="external">http://blog.gdfengshuo.com/example/work/</a></p>
+<p>演示地址：<a href="https://lin-xin.github.io/example/work/">https://lin-xin.github.io/example/work/</a></p>
 
       
     </div>
@@ -713,16 +713,6 @@
         
       </div>
     
-
-    <!--<div id="fuli" class="fuli" style="position: fixed;right: 30px;bottom: 0;z-index: 10000;">
-        <span id="close-fuli" class="close-fuli" @click="visible = false" style="position: absolute;top: 0;right: 0;background: #000;color: #fff;font-size: 14px;padding: 2px 5px;cursor: pointer;">关闭</span>
-        <img src="http://blog.gdfengshuo.com/example/work/static/img/alipay.f2fa983.png" alt="支付宝领红包" title="支付宝扫码领红包">
-    </div>
-    <script>
-      document.getElementById('close-fuli').onclick = function(){
-        document.getElementById('fuli').style.display = 'none';
-      }
-    </script>-->
 
   </div>
 
