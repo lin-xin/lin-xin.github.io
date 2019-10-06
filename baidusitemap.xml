@@ -4,28 +4,6 @@
 
     
   <url>
-    <loc>https://lin-xin.github.io/article/29/</loc>
-    <lastmod>2019-09-29T02:19:18.904Z</lastmod>
-    <data>
-        <display>
-        <title>vue-manage-system 后台管理系统开发总结</title>
-        <pubTime>2018-09-12T11:39:45.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>element</tag>
-         
-         
-           
-             
-              <breadCrumb title="vue" url="https://lin-xin.github.io/categories/vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://lin-xin.github.io/article/15/</loc>
     <lastmod>2019-09-29T02:19:18.904Z</lastmod>
     <data>
@@ -58,6 +36,28 @@
         <tag>图表</tag>
          
         <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="vue" url="https://lin-xin.github.io/categories/vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lin-xin.github.io/article/29/</loc>
+    <lastmod>2019-09-29T02:19:18.904Z</lastmod>
+    <data>
+        <display>
+        <title>vue-manage-system 后台管理系统开发总结</title>
+        <pubTime>2018-09-12T11:39:45.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+        <tag>element</tag>
          
          
            
