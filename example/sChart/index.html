@@ -1,328 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>sChart.js 中文文档</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="keywords" content="sChart.js,chart,图表,js插件">
-    <meta name="description" content="sChart.js 中文文档。一个轻量级的js图表插件。">
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link href="static/css/layui.css" rel="stylesheet">
-    <link href="static/css/index.css" rel="stylesheet">
-    <style>
-    .fuli{
-        position: fixed;
-        right: 30px;
-        bottom: 0;
-        z-index: 10000;
-    }
-    .close-fuli{
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: #000;
-        color: #fff;
-        font-size: 14px;
-        padding: 2px 5px;
-        cursor: pointer;
-    }
-</style>
-</head>
-
-<body>
-    <div class="layui-layout-admin">
-        <div class="layui-header header">
-            <div class="layui-main">
-                <a class="logo" href="https://lin-xin.github.io/example/sChart/">
-                    sChart.js
-                </a>
-                <div class="lang">
-                    <a class="on">中文</a> | <a href="en.html">En</a>
-                </div>
-            </div>
-        </div>
-        <div class="layui-side layui-bg-black">
-            <div class="layui-side-scroll">
-                <ul class="layui-nav layui-nav-tree site-demo-nav">
-                    <li class="layui-nav-item layui-this" data-index="0">
-                        <a href="javascript:;">开始使用</a>
-                    </li>
-                    <li class="layui-nav-item" data-index="1">
-                        <a href="javascript:;">柱状图</a>
-                    </li>
-                    <li class="layui-nav-item" data-index="2">
-                        <a href="javascript:;">折线图</a>
-                    </li>
-                    <li class="layui-nav-item" data-index="3">
-                        <a href="javascript:;">饼状图</a>
-                    </li>
-                    <li class="layui-nav-item" data-index="4">
-                        <a href="javascript:;">环形图</a>
-                    </li>
-                    <li class="layui-nav-item" data-index="-1">
-                        <a href="demo.html" target="_blank">Demo演示</a>
-                    </li>
-                    <li class="layui-nav-item" data-index="-1">
-                        <a href="https://github.com/lin-xin/schart.js" target="_blank">github仓库</a>
-                    </li>
-                    <li class="layui-nav-item" data-index="-1">
-                        <a href="https://github.com/lin-xin/vue-schart" target="_blank">vue-schart</a>
-                    </li>
-                    <li class="layui-nav-item" data-index="5">
-                        <a href="javascript:;">赞赏</a>
-                    </li>
-                </ul>
-                
-            </div>
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=2981207131&site=qq&menu=yes" target="_blank" class="side-contact">
-                <i class="layui-icon">&#xe63a;</i> 联系我们
-            </a>
-        </div>
-        
-        <div class="layui-body layui-tab-content">
-            <div class="schart-main" style="display:block">
-                <h1 class="index-title-h1">sChart.js 中文文档</h1>
-                <blockquote class="layui-elem-quote">sChart.js：一个小型简单的图表库。该文档介绍了该库的所有知识。</blockquote>
-                <a href="https://lin-xin.github.io/example/sChart/download/schart.js.rar" class="layui-btn layui-btn-big download-btn"><i class="layui-icon">&#xe601;</i> 立即下载</a>
-                <h2 class="index-title-h2">开始使用</h2>
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>引入js文件</legend>
-                </fieldset>
-                <p>首先我们需要在页面中引入Chart.js文件。</p>
-                <pre class="layui-code" lay-title="HTML">&lt;script src="sChart.js">&lt;/script></pre>
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>创建画布</legend>
-                </fieldset>
-                <p>为了创建图表，先要生成一个画布，通过画布的id去实例化一个图标对象。</p>
-                <pre class="layui-code" lay-title="HTML"><canvas id="canvas" width="500" height="400"></canvas></pre>
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>创建图表</legend>
-                </fieldset>
-                <p>通过实例化sChart对象来生成图表。</p>
-                <pre class="layui-code" lay-title="JavaScript">new sChart(canvasId, type, data, options)</pre>
-                <p>完成实例化之后，就可以在画布上看到生成的图表了。</p>
-            </div>
-            <div class="schart-main">
-                <h2 class="index-title-h2">柱状图（Bar chart）</h2>
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>使用案例</legend>
-                </fieldset>
-                <img class="demo-img" src="static/img/bar.png">
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>HTML</legend>
-                </fieldset>
-                <pre class="layui-code" lay-title="html">
-<div class="canvas-wrapper">
-    <!-- 在移动端上使用rem单位，需要设置父元素宽高 -->
-    <canvas id="canvas1"></canvas>
-</div></pre>
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>数据结构</legend>
-                </fieldset>
-                <pre class="layui-code" lay-title="JavaScript">
-var data = [
-    {name:'2012',value:1141},
-    {name:'2013',value:500},
-    {name:'2014',value:2260},
-    {name:'2015',value:1170},
-    {name:'2016',value:970},
-    {name:'2017',value:1450}
-]</pre>
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>创建图表</legend>
-                </fieldset>
-                <pre class="layui-code" lay-title="JavaScript">
-new sChart('canvas1', 'bar', data1, {
-    title: '某商店近年营业总额',
-    autoWidth: true,   // 设置宽高自适应
-    showValue: false,
-    bgColor: '#F9EFCC',
-    fillColor: '#00887C',
-    contentColor: 'rgba(46,199,201,0.3)',
-    yEqual: 7
-});</pre>
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>图表参数</legend>
-                </fieldset>
-                <pre class="layui-code" lay-title="JavaScript">options = {
-    autoWidth: true,                // 设置宽高自适应
-    showValue: false,               // 是否在图表中显示数值
-    topPadding: 50,                 // canvas 上边距
-    bottomPadding: 50,              // canvas 下边距
-    leftPadding: 50,                // canvas 左边距
-    rightPadding: 0,                // canvas 右边距
-    yEqual: 5,                      // y轴分成5等分
-    bgColor: '#ffffff',             // 默认背景颜色
-    fillColor: '#1E9FFF',           // 默认填充颜色
-    axisColor: '#666666',           // 坐标轴颜色
-    contentColor: '#eeeeee',        // 内容横线颜色
-    title: '',                      // 图表标题
-    titleColor: '#000000',          // 图表标题颜色
-    titlePosition: 'top'            // 图表标题位置: top / bottom
-}</pre>
-            </div>
-            <div class="schart-main">
-                <h2 class="index-title-h2">折线图（Line chart）</h2>
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>使用案例</legend>
-                </fieldset>
-                <img class="demo-img" src="static/img/line.png">
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>数据结构</legend>
-                </fieldset>
-                <pre class="layui-code" lay-title="JavaScript">
-var data = [
-    {name:'2012',value:1141},
-    {name:'2013',value:500},
-    {name:'2014',value:2260},
-    {name:'2015',value:1170},
-    {name:'2016',value:970},
-    {name:'2017',value:1450}
-]</pre>
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>创建图表</legend>
-                </fieldset>
-                <pre class="layui-code" lay-title="JavaScript">
-new sChart('canvas', 'line', data, {
-    title: '某商店近年营业总额',
-    bgColor: '#D5E4EB',
-    titleColor: '#00887C',
-    fillColor: 'red',
-    contentColor: 'rgba(46,199,201,0.3)'
-});</pre>
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>图表参数</legend>
-                </fieldset>
-                <pre class="layui-code" lay-title="JavaScript">options = {
-    autoWidth: true,                // 设置宽高自适应
-    showValue: false,               // 是否在图表中显示数值
-    topPadding: 50,                 // canvas 上边距
-    bottomPadding: 50,              // canvas 下边距
-    leftPadding: 50,                // canvas 左边距
-    rightPadding: 0,                // canvas 右边距
-    yEqual: 5,                      // y轴分成5等分
-    bgColor: '#ffffff',             // 默认背景颜色
-    fillColor: '#1E9FFF',           // 默认填充颜色
-    axisColor: '#666666',           // 坐标轴颜色
-    contentColor: '#eeeeee',        // 内容横线颜色
-    title: '',                      // 图表标题
-    titleColor: '#000000',          // 图表标题颜色
-    titlePosition: 'top'            // 图表标题位置: top / bottom
-}</pre>
-            </div>
-            <div class="schart-main">
-                <h2 class="index-title-h2">饼状图（Pie chart）</h2>
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>使用案例</legend>
-                </fieldset>
-                <img class="demo-img" src="static/img/pie.png">
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>数据结构</legend>
-                </fieldset>
-                <pre class="layui-code" lay-title="JavaScript">
-var data = [
-    {name:'短袖', value:1200},
-    {name:'休闲裤', value:1222},
-    {name:'连衣裙', value:1283},
-    {name:'外套', value:1314},
-    {name:'羽绒服', value:2314}
-]</pre>
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>创建图表</legend>
-                </fieldset>
-                <pre class="layui-code" lay-title="JavaScript">
-new sChart('canvas', 'pie', data, {
-    title: '某商店各商品年度销量',
-    bgColor: '#829dca',
-    titleColor: '#ffffff',
-    legendColor: '#ffffff'
-});</pre>
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>图表参数</legend>
-                </fieldset>
-                <pre class="layui-code" lay-title="JavaScript">options = {
-    bgColor: '#ffffff',             // 默认背景颜色
-    title: '',                      // 图表标题
-    titleColor: '#000000',          // 图表标题颜色
-    titlePosition: 'top'            // 图表标题位置: top / bottom
-    legendColor: '#000000',         // 图例文本颜色
-    legendTop: 40,                  // 图例距离顶部的长度
-    colorList: ['#1E9FFF', '#13CE66', '#F7BA2A', '#FF4949', '#72f6ff'],    // 饼图颜色列表
-    radius: 100,                    // 饼图半径
-}</pre>
-            </div>
-            <div class="schart-main">
-                <h2 class="index-title-h2">环形图（Ring chart）</h2>
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>使用案例</legend>
-                </fieldset>
-                <img class="demo-img" src="static/img/ring.png">
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>数据结构</legend>
-                </fieldset>
-                <pre class="layui-code" lay-title="JavaScript">
-var data = [
-    {name:'短袖', value:1200},
-    {name:'休闲裤', value:1222},
-    {name:'连衣裙', value:1283},
-    {name:'外套', value:1314},
-    {name:'羽绒服', value:2314}
-]</pre>
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>创建图表</legend>
-                </fieldset>
-                <pre class="layui-code" lay-title="JavaScript">
-new sChart('canvas', 'ring', data, {
-    title: '某商店各商品年度销量',
-    bgColor: '#829daa',
-    titleColor: '#ffffff',
-    legendColor: '#ffffff'
-});</pre>
-                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-                    <legend>图表参数</legend>
-                </fieldset>
-                <pre class="layui-code" lay-title="JavaScript">options = {
-    bgColor: '#ffffff',             // 默认背景颜色
-    title: '',                      // 图表标题
-    titleColor: '#000000',          // 图表标题颜色
-    titlePosition: 'top'            // 图表标题位置: top / bottom
-    legendColor: '#000000',         // 图例文本颜色
-    legendTop: 40,                  // 图例距离顶部的长度
-    colorList: ['#1E9FFF', '#13CE66', '#F7BA2A', '#FF4949', '#72f6ff'],    // 环形图颜色列表
-    radius: 100,                    // 环形图外圆半径
-    innerRadius: 70                 // 环形图内圆半径
-}</pre>
-            </div>
-            <div class="schart-main">
-                <div class="donate-box">
-                    
-                    <img src="static/img/weixin.jpg">
-                    <p>(微信赞赏)</p>
-                    <p>如果你觉得对你有帮助的话，请不吝赞赏，金额随意。谢谢支持!</p>
-                </div>
-            </div>
-        </div>
-        <div class="layui-footer footer">
-            <div class="layui-main">© 2017 <a href="https://lin-xin.github.io" target="_blank">linshuai</a> MIT license</div>
-        </div>
-    </div>
-    <div class="fuli" v-if="visible">
-        <span class="close-fuli" @click="visible = false">关闭</span>
-        <img src="https://lin-xin.github.io/example/work/static/img/alipay.f2fa983.png" alt="支付宝领红包" title="支付宝扫码领红包">
-    </div>
-    <script src="static/layui.js"></script>
-    <script src="static/js/index.js"></script>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>指南 | sChart.js中文文档</title>
+    <meta name="description" content="sChart.js是一个轻量级js图表库，基于canvas实现，兼容移动端">
+    <meta name="keywords" content="schart.js, chart, js图表, sChart">
     <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?b455f7e1c6ca6e239edaccf0e6aa11fb";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?f50ca2928508454f06916ad85f25d2bb";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      </script>
+    
+    <link rel="preload" href="/example/schart/assets/css/0.styles.d3c30c51.css" as="style"><link rel="preload" href="/example/schart/assets/js/app.5167d8fb.js" as="script"><link rel="preload" href="/example/schart/assets/js/2.7ff8e1e3.js" as="script"><link rel="preload" href="/example/schart/assets/js/13.50deda91.js" as="script"><link rel="prefetch" href="/example/schart/assets/js/10.1a005d9a.js"><link rel="prefetch" href="/example/schart/assets/js/11.6bdb67f2.js"><link rel="prefetch" href="/example/schart/assets/js/12.30aa3b6c.js"><link rel="prefetch" href="/example/schart/assets/js/14.187d7dfd.js"><link rel="prefetch" href="/example/schart/assets/js/15.49eb6595.js"><link rel="prefetch" href="/example/schart/assets/js/3.63034cce.js"><link rel="prefetch" href="/example/schart/assets/js/4.07f14000.js"><link rel="prefetch" href="/example/schart/assets/js/5.49263b0c.js"><link rel="prefetch" href="/example/schart/assets/js/6.72dc5cd8.js"><link rel="prefetch" href="/example/schart/assets/js/7.d770575e.js"><link rel="prefetch" href="/example/schart/assets/js/8.6c3274b7.js"><link rel="prefetch" href="/example/schart/assets/js/9.ea37abe0.js">
+    <link rel="stylesheet" href="/example/schart/assets/css/0.styles.d3c30c51.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/example/schart/" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">sChart.js中文文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://github.com/lin-xin/sChart.js" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  仓库
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/lin-xin/vue-schart" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue-schart
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/example/schart/" class="nav-link router-link-exact-active router-link-active">简体中文</a></li><li class="dropdown-item"><!----> <a href="/example/schart/en/" class="nav-link">English</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://github.com/lin-xin/sChart.js" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  仓库
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/lin-xin/vue-schart" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue-schart
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/example/schart/" class="nav-link router-link-exact-active router-link-active">简体中文</a></li><li class="dropdown-item"><!----> <a href="/example/schart/en/" class="nav-link">English</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/example/schart/" class="active sidebar-link">指南</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/example/schart/#介绍" class="sidebar-link">介绍</a></li><li class="sidebar-sub-header"><a href="/example/schart/#快速上手" class="sidebar-link">快速上手</a></li></ul></li><li><a href="/example/schart/bar.html" class="sidebar-link">柱状图</a></li><li><a href="/example/schart/line.html" class="sidebar-link">折线图</a></li><li><a href="/example/schart/pie.html" class="sidebar-link">饼状图</a></li><li><a href="/example/schart/ring.html" class="sidebar-link">环形图</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="指南"><a href="#指南" class="header-anchor">#</a> 指南</h1> <h2 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h2> <p>sChart.js：一个小型简单的图表库。基于 HTML5 canvas 实现，无任何依赖，并且兼容移动端。</p> <blockquote><p>当前版本：<a href="https://github.com/lin-xin/sChart.js/releases" target="_blank" rel="noopener noreferrer">V3.0.0<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <h2 id="快速上手"><a href="#快速上手" class="header-anchor">#</a> 快速上手</h2> <p>可以使用 npm 安装</p> <div class="language- extra-class"><pre class="language-text"><code>npm install schart.js
+</code></pre></div><h3 id="支持-es6-引入"><a href="#支持-es6-引入" class="header-anchor">#</a> 支持 es6 引入</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> Schart <span class="token keyword">from</span> <span class="token string">'schart.js'</span><span class="token punctuation">;</span>
 
-</body>
+<span class="token keyword">new</span> <span class="token class-name">Schart</span><span class="token punctuation">(</span>canvasId<span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="支持script标签引入"><a href="#支持script标签引入" class="header-anchor">#</a> 支持script标签引入</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>schart.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">new</span> <span class="token class-name">Schart</span><span class="token punctuation">(</span>canvasId<span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/example/schart/bar.html">柱状图</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/example/schart/assets/js/app.5167d8fb.js" defer></script><script src="/example/schart/assets/js/2.7ff8e1e3.js" defer></script><script src="/example/schart/assets/js/13.50deda91.js" defer></script>
+  </body>
 </html>
