@@ -1,0 +1,100 @@
+/*：*/
+.page-header {
+    position: relative;
+    display: block;
+    padding: 212px 0 211px;
+    overflow: hidden;
+    z-index: 1;
+}
+.page-header__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--thm-black);
+    background-blend-mode: luminosity;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.page-header__bg::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000d24;
+    opacity: 0.75;
+    z-index: -2;
+    content: '';
+}
+.page-header__inner {
+    position: relative;
+    display: block;
+}
+.page-header__inner .thm-breadcrumb {
+    position: relative;
+    display: block;
+    margin-bottom: 13px;
+}
+.page-header__inner .thm-breadcrumb li {
+    position: relative;
+    display: inline-block;
+    color: var(--thm-white);
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.016em;
+    font-family: var(--thm-font);
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    padding-left: 8px;
+    padding-right: 13px;
+}
+.page-header__inner .thm-breadcrumb li.active {
+    color: var(--thm-primary);
+}
+.page-header__inner .thm-breadcrumb li::before {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    bottom: 6px;
+    width: 2px;
+    background: var(--thm-primary);
+    transform: rotate(15deg);
+    content: '';
+}
+.page-header__inner .thm-breadcrumb li:last-child:before {
+    display: none;
+}
+.page-header__inner .thm-breadcrumb li:first-child {
+    padding-left: 0;
+}
+.page-header__inner .thm-breadcrumb li:last-child {
+    padding-right: 0;
+}
+.page-header__inner .thm-breadcrumb li a {
+    color: var(--thm-white);
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.016em;
+    font-family: var(--thm-font);
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+.page-header__inner .thm-breadcrumb li a:hover {
+    color: var(--thm-primary);
+}
+.page-header__inner h2 {
+    color: var(--thm-white);
+    font-size: 55px;
+    line-height: 1em;
+    font-weight: 700;
+    text-transform: capitalize;
+} /*：*/

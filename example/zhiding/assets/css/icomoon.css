@@ -1,0 +1,218 @@
+/*：*/
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?m31ns');
+    src: url('../fonts/icomoon.eot?m31ns#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?m31ns') format('truetype'), url('../fonts/icomoon.woff?m31ns') format('woff'),
+        url('../fonts/icomoon.svg?m31ns#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+[class^='icon-'],
+[class*=' icon-'] {
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-check-list:before {
+    content: '\e900';
+}
+.icon-search-interface-symbol:before {
+    content: '\e901';
+}
+.icon-briefing:before {
+    content: '\e902';
+}
+.icon-shopping-cart:before {
+    content: '\e903';
+}
+.icon-play-button:before {
+    content: '\e904';
+}
+.icon-play-button-1:before {
+    content: '\e905';
+}
+.icon-pin:before {
+    content: '\e906';
+}
+.icon-envelope:before {
+    content: '\e907';
+}
+.icon-facebook:before {
+    content: '\e908';
+}
+.icon-instagram:before {
+    content: '\e909';
+}
+.icon-tik-tok:before {
+    content: '\e90a';
+}
+.icon-youtube:before {
+    content: '\e90b';
+}
+.icon-youtube-1:before {
+    content: '\e90c';
+}
+.icon-plus:before {
+    content: '\e90d';
+}
+.icon-plus-1:before {
+    content: '\e90e';
+}
+.icon-plus-2:before {
+    content: '\e90f';
+}
+.icon-minus:before {
+    content: '\e910';
+}
+.icon-minus-1:before {
+    content: '\e911';
+}
+.icon-solution:before {
+    content: '\e912';
+}
+.icon-blueprint:before {
+    content: '\e913';
+}
+.icon-office-building:before {
+    content: '\e914';
+}
+.icon-construction-machine:before {
+    content: '\e915';
+}
+.icon-construction:before {
+    content: '\e916';
+}
+.icon-interior-design:before {
+    content: '\e917';
+}
+.icon-link:before {
+    content: '\e918';
+}
+.icon-share:before {
+    content: '\e919';
+}
+.icon-facebook-1:before {
+    content: '\e91a';
+}
+.icon-letter-v:before {
+    content: '\e91b';
+}
+.icon-letter-x:before {
+    content: '\e91c';
+}
+.icon-light-bulb:before {
+    content: '\e91d';
+}
+.icon-engineer:before {
+    content: '\e91e';
+}
+.icon-star:before {
+    content: '\e91f';
+}
+.icon-star-1:before {
+    content: '\e920';
+}
+.icon-left-arrow:before {
+    content: '\e921';
+}
+.icon-left-arrow1:before {
+    content: '\e922';
+}
+.icon-right-chevron:before {
+    content: '\e923';
+}
+.icon-left-chevron:before {
+    content: '\e924';
+}
+.icon-telegram:before {
+    content: '\e925';
+}
+.icon-dribbble:before {
+    content: '\e926';
+}
+.icon-twitter:before {
+    content: '\e927';
+}
+.icon-verified:before {
+    content: '\e928';
+}
+.icon-analytics:before {
+    content: '\e929';
+}
+.icon-check-mark:before {
+    content: '\e92a';
+}
+.icon-bed:before {
+    content: '\e92b';
+}
+.icon-targeted:before {
+    content: '\e92c';
+}
+.icon-clock:before {
+    content: '\e92d';
+}
+.icon-calendar:before {
+    content: '\e92e';
+}
+.icon-quote:before {
+    content: '\e92f';
+}
+.icon-quotation:before {
+    content: '\e930';
+}
+.icon-linkedin-big-logo:before {
+    content: '\e931';
+}
+.icon-phone:before {
+    content: '\e932';
+}
+.icon-call:before {
+    content: '\e933';
+}
+.icon-top-arrow:before {
+    content: '\e934';
+}
+.icon-down-arrow:before {
+    content: '\e935';
+}
+.icon-pinterest:before {
+    content: '\e936';
+}
+.icon-user:before {
+    content: '\e937';
+}
+.icon-right-quotation-mark:before {
+    content: '\e938';
+}
+.icon-turn-left:before {
+    content: '\e939';
+}
+.icon-turn-left1:before {
+    content: '\e93a';
+}
+.icon-blueprint-1:before {
+    content: '\e93b';
+}
+.icon-architect:before {
+    content: '\e93c';
+}
+.icon-house-plan:before {
+    content: '\e93d';
+}
+.icon-pencil-and-ruler:before {
+    content: '\e93e';
+}
+.icon-measuring:before {
+    content: '\e93f';
+}
+.icon-heart:before {
+    content: '\e940';
+} /*：*/

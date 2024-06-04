@@ -1,0 +1,71 @@
+/*：*/
+.brand-one {
+    position: relative;
+    display: block;
+    background: var(--thm-white);
+    padding: 120px 0 0;
+    overflow: hidden;
+    z-index: 1;
+}
+.brand-one .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+.brand-one .swiper-slide .img-box {
+    position: relative;
+    display: block;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.brand-one .swiper-slide:hover .img-box {
+    transform: translateY(-100%);
+}
+.brand-one .swiper-slide .img-box img {
+    opacity: 0.4;
+    width: auto;
+}
+.brand-one .swiper-slide .img-box2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translateY(100%);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.brand-one .swiper-slide:hover .img-box2 {
+    transform: translateY(0);
+}
+.brand-one .swiper-slide .img-box2 img {
+    opacity: 1;
+}
+.brand-one--two {
+    position: relative;
+    display: block;
+    padding: 66px 0 0;
+}
+.brand-one--two .swiper-slide .img-box img {
+    opacity: 1;
+    width: auto;
+} /*：*/
